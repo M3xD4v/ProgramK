@@ -1,0 +1,103 @@
+{
+	"items": [
+		{
+			"_id": "366Rotor",
+			"_tpl": "366Rotor",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+        {
+			"_id": "366SKSAdapter",
+			"_tpl": "366SKSAdapter",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+        {
+			"_id": "556Rotor",
+			"_tpl": "556Rotor",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+	"_id": "366MUZZLEBRAKE",
+	"_tpl": "366MUZZLEBRAKE",
+	"parentId": "hideout",
+	"slotId": "hideout",
+	"upd": {
+		"UnlimitedCount": true,
+		"StackObjectsCount": 999999
+	}
+},
+        {
+			"_id": "76239Rotor",
+			"_tpl": "76239Rotor",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		}
+	],
+	"barter_scheme": {
+		"366Rotor": [
+			[
+				{
+					"count": 24754,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+        "366SKSAdapter": [
+			[
+				{
+					"count": 2353,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+        "556Rotor": [
+			[
+				{
+					"count": 27547,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"366MUZZLEBRAKE": [
+	[
+		{
+			"count": 23045,
+			"_tpl": "5449016a4bdc2d6f028b456f"
+		}
+	]
+],
+        "76239Rotor": [
+			[
+				{
+					"count": 29565,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		]
+	},
+	"loyal_level_items": {
+		"366Rotor": 1,
+        "366SKSAdapter": 1,
+        "556Rotor": 1,
+        "76239Rotor": 1,
+				 "366MUZZLEBRAKE": 1
+	}
+}

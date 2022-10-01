@@ -1,0 +1,69 @@
+{
+	"items": [
+		{
+			"_id": "e5a41e3e4416c3d32dd06192",
+			"_tpl": "SOC-97R",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "ce969fe973ee4861e162c205",
+			"_tpl": "5c5039be2e221602b177c9ff",
+			"parentId": "e5a41e3e4416c3d32dd06192",
+			"slotId": "mod_gas_block"
+		},
+		{
+			"_id": "6b3813f873ef2fc6b6c0a9a8",
+			"_tpl": "5c503d0a2e221602b542b7ef",
+			"parentId": "e5a41e3e4416c3d32dd06192",
+			"slotId": "mod_reciever"
+		},
+		{
+			"_id": "3d09c3d857482b2a78c9c6c6",
+			"_tpl": "5c503b1c2e221602b21d6e9d",
+			"parentId": "e5a41e3e4416c3d32dd06192",
+			"slotId": "mod_sight_rear",
+			"upd": {
+				"Sight": {
+					"ScopesCurrentCalibPointIndexes": [
+						0
+					],
+					"ScopesSelectedModes": [
+						0
+					],
+					"SelectedScope": 0
+				}
+			}
+		},
+		{
+			"_id": "b8413fd71d14058eefce9bf9",
+			"_tpl": "5c503af12e221602b177ca02",
+			"parentId": "e5a41e3e4416c3d32dd06192",
+			"slotId": "mod_stock"
+		},
+		{
+			"_id": "8e30f9f2d13609bd81cb0e36",
+			"_tpl": "5c503ac82e221602b21d6e9a",
+			"parentId": "e5a41e3e4416c3d32dd06192",
+			"slotId": "mod_magazine"
+		}
+		
+	],
+	"barter_scheme": {
+		"e5a41e3e4416c3d32dd06192": [
+			[
+				{
+					"count": 41223,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		]
+	},
+	"loyal_level_items": {
+		"e5a41e3e4416c3d32dd06192": 1
+	}
+}

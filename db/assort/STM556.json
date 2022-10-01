@@ -1,0 +1,75 @@
+{
+	"items": [
+		{
+		"_id": "STM556A",
+		"_tpl": "STM556",
+		"parentId": "hideout",
+		"slotId": "hideout",
+		"upd": {
+			"UnlimitedCount": true,
+			"StackObjectsCount": 999999
+		}
+	},
+	{
+		"_id": "3456345234234234",
+		"_tpl": "55d4b9964bdc2d1d4e8b456e",
+		"parentId": "STM556A",
+		"slotId": "mod_pistol_grip"
+	},
+	{
+		"_id": "7653453445324534",
+		"_tpl": "55d4887d4bdc2d962f8b4570",
+		"parentId": "STM556A",
+		"slotId": "mod_magazine"
+	},
+	{
+		"_id": "STMUPPER556",
+		"_tpl": "STM556_upper",
+		"parentId": "STM556A",
+		"slotId": "mod_reciever"
+	},
+	{
+		"_id": "765345344536524534",
+		"_tpl": "5c0faeddd174af02a962601f",
+		"parentId": "STM556A",
+		"slotId": "mod_stock"
+	},
+	{
+		"_id": "324256634534",
+		"_tpl": "5c0faf68d174af02a96260b8",
+		"parentId": "STM556A",
+		"slotId": "mod_charge"
+	},
+	{
+		"_id": "3242566345343452342",
+		"_tpl": "barrelSTM556_406mm",
+		"parentId": "STMUPPER556",
+		"slotId": "mod_barrel"
+	},
+	{
+		"_id": "324256634534345345342342",
+		"_tpl": "6034e3d953a60014f970617b",
+		"parentId": "STMUPPER556",
+		"slotId": "mod_handguard"
+	},
+	{
+		"_id": "32425663453234345345342342",
+		"_tpl": "602e620f9b513876d4338d9a",
+		"parentId": "765345344536524534",
+		"slotId": "mod_stock_000"
+	}
+	],
+	"barter_scheme": {
+		"STM556A": [
+			[
+				{
+					"count": 38232,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		]
+	},
+	"loyal_level_items": {
+		"STM556A": 1
+	}
+}

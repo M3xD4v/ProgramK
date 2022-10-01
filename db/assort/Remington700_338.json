@@ -1,0 +1,200 @@
+{
+	"items": [
+		{
+			"_id": "e7241aee385e075d0dcbd695",
+			"_tpl": "remington338",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "8801fd9a6eaec4bc48224a2d",
+			"_tpl": "rem338Mag5",
+			"parentId": "e7241aee385e075d0dcbd695",
+			"slotId": "mod_magazine"
+		},
+		{
+			"_id": "6db8aa85db9989629244dddd",
+			"_tpl": "rem338woodenstock",
+			"parentId": "e7241aee385e075d0dcbd695",
+			"slotId": "mod_stock"
+		},
+		{
+			"_id": "374d9f3c6b871f6243098b61",
+			"_tpl": "rem338_508mmheavy",
+			"parentId": "e7241aee385e075d0dcbd695",
+			"slotId": "mod_barrel"
+		},
+		{
+			"_id": "rem338Mag5",
+			"_tpl": "rem338Mag5",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "rem338polymerstock",
+			"_tpl": "rem338polymerstock",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "rem338woodenstock",
+			"_tpl": "rem338woodenstock",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+
+		
+		{
+			"_id": "rem338_660mm",
+			"_tpl": "rem338_660mm",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "rem338_660mmheavy",
+			"_tpl": "rem338_660mmheavy",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "rem338_508mm",
+			"_tpl": "rem338_508mm",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "rem338_508mmheavy",
+			"_tpl": "rem338_508mmheavy",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "rem338Mag10",
+			"_tpl": "rem338Mag10",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		}
+	],
+	"barter_scheme": {
+		"e7241aee385e075d0dcbd695": [
+			[
+				{
+					"count": 45032,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"rem338Mag10": [
+			[
+				{
+					"count": 7032,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"rem338Mag5": [
+			[
+				{
+					"count": 1932,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"rem338polymerstock": [
+			[
+				{
+					"count": 4532,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"rem338woodenstock": [
+			[
+				{
+					"count": 4532,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"rem338_508mm": [
+			[
+				{
+					"count": 4532,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"rem338_660mm": [
+			[
+				{
+					"count": 4532,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"rem338_508mmheavy": [
+			[
+				{
+					"count": 4532,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"rem338_660mmheavy": [
+			[
+				{
+					"count": 4532,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		]
+	},
+
+	"loyal_level_items": {
+		"e7241aee385e075d0dcbd695": 1,
+		"rem338Mag10": 1,
+		"rem338Mag5": 1,
+		"rem338polymerstock": 1,
+		"rem338woodenstock": 1,
+		"rem338_508mm": 1,
+		"rem338_508mmheavy": 1,
+		"rem338_660mm": 1,
+		"rem338_660mmheavy": 1
+	}
+}

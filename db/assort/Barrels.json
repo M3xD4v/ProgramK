@@ -1,0 +1,334 @@
+{
+	"items": [
+		{
+			"_id": "MCX556_171_barrel",
+			"_tpl": "MCX556_171_barrel",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "barrel_MCX556_400mm",
+			"_tpl": "barrel_MCX556_400mm",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "barrel_MCX556_330mm",
+			"_tpl": "barrel_MCX556_330mm",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "barrel_MCX_400mm",
+			"_tpl": "barrel_MCX_400mm",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "barrel_MCX_330mm",
+			"_tpl": "barrel_MCX_330mm",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "barrel_vpo215_420mm",
+			"_tpl": "barrel_vpo215_420mm",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "barrel_vpo215_520mm",
+			"_tpl": "barrel_vpo215_520mm",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+        {
+			"_id": "MCX556_229_barrel",
+			"_tpl": "MCX556_229_barrel",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+
+		{
+			"_id": "barrel_vpo193_420mm",
+			"_tpl": "barrel_vpo193_420mm",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "barrel_vpo193_520mm",
+			"_tpl": "barrel_vpo193_520mm",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "barrel_vpo193_600mm",
+			"_tpl": "barrel_vpo193_600mm",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+
+		{
+			"_id": "barrelSTM_266mm",
+			"_tpl": "barrelSTM_266mm",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "barrelSTM_304mm",
+			"_tpl": "barrelSTM_304mm",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "barrelSTM_355mm",
+			"_tpl": "barrelSTM_355mm",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "barrelSTM_406mm",
+			"_tpl": "barrelSTM_406mm",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "barrel_ppsh_456mm_762x25",
+			"_tpl": "barrel_ppsh_456mm_762x25",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "barrel_m3_benelli_660mm_12g",
+			"_tpl": "barrel_m3_benelli_660mm_12g",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		}
+	],
+	"barter_scheme": {
+		"barrel_ppsh_456mm_762x25": [
+			[
+				{
+					"count": 10392,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"MCX556_171_barrel": [
+			[
+				{
+					"count": 9103,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+        "MCX556_229_barrel": [
+			[
+				{
+					"count": 11104,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+				"barrel_MCX556_400mm": [
+			[
+				{
+					"count": 9103,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+        "barrel_MCX556_330mm": [
+			[
+				{
+					"count": 11104,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"barrel_MCX_400mm": [
+			[
+				{
+					"count": 11103,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+        "barrel_MCX_330mm": [
+			[
+				{
+					"count": 14104,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"barrel_vpo215_520mm": [
+			[
+				{
+					"count": 9103,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+        "barrel_vpo215_420mm": [
+			[
+				{
+					"count": 11104,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"barrel_vpo193_600mm": [
+			[
+				{
+					"count": 8104,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"barrel_vpo193_520mm": [
+			[
+				{
+					"count": 7103,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"barrel_vpo193_420mm": [
+			[
+				{
+					"count": 6104,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"barrelSTM_266mm": [
+			[
+				{
+					"count": 6104,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"barrelSTM_304mm": [
+			[
+				{
+					"count": 6104,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"barrelSTM_355mm": [
+			[
+				{
+					"count": 6104,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"barrelSTM_406mm": [
+			[
+				{
+					"count": 6104,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"barrel_m3_benelli_660mm_12g": [
+			[
+				{
+					"count": 16878,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		]
+
+	},
+	"loyal_level_items": {
+		"MCX556_171_barrel": 1,
+        "MCX556_229_barrel": 1,
+		"barrel_vpo215_520mm": 1,
+		"barrel_vpo215_420mm": 1 ,
+		"barrel_MCX556_330mm":1,
+		"barrel_MCX556_400mm":1,
+		"barrel_MCX_330mm":1,
+		"barrel_MCX_400mm":1,
+		"barrel_vpo193_600mm": 1,
+		"barrel_vpo193_420mm": 1,
+		"barrel_vpo193_520mm": 1,
+		"barrelSTM_266mm":1,
+		"barrelSTM_304mm": 1,
+		"barrelSTM_355mm": 1,
+		"barrelSTM_406mm": 1,
+		"barrel_ppsh_456mm_762x25": 1,
+		"barrel_m3_benelli_660mm_12g": 1
+	}
+}

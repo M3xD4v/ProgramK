@@ -1,0 +1,104 @@
+{
+	"items": [
+		{
+			"_id": "KobraPicatinny",
+			"_tpl": "KobraPicatinny",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+        {
+			"_id": "Leftmount_all_ncstar_mpr45",
+			"_tpl": "Leftmount_all_ncstar_mpr45",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+        {
+			"_id": "NCSTARLONG_LEFT",
+			"_tpl": "NCSTARLONG_LEFT",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+        {
+			"_id": "NCSTARLONG_RIGHT",
+			"_tpl": "NCSTARLONG_RIGHT",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "Vortex_rmr_Mount",
+			"_tpl": "Vortex_rmr_Mount",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		}
+	],
+	"barter_scheme": {
+		"KobraPicatinny": [
+			[
+				{
+					"count": 3423,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+        "Leftmount_all_ncstar_mpr45": [
+			[
+				{
+					"count": 8777,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+        "NCSTARLONG_LEFT": [
+			[
+				{
+					"count": 12304,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+        "NCSTARLONG_RIGHT": [
+			[
+				{
+					"count": 12304,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"Vortex_rmr_Mount": [
+			[
+				{
+					"count": 8104,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		]
+	},
+	
+	"loyal_level_items": {
+		"KobraPicatinny": 1,
+        "Leftmount_all_ncstar_mpr45": 1,
+        "NCSTARLONG_LEFT": 1,
+        "NCSTARLONG_RIGHT": 1,
+		"Vortex_rmr_Mount": 1
+	}
+}

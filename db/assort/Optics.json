@@ -1,0 +1,103 @@
+{
+	"items": [
+		{
+			"_id": "monstrum3x",
+			"_tpl": "monstrum3x",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "monstrum3x_tan",
+			"_tpl": "monstrum3x_tan",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "vortex_spitfire_hd_x3",
+			"_tpl": "vortex_spitfire_hd_x3",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "vortex_spitfire_hd_x5",
+			"_tpl": "vortex_spitfire_hd_x5",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "PPT",
+			"_tpl": "PPT",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		}
+	],
+	"barter_scheme": {
+		"monstrum3x": [
+			[
+				{
+					"count": 1,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"monstrum3x_tan": [
+			[
+				{
+					"count": 1,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"vortex_spitfire_hd_x3": [
+			[
+				{
+					"count": 24122,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"vortex_spitfire_hd_x5": [
+			[
+				{
+					"count": 27122,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"PPT": [
+			[
+				{
+					"count": 14324,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		]
+	},
+	"loyal_level_items": {
+		"monstrum3x": 1,
+		"monstrum3x_tan": 1,
+		"vortex_spitfire_hd_x3": 1,
+		"vortex_spitfire_hd_x5":1,
+		"PPT": 1
+	}
+}

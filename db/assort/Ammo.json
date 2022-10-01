@@ -1,0 +1,65 @@
+{
+	"items": [
+		{
+			"_id": "366DGW",
+			"_tpl": "366DGW",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "366BUCKSHOT",
+			"_tpl": "366BUCKSHOT",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "366FLECHETTE",
+			"_tpl": "366FLECHETTE",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		}
+	],
+	"barter_scheme": {
+		"366DGW": [
+			[
+				{
+					"count": 424,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"366BUCKSHOT": [
+			[
+				{
+					"count": 56,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"366FLECHETTE": [
+			[
+				{
+					"count": 75,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		]
+	},
+	"loyal_level_items": {
+		"366DGW": 1,
+		"366FLECHETTE": 1,
+		"366BUCKSHOT": 1
+	}
+}

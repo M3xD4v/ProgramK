@@ -1,0 +1,65 @@
+{
+	"items": [
+		{
+			"_id": "VPRDUSTCOVER",
+			"_tpl": "VPRDUSTCOVER",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "extended_reciever_ppsh_zis_ppsh41_std",
+			"_tpl": "extended_reciever_ppsh_zis_ppsh41_std",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "TulaIron",
+			"_tpl": "5649d9a14bdc2d79388b4580",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		}
+	],
+	"barter_scheme": {
+		"VPRDUSTCOVER": [
+			[
+				{
+					"count": 4532,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"extended_reciever_ppsh_zis_ppsh41_std": [
+			[
+				{
+					"count": 10222,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"TulaIron": [
+			[
+				{
+					"count": 2312,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		]
+	},
+	"loyal_level_items": {
+		"VPRDUSTCOVER": 1,
+		"TulaIron": 1,
+		"extended_reciever_ppsh_zis_ppsh41_std": 1
+	}
+}

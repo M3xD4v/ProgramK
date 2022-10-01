@@ -1,0 +1,46 @@
+{
+	"items": [
+		{
+			"_id": "vpo192",
+			"_tpl": "vpo192",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "vpo192mag",
+			"_tpl": "vpo192mag",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		}
+	],
+	"barter_scheme": {
+		"vpo192": [
+			[
+				{
+					"count": 4532,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"vpo192mag": [
+			[
+				{
+					"count": 4532,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		]
+	},
+	"loyal_level_items": {
+		"vpo192": 1,
+		"vpo192mag": 1
+	}
+}
