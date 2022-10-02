@@ -51,6 +51,7 @@ class Mod {
     }
     postDBLoad(container) {
         const databaseModule = require("./databaseModule");
+        const StocksOverhaul = require("./StocksOverhaul");
         const databaseServer = container.resolve("DatabaseServer");
         const tables = databaseServer.getTables();
         const logger = container.resolve("WinstonLogger");
@@ -68,6 +69,7 @@ class Mod {
             this.createItem(itemsToAdd[itemInJson].id, itemsToAdd[itemInJson].cloneID, itemsToAdd[itemInJson].bundle, itemsToAdd[itemInJson].fullName, itemsToAdd[itemInJson].shortName, itemsToAdd[itemInJson].description, items, global);
         }
         databaseModule.execute();
+        StocksOverhaul.execute();
         database.templates.items["5447a9cd4bdc2dbd208b4567"]._props.Foldable = true;
         database.templates.items["5447a9cd4bdc2dbd208b4567"]._props.FoldedSlot = "mod_stock";
         database.templates.items["5447a9cd4bdc2dbd208b4567"]._props.Slots[3]._props.filters[0].Filter.push("5bcf0213d4351e0085327c17");

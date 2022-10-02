@@ -128,7 +128,6 @@ function execute() {
 
     for (const conflict of scopesconflict) {
         database.templates.items[conflict]._props.ConflictingItems.length = 0;
-            logger.log("removed " + conflict, "blue")
     }
 
     database.templates.items["5b3b99475acfc432ff4dcbee"]._props.ConflictingItems.length = 0;
@@ -272,7 +271,7 @@ function execute() {
     }
 
   }
-  
-  
+
+
   // add the code below
   module.exports = { execute };

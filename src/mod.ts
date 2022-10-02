@@ -23,7 +23,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
     logger: ILogger
     DB: JSON
 
-    modPath: string = path.normalize(path.join(__dirname, '..'));    
+    modPath: string = path.normalize(path.join(__dirname, '..'));
     modConfig: JSON
     modName: string
 
@@ -46,7 +46,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         }
         else{
             this.logger.error(this.modName +"required base.json missing in /db/base/");
-        }        
+        }
 
         this.logger.debug(`[${this.modName}] Loading... `);
 
@@ -59,7 +59,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
 
     public postDBLoad(container: DependencyContainer): void {
         const databaseModule = require("./databaseModule");
-
+        const StocksOverhaul = require("./StocksOverhaul")
         const databaseServer = container.resolve < DatabaseServer > ("DatabaseServer");
         const tables = databaseServer.getTables();
         const logger = container.resolve < ILogger > ("WinstonLogger");
@@ -84,6 +84,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
 
 
         databaseModule.execute()
+        StocksOverhaul.execute()
         database.templates.items["5447a9cd4bdc2dbd208b4567"]._props.Foldable = true
         database.templates.items["5447a9cd4bdc2dbd208b4567"]._props.FoldedSlot = "mod_stock"
         database.templates.items["5447a9cd4bdc2dbd208b4567"]._props.Slots[3]._props.filters[0].Filter.push("5bcf0213d4351e0085327c17");
@@ -105,7 +106,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         if(fs.existsSync(questassortPath)){
             tables.traders[this.traderBase._id].questassort = require(questassortPath);
         }
-         
+
 
         // For each language, add locale for the new trader
         const locales = Object.values(tables.locales.global) as ILocaleGlobalBase[];
@@ -133,20 +134,20 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         let fileCount = files.length;
 
         if(fileCount == 0){
-            this.logger.error(this.modName+": No Files in /db/assort/"); 
+            this.logger.error(this.modName+": No Files in /db/assort/");
             return assort;
         }
 
         files.forEach(file => {
             assort = this.mergeAssorts(assort,file);
         });
-        this.logger.info(this.modName+": Loaded "+fileCount+" files.");     
+        this.logger.info(this.modName+": Loaded "+fileCount+" files.");
         return assort;
     }
 
     private registerProfileImage(container: DependencyContainer): void {
         const resFolderPath = this.modPath+"/res/";
-    
+
         // Register route pointing to the profile picture
         const imageRouter = container.resolve<ImageRouter>("ImageRouter");
         //let filename =this.traderBase.avatar.replace(".jpg","");
@@ -174,24 +175,24 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         const logger = container.resolve < ILogger > ("WinstonLogger");
 
         let fileNameList = fs.readdirSync(filePath);
-        let fileList = [];        
+        let fileList = [];
         fileNameList.forEach(fileName => {
             if (path.extname(fileName) == ".json"){
                 let newFile = require(filePath+fileName) as ITraderAssort;
                 fileList.push(newFile);
-            }      
+            }
         });
         return fileList;
     }
 
     private mergeAssorts(assort1: ITraderAssort,assort2: ITraderAssort): ITraderAssort{
-		Object.values(assort2.items).map((item)=>{	
+		Object.values(assort2.items).map((item)=>{
 			assort1.items.push(item);
 			if(item.parentId =="hideout"){  //check if its not part of a preset
 				assort1.barter_scheme[item._id] = assort2.barter_scheme[item._id];
 				assort1.loyal_level_items[item._id] = assort2.loyal_level_items[item._id];
-			}				
-		});		
+			}
+		});
 		return assort1;
 	}
 
@@ -247,7 +248,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
     }
 
 
-    
+
 
 
 }
