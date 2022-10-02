@@ -25,6 +25,9 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
 
     modPath: string = path.normalize(path.join(__dirname, '..'));
     modConfig: JSON
+    modConfigPrices: JSON
+    modInterKConfig: JSON
+    modInterKStock: JSON
     modName: string
 
     traderBase: JSON
@@ -37,6 +40,9 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
 
         //Loading Config
         this.modConfig = require("../config/config.json");
+        this.modInterKConfig= require("../config/InterK.json");
+        this.modConfigPrices = require("../config/Prices.json");
+        this.modInterKStock = require("../config/TraderStock.json");
         this.modName = this.modConfig.ModName;
 
         //Loading TraderBase
@@ -73,12 +79,12 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         logger.log("Program K Loaded", "yellow");
 
 
-
+        const Prices = this.modConfigPrices
         for (const itemInJson in itemsToAdd) {
             if (itemsToAdd[itemInJson].id === undefined) {
                 break;
             }
-            this.createItemHandbookEntry(itemsToAdd[itemInJson].id, itemsToAdd[itemInJson].handbookID, itemsToAdd[itemInJson].handbookPrice, handbook);
+            this.createItemHandbookEntry(itemsToAdd[itemInJson].id, itemsToAdd[itemInJson].handbookID, Prices[itemInJson], handbook);
             this.createItem(itemsToAdd[itemInJson].id, itemsToAdd[itemInJson].cloneID, itemsToAdd[itemInJson].bundle, itemsToAdd[itemInJson].fullName, itemsToAdd[itemInJson].shortName, itemsToAdd[itemInJson].description, items, global);
         }
 
@@ -166,7 +172,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         const traderConfig = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
         const traderRefreshConfig: UpdateTime = {
             traderId: this.traderBase._id,
-            seconds: this.modConfig.TraderUpdateTimeInSec
+            seconds: this.modInterKConfig.TraderUpdateTimeInSec
         };
         traderConfig.updateTime.push(traderRefreshConfig);
     }
@@ -187,8 +193,40 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
 
     private mergeAssorts(assort1: ITraderAssort,assort2: ITraderAssort): ITraderAssort{
 		Object.values(assort2.items).map((item)=>{
-			assort1.items.push(item);
+            const logger = container.resolve < ILogger > ("WinstonLogger");
+			
+            if (item.upd && 2+2 == 3){
+                if (item.upd.UnlimitedCount) {
+                    function filterById(jsonObject, id) {return jsonObject.filter(function(jsonObject) {return (jsonObject['_id'] == id);})[0];}
+                    const json = JSON.stringify(this.modInterKStock)
+                    const sjson = JSON.parse(json)
+                    var selectedObject = filterById(sjson['ITEM'], item._id);
+                    var test = selectedObject
+                    delete test['parentId']
+                    delete test['slotId']
+                    delete test['_tpl']
+                    logger.log(JSON.stringify(test) + ",", "blue") 
+                }
+                if (item.upd.UnlimitedCount) {
+
+                    function filterById(jsonObject, id) {return jsonObject.filter(function(jsonObject) {return (jsonObject['_id'] == id);})[0];}
+                        const json = JSON.stringify(this.modInterKStock)
+                        const sjson = JSON.parse(json)
+                        var selectedObject = filterById(sjson['ITEM'], item._id);
+                        selectedObject.upd.StackObjectsCount = selectedObject.upd.StackObjectsCount * this.modInterKConfig.StockMultiplier
+                        item = selectedObject
+
+                }
+            }
+
+            assort1.items.push(item);
 			if(item.parentId =="hideout"){  //check if its not part of a preset
+                const IKConfig = this.modInterKConfig
+                const indivItem = assort2.barter_scheme[item._id]
+                indivItem[0][0].count = this.modConfigPrices[item._id]
+                indivItem[0][0].count = indivItem[0][0].count * IKConfig.PriceMultiplier
+
+               // logger.log(`"` +  item._id + `"` +":" + indivItem[0][0].count + `,` , "yellow")
 				assort1.barter_scheme[item._id] = assort2.barter_scheme[item._id];
 				assort1.loyal_level_items[item._id] = assort2.loyal_level_items[item._id];
 			}
