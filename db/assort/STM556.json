@@ -1,7 +1,7 @@
 {
 	"items": [
 		{
-		"_id": "STM556A",
+		"_id": "PRESET_STM556",
 		"_tpl": "STM556",
 		"parentId": "hideout",
 		"slotId": "hideout",
@@ -13,31 +13,31 @@
 	{
 		"_id": "3456345234234234",
 		"_tpl": "55d4b9964bdc2d1d4e8b456e",
-		"parentId": "STM556A",
+		"parentId": "PRESET_STM556",
 		"slotId": "mod_pistol_grip"
 	},
 	{
 		"_id": "7653453445324534",
 		"_tpl": "55d4887d4bdc2d962f8b4570",
-		"parentId": "STM556A",
+		"parentId": "PRESET_STM556",
 		"slotId": "mod_magazine"
 	},
 	{
 		"_id": "STMUPPER556",
 		"_tpl": "STM556_upper",
-		"parentId": "STM556A",
+		"parentId": "PRESET_STM556",
 		"slotId": "mod_reciever"
 	},
 	{
 		"_id": "765345344536524534",
 		"_tpl": "5c0faeddd174af02a962601f",
-		"parentId": "STM556A",
+		"parentId": "PRESET_STM556",
 		"slotId": "mod_stock"
 	},
 	{
 		"_id": "324256634534",
 		"_tpl": "5c0faf68d174af02a96260b8",
-		"parentId": "STM556A",
+		"parentId": "PRESET_STM556",
 		"slotId": "mod_charge"
 	},
 	{
@@ -60,7 +60,7 @@
 	}
 	],
 	"barter_scheme": {
-		"STM556A": [
+		"PRESET_STM556": [
 			[
 				{
 					"count": 38232,
@@ -70,6 +70,6 @@
 		]
 	},
 	"loyal_level_items": {
-		"STM556A": 1
+		"PRESET_STM556": 1
 	}
 }

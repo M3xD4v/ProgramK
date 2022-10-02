@@ -1,7 +1,7 @@
 {
 	"items": [
 		{
-			"_id": "c6d7aec8bba7eea5eea099b1",
+			"_id": "PRESET_VPO208RIFLE",
 			"_tpl": "VPO208RIFLE",
 			"parentId": "hideout",
 			"slotId": "hideout",
@@ -13,13 +13,13 @@
 		{
 			"_id": "97e3a61180f2255b0143b0c1",
 			"_tpl": "VPO208STOCK",
-			"parentId": "c6d7aec8bba7eea5eea099b1",
+			"parentId": "PRESET_VPO208RIFLE",
 			"slotId": "mod_stock"
 		},
 		{
 			"_id": "28fb6ff20484eb5175774020",
 			"_tpl": "574db213245977459a2f3f5d",
-			"parentId": "c6d7aec8bba7eea5eea099b1",
+			"parentId": "PRESET_VPO208RIFLE",
 			"slotId": "mod_sight_rear",
 			"upd": {
 				"Sight": {
@@ -36,13 +36,13 @@
 		{
 			"_id": "a4edf12c5beb476bf641acc4",
 			"_tpl": "587df3a12459772c28142567",
-			"parentId": "c6d7aec8bba7eea5eea099b1",
+			"parentId": "PRESET_VPO208RIFLE",
 			"slotId": "mod_magazine"
 		}
 		
 	],
 	"barter_scheme": {
-		"c6d7aec8bba7eea5eea099b1": [
+		"PRESET_VPO208RIFLE": [
 			[
 				{
 					"count": 31245,
@@ -52,6 +52,6 @@
 		]
 	},
 	"loyal_level_items": {
-		"c6d7aec8bba7eea5eea099b1": 1
+		"PRESET_VPO208RIFLE": 1
 	}
 }

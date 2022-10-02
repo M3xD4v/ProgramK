@@ -1,7 +1,7 @@
 {
 	"items": [
 		{
-			"_id": "e7241aee385e075d0dcbd695",
+			"_id": "PRESET_remington338",
 			"_tpl": "remington338",
 			"parentId": "hideout",
 			"slotId": "hideout",
@@ -13,19 +13,19 @@
 		{
 			"_id": "8801fd9a6eaec4bc48224a2d",
 			"_tpl": "rem338Mag5",
-			"parentId": "e7241aee385e075d0dcbd695",
+			"parentId": "PRESET_remington338",
 			"slotId": "mod_magazine"
 		},
 		{
 			"_id": "6db8aa85db9989629244dddd",
 			"_tpl": "rem338woodenstock",
-			"parentId": "e7241aee385e075d0dcbd695",
+			"parentId": "PRESET_remington338",
 			"slotId": "mod_stock"
 		},
 		{
 			"_id": "374d9f3c6b871f6243098b61",
 			"_tpl": "rem338_508mmheavy",
-			"parentId": "e7241aee385e075d0dcbd695",
+			"parentId": "PRESET_remington338",
 			"slotId": "mod_barrel"
 		},
 		{
@@ -112,7 +112,7 @@
 		}
 	],
 	"barter_scheme": {
-		"e7241aee385e075d0dcbd695": [
+		"PRESET_remington338": [
 			[
 				{
 					"count": 45032,
@@ -187,7 +187,7 @@
 	},
 
 	"loyal_level_items": {
-		"e7241aee385e075d0dcbd695": 1,
+		"PRESET_remington338": 1,
 		"rem338Mag10": 1,
 		"rem338Mag5": 1,
 		"rem338polymerstock": 1,

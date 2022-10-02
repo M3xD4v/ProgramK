@@ -1,7 +1,7 @@
 {
 	"items": [
 		{
-			"_id": "vpo192",
+			"_id": "PRESET_vpo192",
 			"_tpl": "vpo192",
 			"parentId": "hideout",
 			"slotId": "hideout",
@@ -13,19 +13,19 @@
 		{
 			"_id": "e7edb17d77a51f22f23d3cb5",
 			"_tpl": "vpo192mag",
-			"parentId": "vpo192",
+			"parentId": "PRESET_vpo192",
 			"slotId": "mod_magazine"
 		},
 		{
 			"_id": "85f7af4efcfee6b20a0b0f5b",
 			"_tpl": "5de655be4a9f347bc92edb88",
-			"parentId": "vpo192",
+			"parentId": "PRESET_vpo192",
 			"slotId": "mod_stock"
 		},
 		{
 			"_id": "f04dcb63a3a7a8e2d8b6ed1b",
 			"_tpl": "barrel_vpo193_420mm",
-			"parentId": "vpo192",
+			"parentId": "PRESET_vpo192",
 			"slotId": "mod_barrel"
 		},
 		{
@@ -40,7 +40,7 @@
 		}
 	],
 	"barter_scheme": {
-		"vpo192": [
+		"PRESET_vpo192": [
 			[
 				{
 					"count": 15342,
@@ -58,7 +58,7 @@
 		]
 	},
 	"loyal_level_items": {
-		"vpo192": 1,
+		"PRESET_vpo192": 1,
 		"vpo192mag": 1
 	}
 }

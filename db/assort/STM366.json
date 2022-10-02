@@ -1,7 +1,7 @@
 {
 	"items": [
 		{
-		"_id": "fc16b50eb8812d2b27f8929e",
+		"_id": "PRESET_STM366",
 		"_tpl": "STM366",
 		"parentId": "hideout",
 		"slotId": "hideout",
@@ -13,31 +13,31 @@
 	{
 		"_id": "dd3cc84f5e055ed4f2f14af4",
 		"_tpl": "55d4b9964bdc2d1d4e8b456e",
-		"parentId": "fc16b50eb8812d2b27f8929e",
+		"parentId": "PRESET_STM366",
 		"slotId": "mod_pistol_grip"
 	},
 	{
 		"_id": "cc191676f9038afab5764fa8",
 		"_tpl": "STM366Mag",
-		"parentId": "fc16b50eb8812d2b27f8929e",
+		"parentId": "PRESET_STM366",
 		"slotId": "mod_magazine"
 	},
 	{
 		"_id": "99e160d917d0935e8c85089d",
 		"_tpl": "STM366_upper",
-		"parentId": "fc16b50eb8812d2b27f8929e",
+		"parentId": "PRESET_STM366",
 		"slotId": "mod_reciever"
 	},
 	{
 		"_id": "9c0abef88f28f635cc47dbde",
 		"_tpl": "5c0faeddd174af02a962601f",
-		"parentId": "fc16b50eb8812d2b27f8929e",
+		"parentId": "PRESET_STM366",
 		"slotId": "mod_stock"
 	},
 	{
 		"_id": "1302cb59e7fcdacfa0329661",
 		"_tpl": "5c0faf68d174af02a96260b8",
-		"parentId": "fc16b50eb8812d2b27f8929e",
+		"parentId": "PRESET_STM366",
 		"slotId": "mod_charge"
 	},
 	{
@@ -70,7 +70,7 @@
 		}
 	],
 	"barter_scheme": {
-		"fc16b50eb8812d2b27f8929e": [
+		"PRESET_STM366": [
 			[
 				{
 					"count": 31232,
@@ -88,7 +88,7 @@
 		]
 	},
 	"loyal_level_items": {
-		"fc16b50eb8812d2b27f8929e": 1,
+		"PRESET_STM366": 1,
 		"STM366Mag": 1
 	}
 }

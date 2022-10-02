@@ -1,7 +1,7 @@
 {
 	"items": [
 		{
-			"_id": "ae8e864624f86f2c65a9978d",
+			"_id": "PRESET_rhino_40ds",
 			"_tpl": "weapon_chiappa_rhino_40ds_9x33R",
 			"parentId": "hideout",
 			"slotId": "hideout",
@@ -13,13 +13,13 @@
 		{
 			"_id": "23eaebc6661e2d3b077999cf",
 			"_tpl": "619f54a1d25cbd424731fb99",
-			"parentId": "ae8e864624f86f2c65a9978d",
+			"parentId": "PRESET_rhino_40ds",
 			"slotId": "mod_magazine"
 		},
 		{
 			"_id": "e9ebdae2d7e3f9a0beacd82c",
 			"_tpl": "619f4cee4c58466fe1228435",
-			"parentId": "ae8e864624f86f2c65a9978d",
+			"parentId": "PRESET_rhino_40ds",
 			"slotId": "mod_sight_rear",
 			"upd": {
 				"Sight": {
@@ -36,7 +36,7 @@
 		{
 			"_id": "d16f66e52f27244497fe44de",
 			"_tpl": "619f4d304c58466fe1228437",
-			"parentId": "ae8e864624f86f2c65a9978d",
+			"parentId": "PRESET_rhino_40ds",
 			"slotId": "mod_sight_front",
 			"upd": {
 				"Sight": {
@@ -53,11 +53,11 @@
 		{
 			"_id": "1e08313f7188bb44192af385",
 			"_tpl": "619f4bffd25cbd424731fb97",
-			"parentId": "ae8e864624f86f2c65a9978d",
+			"parentId": "PRESET_rhino_40ds",
 			"slotId": "mod_pistol_grip"
 		},
 		{
-			"_id": "767b5ebdc1bab1c3f982f3c0",
+			"_id": "PRESET_rhino_200ds",
 			"_tpl": "weapon_chiappa_rhino_200ds_9x33R",
 			"parentId": "hideout",
 			"slotId": "hideout",
@@ -69,13 +69,13 @@
 		{
 			"_id": "6f17da379476963824eceac7",
 			"_tpl": "619f54a1d25cbd424731fb99",
-			"parentId": "767b5ebdc1bab1c3f982f3c0",
+			"parentId": "PRESET_rhino_200ds",
 			"slotId": "mod_magazine"
 		},
 		{
 			"_id": "56c69db59a7fa3fc3afd2733",
 			"_tpl": "619f4d304c58466fe1228437",
-			"parentId": "767b5ebdc1bab1c3f982f3c0",
+			"parentId": "PRESET_rhino_200ds",
 			"slotId": "mod_sight_front",
 			"upd": {
 				"Sight": {
@@ -92,11 +92,11 @@
 		{
 			"_id": "4",
 			"_tpl": "619f4bffd25cbd424731fb97",
-			"parentId": "767b5ebdc1bab1c3f982f3c0",
+			"parentId": "PRESET_rhino_200ds",
 			"slotId": "mod_pistol_grip"
 		},
 		{
-			"_id": "3b7ad960b882f67fe61d2166",
+			"_id": "PRESET_rhino_60ds",
 			"_tpl": "weapon_chiappa_rhino_60ds_9x33R",
 			"parentId": "hideout",
 			"slotId": "hideout",
@@ -108,13 +108,13 @@
 		{
 			"_id": "d1c723709a0a749c349e6552",
 			"_tpl": "619f54a1d25cbd424731fb99",
-			"parentId": "3b7ad960b882f67fe61d2166",
+			"parentId": "PRESET_rhino_60ds",
 			"slotId": "mod_magazine"
 		},
 		{
 			"_id": "c8a09bdb43aa96df2a93d081",
 			"_tpl": "619f4cee4c58466fe1228435",
-			"parentId": "3b7ad960b882f67fe61d2166",
+			"parentId": "PRESET_rhino_60ds",
 			"slotId": "mod_sight_rear",
 			"upd": {
 				"Sight": {
@@ -131,7 +131,7 @@
 		{
 			"_id": "9723ef7e03ae1fb265327d67",
 			"_tpl": "619f4d304c58466fe1228437",
-			"parentId": "3b7ad960b882f67fe61d2166",
+			"parentId": "PRESET_rhino_60ds",
 			"slotId": "mod_sight_front",
 			"upd": {
 				"Sight": {
@@ -148,13 +148,13 @@
 		{
 			"_id": "38a71f817791521b59577a58",
 			"_tpl": "619f4bffd25cbd424731fb97",
-			"parentId": "3b7ad960b882f67fe61d2166",
+			"parentId": "PRESET_rhino_60ds",
 			"slotId": "mod_pistol_grip"
 		}
 	],
 	
 	"barter_scheme": {
-		"767b5ebdc1bab1c3f982f3c0": [
+		"PRESET_rhino_200ds": [
 			[
 				{
 					"count": 1,
@@ -162,7 +162,7 @@
 				}
 			]
 		],
-		"ae8e864624f86f2c65a9978d": [
+		"PRESET_rhino_40ds": [
 			[
 				{
 					"count": 1,
@@ -170,7 +170,7 @@
 				}
 			]
 		],
-		"3b7ad960b882f67fe61d2166": [
+		"PRESET_rhino_60ds": [
 			[
 				{
 					"count": 1,
@@ -182,8 +182,8 @@
 },
 	"loyal_level_items": {
 		"monstrum3x": 1,
-		"767b5ebdc1bab1c3f982f3c0": 1,
-		"ae8e864624f86f2c65a9978d": 1,
-		"3b7ad960b882f67fe61d2166": 1
+		"PRESET_rhino_200ds": 1,
+		"PRESET_rhino_40ds": 1,
+		"PRESET_rhino_60ds": 1
 	}
 }
