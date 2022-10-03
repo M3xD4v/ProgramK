@@ -1,5 +1,6 @@
 import {container, DependencyContainer} from "tsyringe";
 import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
+import { ConfigServer } from "@spt-aki/servers/ConfigServer";
 import {ILogger} from "@spt-aki/models/spt/utils/ILogger";
 import {JsonUtil} from "@spt-aki/utils/JsonUtil";
 import { IPreAkiLoadMod } from "@spt-aki/models/external/IPreAkiLoadMod";
@@ -65,6 +66,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
 
     public postDBLoad(container: DependencyContainer): void {
         const databaseModule = require("./databaseModule");
+        const weaponImplementation = require("./weaponImplementation");
         const StocksOverhaul = require("./StocksOverhaul")
         const databaseServer = container.resolve < DatabaseServer > ("DatabaseServer");
         const tables = databaseServer.getTables();
@@ -88,9 +90,10 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
             this.createItem(itemsToAdd[itemInJson].id, itemsToAdd[itemInJson].cloneID, itemsToAdd[itemInJson].bundle, itemsToAdd[itemInJson].fullName, itemsToAdd[itemInJson].shortName, itemsToAdd[itemInJson].description, items, global);
         }
 
-
+        database.globals.config.Mastering[3].Templates.push("VPO208RIFLE");
         databaseModule.execute()
         StocksOverhaul.execute()
+        weaponImplementation.execute()
         database.templates.items["5447a9cd4bdc2dbd208b4567"]._props.Foldable = true
         database.templates.items["5447a9cd4bdc2dbd208b4567"]._props.FoldedSlot = "mod_stock"
         database.templates.items["5447a9cd4bdc2dbd208b4567"]._props.Slots[3]._props.filters[0].Filter.push("5bcf0213d4351e0085327c17");
@@ -195,8 +198,8 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
 		Object.values(assort2.items).map((item)=>{
             const logger = container.resolve < ILogger > ("WinstonLogger");
 			
-            if (item.upd && 2+2 == 3){
-                if (item.upd.UnlimitedCount) {
+            if (item.upd){
+                if (item.upd.UnlimitedCount && 2+2==3) {
                     function filterById(jsonObject, id) {return jsonObject.filter(function(jsonObject) {return (jsonObject['_id'] == id);})[0];}
                     const json = JSON.stringify(this.modInterKStock)
                     const sjson = JSON.parse(json)
@@ -205,7 +208,8 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
                     delete test['parentId']
                     delete test['slotId']
                     delete test['_tpl']
-                    logger.log(JSON.stringify(test) + ",", "blue") 
+                    test.loyal_level_items = 1
+                   // logger.log(JSON.stringify(test) + ",", "blue") 
                 }
                 if (item.upd.UnlimitedCount) {
 
@@ -214,7 +218,9 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
                         const sjson = JSON.parse(json)
                         var selectedObject = filterById(sjson['ITEM'], item._id);
                         selectedObject.upd.StackObjectsCount = selectedObject.upd.StackObjectsCount * this.modInterKConfig.StockMultiplier
-                        item = selectedObject
+                        item.upd = selectedObject.upd
+                       // logger.log(item.upd, "blue") 
+                       // logger.log(selectedObject.upd, "blue") 
 
                 }
             }
@@ -223,12 +229,22 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
 			if(item.parentId =="hideout"){  //check if its not part of a preset
                 const IKConfig = this.modInterKConfig
                 const indivItem = assort2.barter_scheme[item._id]
+                const json = JSON.stringify(this.modInterKStock)
+                const sjson = JSON.parse(json)
+                function filterById(jsonObject, id) {return jsonObject.filter(function(jsonObject) {return (jsonObject['_id'] == id);})[0];}
+                var selectedObject = filterById(sjson['ITEM'], item._id);
                 indivItem[0][0].count = this.modConfigPrices[item._id]
                 indivItem[0][0].count = indivItem[0][0].count * IKConfig.PriceMultiplier
 
                // logger.log(`"` +  item._id + `"` +":" + indivItem[0][0].count + `,` , "yellow")
 				assort1.barter_scheme[item._id] = assort2.barter_scheme[item._id];
-				assort1.loyal_level_items[item._id] = assort2.loyal_level_items[item._id];
+                if (this.modInterKConfig.BalancedLoyaltyLevels == true) 
+                {
+                    assort1.loyal_level_items[item._id] = selectedObject.loyal_level_items
+                }
+				else {
+                    assort1.loyal_level_items[item._id] = 1
+                }
 			}
 		});
 		return assort1;
