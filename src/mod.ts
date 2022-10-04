@@ -258,36 +258,36 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
     }
 
     createItemHandbookEntry(i_id, i_category, i_fprice, i_handbook) {
-        //add item to handbook
+
         const logger = container.resolve < ILogger > ("WinstonLogger");
-        //  logger.info("Adding item to handbook: " + i_id);
+   
 
         i_handbook.push({
             "Id": i_id,
             "ParentId": i_category,
             "Price": i_fprice
         });
-        //  logger.success("Item successfully added to handbook: " + i_id);
+     
     }
 
     createItem(i_id, i_clone, i_path, i_lname, i_sname, i_desc, i_items, i_global) {
         const JsonUtil = container.resolve < JsonUtil > ("JsonUtil");
         const logger = container.resolve < ILogger > ("WinstonLogger");
         const item = JsonUtil.clone(i_items[i_clone]);
-        //logger.info("Adding item to database: " + i_id);
 
-        //global changes for all new items
+
+
         item._id = i_id;
         item._props.Prefab.path = i_path;
 
 
-        //special changes for those specified within
+
         for (const propsToEdit in itemsToAdd[i_id].propOverrides) {
             item._props[propsToEdit] = itemsToAdd[i_id].propOverrides[propsToEdit];
         }
 
 
-        //add custom item names to all languages/locales
+
         for (const localeID in i_global) {
             i_global[localeID].templates[i_id] = {
                 "Name": i_lname,
@@ -296,9 +296,8 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
             };
         }
 
-        //finally add the new item to the database
         i_items[i_id] = item;
-        //  logger.success("Item added to database successfully: " + i_id);
+ 
     }
 
 

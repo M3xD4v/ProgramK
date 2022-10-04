@@ -1,0 +1,143 @@
+{
+    "PRESET_MCX556": {
+        "_changeWeaponName": false,
+        "_encyclopedia": "MCX556",
+        "_id": "PRESET_MCX5565",
+        "_items": [
+          {
+            "_id": "PRESET_MCX556",
+            "_tpl": "MCX556",
+            "upd": {
+              "FireMode": {
+                "FireMode": "single"
+              }
+            }
+          },
+          {
+            "_id": "8a0db644e63ed9767bf32da4",
+            "_tpl": "55802f5d4bdc2dac148b458f",
+            "parentId": "PRESET_MCX556",
+            "slotId": "mod_pistol_grip"
+          },
+          {
+            "_id": "d36210871b68f8ee48c5263d",
+            "_tpl": "55d4887d4bdc2d962f8b4570",
+            "parentId": "PRESET_MCX556",
+            "slotId": "mod_magazine"
+          },
+          {
+            "_id": "2cd8658e8ad84c1de2f07158",
+            "_tpl": "MCX556UPPER",
+            "parentId": "PRESET_MCX556",
+            "slotId": "mod_reciever"
+          },
+          {
+            "_id": "2db451a8652ad51c33ca3b29",
+            "_tpl": "5fbcc429900b1d5091531dd7",
+            "parentId": "PRESET_MCX556",
+            "slotId": "mod_stock"
+          },
+          {
+            "_id": "282abc56fc9fa6574fb7c995",
+            "_tpl": "5fbcc640016cce60e8341acc",
+            "parentId": "PRESET_MCX556",
+            "slotId": "mod_charge"
+          },
+          {
+            "_id": "b884309d0270eec1f676b8a9",
+            "_tpl": "MCX556_171_barrel",
+            "parentId": "2cd8658e8ad84c1de2f07158",
+            "slotId": "mod_barrel"
+          },
+          {
+            "_id": "10f0e0a2e1ab601f33bb537e",
+            "_tpl": "5fbc226eca32ed67276c155d",
+            "parentId": "2cd8658e8ad84c1de2f07158",
+            "slotId": "mod_handguard"
+          },
+          {
+            "_id": "31bdef41b7a521a20a0cf4d3",
+            "_tpl": "5c0fafb6d174af02a96260ba",
+            "parentId": "b884309d0270eec1f676b8a9",
+            "slotId": "mod_muzzle"
+          },
+          {
+            "_id": "b3114d4f3b4db988ca66ee5d",
+            "_tpl": "5fbc210bf24b94483f726481",
+            "parentId": "b884309d0270eec1f676b8a9",
+            "slotId": "mod_gas_block"
+          }
+        ],
+        "_name": "MCX Virtus Default",
+        "_parent": "PRESET_MCX556",
+        "_type": "Preset"
+      },
+      "PRESET_STM556": {
+          "_changeWeaponName": false,
+          "_encyclopedia": "STM556",
+          "_id": "PRESET_STM556_ID",
+          "_items": [
+            {
+		"_id": "PRESET_STM556",
+		"_tpl": "STM556",
+    "upd": {
+      "FireMode": {
+        "FireMode": "single"
+      }
+    }
+	},
+	{
+		"_id": "3456345234234234",
+		"_tpl": "55d4b9964bdc2d1d4e8b456e",
+		"parentId": "PRESET_STM556",
+		"slotId": "mod_pistol_grip"
+	},
+	{
+		"_id": "7653453445324534",
+		"_tpl": "55d4887d4bdc2d962f8b4570",
+		"parentId": "PRESET_STM556",
+		"slotId": "mod_magazine"
+	},
+	{
+		"_id": "STMUPPER556",
+		"_tpl": "STM556_upper",
+		"parentId": "PRESET_STM556",
+		"slotId": "mod_reciever"
+	},
+	{
+		"_id": "765345344536524534",
+		"_tpl": "5c0faeddd174af02a962601f",
+		"parentId": "PRESET_STM556",
+		"slotId": "mod_stock"
+	},
+	{
+		"_id": "324256634534",
+		"_tpl": "5c0faf68d174af02a96260b8",
+		"parentId": "PRESET_STM556",
+		"slotId": "mod_charge"
+	},
+	{
+		"_id": "3242566345343452342",
+		"_tpl": "barrelSTM556_406mm",
+		"parentId": "STMUPPER556",
+		"slotId": "mod_barrel"
+	},
+	{
+		"_id": "324256634534345345342342",
+		"_tpl": "6034e3d953a60014f970617b",
+		"parentId": "STMUPPER556",
+		"slotId": "mod_handguard"
+	},
+	{
+		"_id": "32425663453234345345342342",
+		"_tpl": "602e620f9b513876d4338d9a",
+		"parentId": "765345344536524534",
+		"slotId": "mod_stock_000"
+	}
+          ],
+          "_name": "STM556 Default",
+          "_parent": "PRESET_STM556",
+          "_type": "Preset"
+        }
+
+}
