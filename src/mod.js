@@ -40,6 +40,19 @@ class Mod {
         this.modConfigPrices = require("../config/Prices.json");
         this.modInterKStock = require("../config/TraderStock.json");
         this.modName = this.modConfig.ModName;
+        if (this.modConfig.ItemCustomColors == false) {
+            for (const key in itemsToAdd) {
+                const ITM = itemsToAdd[key];
+                if (ITM.propOverrides !== undefined) {
+                    if (Object.keys(ITM.propOverrides).length > 1) {
+                        delete ITM.propOverrides["BackgroundColor"];
+                    }
+                    else {
+                        delete ITM.propOverrides;
+                    }
+                }
+            }
+        }
         //Loading TraderBase
         let traderBasePath = this.modPath + "/db/base/base.json";
         if (fs.existsSync(traderBasePath)) {
@@ -63,7 +76,14 @@ class Mod {
         const items = database.templates.items;
         const handbook = database.templates.handbook.Items;
         const global = database.locales.global;
-        const traders = database.traders;
+        const cServer = container.resolve("ConfigServer");
+        const ragfairConfig = cServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
+        const traderConfig = cServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
+        const traderC = {
+            "traderId": "newTraderId",
+            "seconds": 3600
+        };
+        ragfairConfig.traders.newTraderId = true;
         logger.log("Program K Loaded", "yellow");
         const Prices = this.modConfigPrices;
         for (const itemInJson in itemsToAdd) {
@@ -77,9 +97,6 @@ class Mod {
         databaseModule.execute();
         StocksOverhaul.execute();
         weaponImplementation.execute();
-        database.templates.items["5447a9cd4bdc2dbd208b4567"]._props.Foldable = true;
-        database.templates.items["5447a9cd4bdc2dbd208b4567"]._props.FoldedSlot = "mod_stock";
-        database.templates.items["5447a9cd4bdc2dbd208b4567"]._props.Slots[3]._props.filters[0].Filter.push("5bcf0213d4351e0085327c17");
         const jsonUtil = container.resolve("JsonUtil");
         // Add the new trader to the trader lists in DatabaseServer
         tables.traders[this.traderBase._id] = {
@@ -214,29 +231,22 @@ class Mod {
         return filtersIncludeAttachment;
     }
     createItemHandbookEntry(i_id, i_category, i_fprice, i_handbook) {
-        //add item to handbook
         const logger = tsyringe_1.container.resolve("WinstonLogger");
-        //  logger.info("Adding item to handbook: " + i_id);
         i_handbook.push({
             "Id": i_id,
             "ParentId": i_category,
             "Price": i_fprice
         });
-        //  logger.success("Item successfully added to handbook: " + i_id);
     }
     createItem(i_id, i_clone, i_path, i_lname, i_sname, i_desc, i_items, i_global) {
         const JsonUtil = tsyringe_1.container.resolve("JsonUtil");
         const logger = tsyringe_1.container.resolve("WinstonLogger");
         const item = JsonUtil.clone(i_items[i_clone]);
-        //logger.info("Adding item to database: " + i_id);
-        //global changes for all new items
         item._id = i_id;
         item._props.Prefab.path = i_path;
-        //special changes for those specified within
         for (const propsToEdit in itemsToAdd[i_id].propOverrides) {
             item._props[propsToEdit] = itemsToAdd[i_id].propOverrides[propsToEdit];
         }
-        //add custom item names to all languages/locales
         for (const localeID in i_global) {
             i_global[localeID].templates[i_id] = {
                 "Name": i_lname,
@@ -244,9 +254,7 @@ class Mod {
                 "Description": i_desc
             };
         }
-        //finally add the new item to the database
         i_items[i_id] = item;
-        //  logger.success("Item added to database successfully: " + i_id);
     }
 }
 module.exports = {

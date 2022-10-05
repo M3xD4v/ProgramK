@@ -1,143 +1,744 @@
 {
-    "PRESET_MCX556": {
-        "_changeWeaponName": false,
-        "_encyclopedia": "MCX556",
-        "_id": "PRESET_MCX5565",
-        "_items": [
-          {
-            "_id": "PRESET_MCX556",
-            "_tpl": "MCX556",
-            "upd": {
-              "FireMode": {
-                "FireMode": "single"
-              }
-            }
-          },
-          {
-            "_id": "8a0db644e63ed9767bf32da4",
-            "_tpl": "55802f5d4bdc2dac148b458f",
-            "parentId": "PRESET_MCX556",
-            "slotId": "mod_pistol_grip"
-          },
-          {
-            "_id": "d36210871b68f8ee48c5263d",
-            "_tpl": "55d4887d4bdc2d962f8b4570",
-            "parentId": "PRESET_MCX556",
-            "slotId": "mod_magazine"
-          },
-          {
-            "_id": "2cd8658e8ad84c1de2f07158",
-            "_tpl": "MCX556UPPER",
-            "parentId": "PRESET_MCX556",
-            "slotId": "mod_reciever"
-          },
-          {
-            "_id": "2db451a8652ad51c33ca3b29",
-            "_tpl": "5fbcc429900b1d5091531dd7",
-            "parentId": "PRESET_MCX556",
-            "slotId": "mod_stock"
-          },
-          {
-            "_id": "282abc56fc9fa6574fb7c995",
-            "_tpl": "5fbcc640016cce60e8341acc",
-            "parentId": "PRESET_MCX556",
-            "slotId": "mod_charge"
-          },
-          {
-            "_id": "b884309d0270eec1f676b8a9",
-            "_tpl": "MCX556_171_barrel",
-            "parentId": "2cd8658e8ad84c1de2f07158",
-            "slotId": "mod_barrel"
-          },
-          {
-            "_id": "10f0e0a2e1ab601f33bb537e",
-            "_tpl": "5fbc226eca32ed67276c155d",
-            "parentId": "2cd8658e8ad84c1de2f07158",
-            "slotId": "mod_handguard"
-          },
-          {
-            "_id": "31bdef41b7a521a20a0cf4d3",
-            "_tpl": "5c0fafb6d174af02a96260ba",
-            "parentId": "b884309d0270eec1f676b8a9",
-            "slotId": "mod_muzzle"
-          },
-          {
-            "_id": "b3114d4f3b4db988ca66ee5d",
-            "_tpl": "5fbc210bf24b94483f726481",
-            "parentId": "b884309d0270eec1f676b8a9",
-            "slotId": "mod_gas_block"
+  "PRESET_STM366": {
+    "_changeWeaponName": false,
+    "_encyclopedia": "STM366",
+    "_id": "PRESET_STM366",
+    "_items": [
+      {
+        "_id": "PRESET_STM366",
+        "_tpl": "STM366",
+        "upd": {
+          "FireMode": {
+            "FireMode": "single"
           }
-        ],
-        "_name": "MCX Virtus Default",
-        "_parent": "PRESET_MCX556",
-        "_type": "Preset"
-      },
-      "PRESET_STM556": {
-          "_changeWeaponName": false,
-          "_encyclopedia": "STM556",
-          "_id": "PRESET_STM556_ID",
-          "_items": [
-            {
-		"_id": "PRESET_STM556",
-		"_tpl": "STM556",
-    "upd": {
-      "FireMode": {
-        "FireMode": "single"
-      }
-    }
-	},
-	{
-		"_id": "3456345234234234",
-		"_tpl": "55d4b9964bdc2d1d4e8b456e",
-		"parentId": "PRESET_STM556",
-		"slotId": "mod_pistol_grip"
-	},
-	{
-		"_id": "7653453445324534",
-		"_tpl": "55d4887d4bdc2d962f8b4570",
-		"parentId": "PRESET_STM556",
-		"slotId": "mod_magazine"
-	},
-	{
-		"_id": "STMUPPER556",
-		"_tpl": "STM556_upper",
-		"parentId": "PRESET_STM556",
-		"slotId": "mod_reciever"
-	},
-	{
-		"_id": "765345344536524534",
-		"_tpl": "5c0faeddd174af02a962601f",
-		"parentId": "PRESET_STM556",
-		"slotId": "mod_stock"
-	},
-	{
-		"_id": "324256634534",
-		"_tpl": "5c0faf68d174af02a96260b8",
-		"parentId": "PRESET_STM556",
-		"slotId": "mod_charge"
-	},
-	{
-		"_id": "3242566345343452342",
-		"_tpl": "barrelSTM556_406mm",
-		"parentId": "STMUPPER556",
-		"slotId": "mod_barrel"
-	},
-	{
-		"_id": "324256634534345345342342",
-		"_tpl": "6034e3d953a60014f970617b",
-		"parentId": "STMUPPER556",
-		"slotId": "mod_handguard"
-	},
-	{
-		"_id": "32425663453234345345342342",
-		"_tpl": "602e620f9b513876d4338d9a",
-		"parentId": "765345344536524534",
-		"slotId": "mod_stock_000"
-	}
-          ],
-          "_name": "STM556 Default",
-          "_parent": "PRESET_STM556",
-          "_type": "Preset"
         }
-
+      },
+      {
+        "_id": "dd3cc84f5e055ed4f2f14af4",
+        "_tpl": "55d4b9964bdc2d1d4e8b456e",
+        "parentId": "PRESET_STM366",
+        "slotId": "mod_pistol_grip"
+      },
+      {
+        "_id": "cc191676f9038afab5764fa8",
+        "_tpl": "STM366Mag",
+        "parentId": "PRESET_STM366",
+        "slotId": "mod_magazine"
+      },
+      {
+        "_id": "99e160d917d0935e8c85089d",
+        "_tpl": "STM366_upper",
+        "parentId": "PRESET_STM366",
+        "slotId": "mod_reciever"
+      },
+      {
+        "_id": "9c0abef88f28f635cc47dbde",
+        "_tpl": "5c0faeddd174af02a962601f",
+        "parentId": "PRESET_STM366",
+        "slotId": "mod_stock"
+      },
+      {
+        "_id": "1302cb59e7fcdacfa0329661",
+        "_tpl": "5c0faf68d174af02a96260b8",
+        "parentId": "PRESET_STM366",
+        "slotId": "mod_charge"
+      },
+      {
+        "_id": "de40f934b3078859ab60a6f3",
+        "_tpl": "barrelSTM_406mm",
+        "parentId": "99e160d917d0935e8c85089d",
+        "slotId": "mod_barrel"
+      },
+      {
+        "_id": "2e228a67ed747d93f59ba505",
+        "_tpl": "6034e3d953a60014f970617b",
+        "parentId": "99e160d917d0935e8c85089d",
+        "slotId": "mod_handguard"
+      },
+      {
+        "_id": "825b500e2c6d187e57e0c6ea",
+        "_tpl": "602e620f9b513876d4338d9a",
+        "parentId": "9c0abef88f28f635cc47dbde",
+        "slotId": "mod_stock_000"
+      }
+    ],
+    "_name": "STM366",
+    "_parent": "PRESET_STM366",
+    "_type": "Preset"
+  },
+  "PRESET_STM556": {
+    "_changeWeaponName": false,
+    "_encyclopedia": "STM556",
+    "_id": "PRESET_STM556",
+    "_items": [
+      {
+        "_id": "PRESET_STM556",
+        "_tpl": "STM556",
+        "upd": {
+          "FireMode": {
+            "FireMode": "single"
+          }
+        }
+      },
+      {
+        "_id": "3456345234234234",
+        "_tpl": "55d4b9964bdc2d1d4e8b456e",
+        "parentId": "PRESET_STM556",
+        "slotId": "mod_pistol_grip"
+      },
+      {
+        "_id": "7653453445324534",
+        "_tpl": "55d4887d4bdc2d962f8b4570",
+        "parentId": "PRESET_STM556",
+        "slotId": "mod_magazine"
+      },
+      {
+        "_id": "STMUPPER556",
+        "_tpl": "STM556_upper",
+        "parentId": "PRESET_STM556",
+        "slotId": "mod_reciever"
+      },
+      {
+        "_id": "765345344536524534",
+        "_tpl": "5c0faeddd174af02a962601f",
+        "parentId": "PRESET_STM556",
+        "slotId": "mod_stock"
+      },
+      {
+        "_id": "324256634534",
+        "_tpl": "5c0faf68d174af02a96260b8",
+        "parentId": "PRESET_STM556",
+        "slotId": "mod_charge"
+      },
+      {
+        "_id": "3242566345343452342",
+        "_tpl": "barrelSTM556_406mm",
+        "parentId": "STMUPPER556",
+        "slotId": "mod_barrel"
+      },
+      {
+        "_id": "324256634534345345342342",
+        "_tpl": "6034e3d953a60014f970617b",
+        "parentId": "STMUPPER556",
+        "slotId": "mod_handguard"
+      },
+      {
+        "_id": "32425663453234345345342342",
+        "_tpl": "602e620f9b513876d4338d9a",
+        "parentId": "765345344536524534",
+        "slotId": "mod_stock_000"
+      }
+    ],
+    "_name": "STM556",
+    "_parent": "PRESET_STM556",
+    "_type": "Preset"
+  },
+  "PRESET_MCX556": {
+    "_changeWeaponName": false,
+    "_encyclopedia": "MCX556",
+    "_id": "PRESET_MCX556",
+    "_items": [
+      {
+        "_id": "PRESET_MCX556",
+        "_tpl": "MCX556",
+        "upd": {
+          "FireMode": {
+            "FireMode": "single"
+          }
+        }
+      },
+      {
+        "_id": "8a0db644e63ed9767bf32da4",
+        "_tpl": "55802f5d4bdc2dac148b458f",
+        "parentId": "PRESET_MCX556",
+        "slotId": "mod_pistol_grip"
+      },
+      {
+        "_id": "d36210871b68f8ee48c5263d",
+        "_tpl": "55d4887d4bdc2d962f8b4570",
+        "parentId": "PRESET_MCX556",
+        "slotId": "mod_magazine"
+      },
+      {
+        "_id": "2cd8658e8ad84c1de2f07158",
+        "_tpl": "MCX556UPPER",
+        "parentId": "PRESET_MCX556",
+        "slotId": "mod_reciever"
+      },
+      {
+        "_id": "2db451a8652ad51c33ca3b29",
+        "_tpl": "5fbcc429900b1d5091531dd7",
+        "parentId": "PRESET_MCX556",
+        "slotId": "mod_stock"
+      },
+      {
+        "_id": "282abc56fc9fa6574fb7c995",
+        "_tpl": "5fbcc640016cce60e8341acc",
+        "parentId": "PRESET_MCX556",
+        "slotId": "mod_charge"
+      },
+      {
+        "_id": "b884309d0270eec1f676b8a9",
+        "_tpl": "MCX556_171_barrel",
+        "parentId": "2cd8658e8ad84c1de2f07158",
+        "slotId": "mod_barrel"
+      },
+      {
+        "_id": "10f0e0a2e1ab601f33bb537e",
+        "_tpl": "5fbc226eca32ed67276c155d",
+        "parentId": "2cd8658e8ad84c1de2f07158",
+        "slotId": "mod_handguard"
+      },
+      {
+        "_id": "31bdef41b7a521a20a0cf4d3",
+        "_tpl": "5c0fafb6d174af02a96260ba",
+        "parentId": "b884309d0270eec1f676b8a9",
+        "slotId": "mod_muzzle"
+      },
+      {
+        "_id": "b3114d4f3b4db988ca66ee5d",
+        "_tpl": "5fbc210bf24b94483f726481",
+        "parentId": "b884309d0270eec1f676b8a9",
+        "slotId": "mod_gas_block"
+      }
+    ],
+    "_name": "MCX556",
+    "_parent": "PRESET_MCX556",
+    "_type": "Preset"
+  },  
+  "PRESET_remington338": {
+    "_changeWeaponName": false,
+    "_encyclopedia": "remington338",
+    "_id": "PRESET_remington338",
+    "_items": [
+      {
+        "_id": "PRESET_remington338",
+        "_tpl": "remington338",
+        "upd": {
+          "FireMode": {
+            "FireMode": "single"
+          }
+        }
+      },
+      {
+        "_id": "8801fd9a6eaec4bc48224a2d",
+        "_tpl": "rem338Mag5",
+        "parentId": "PRESET_remington338",
+        "slotId": "mod_magazine"
+      },
+      {
+        "_id": "6db8aa85db9989629244dddd",
+        "_tpl": "rem338woodenstock",
+        "parentId": "PRESET_remington338",
+        "slotId": "mod_stock"
+      },
+      {
+        "_id": "374d9f3c6b871f6243098b61",
+        "_tpl": "rem338_508mmheavy",
+        "parentId": "PRESET_remington338",
+        "slotId": "mod_barrel"
+      }
+    ],
+    "_name": "remington338",
+    "_parent": "PRESET_remington338",
+    "_type": "Preset"
+  },
+  "PRESET_SOC-97R": {
+    "_changeWeaponName": false,
+    "_encyclopedia": "SOC-97R",
+    "_id": "PRESET_SOC-97R",
+    "_items": [
+      {
+        "_id": "PRESET_SOC-97R",
+        "_tpl": "SOC-97R",
+        "upd": {
+          "FireMode": {
+            "FireMode": "single"
+          }
+        }
+      },
+      {
+        "_id": "ce969fe973ee4861e162c205",
+        "_tpl": "5c5039be2e221602b177c9ff",
+        "parentId": "PRESET_SOC-97R",
+        "slotId": "mod_gas_block"
+      },
+      {
+        "_id": "6b3813f873ef2fc6b6c0a9a8",
+        "_tpl": "5c503d0a2e221602b542b7ef",
+        "parentId": "PRESET_SOC-97R",
+        "slotId": "mod_reciever"
+      },
+      {
+        "_id": "3d09c3d857482b2a78c9c6c6",
+        "_tpl": "5c503b1c2e221602b21d6e9d",
+        "parentId": "PRESET_SOC-97R",
+        "slotId": "mod_sight_rear",
+        "upd": {
+          "Sight": {
+            "ScopesCurrentCalibPointIndexes": [
+              0
+            ],
+            "ScopesSelectedModes": [
+              0
+            ],
+            "SelectedScope": 0
+          }
+        }
+      },
+      {
+        "_id": "b8413fd71d14058eefce9bf9",
+        "_tpl": "5c503af12e221602b177ca02",
+        "parentId": "PRESET_SOC-97R",
+        "slotId": "mod_stock"
+      },
+      {
+        "_id": "8e30f9f2d13609bd81cb0e36",
+        "_tpl": "5c503ac82e221602b21d6e9a",
+        "parentId": "PRESET_SOC-97R",
+        "slotId": "mod_magazine"
+      }
+    ],
+    "_name": "SOC-97R",
+    "_parent": "PRESET_SOC-97R",
+    "_type": "Preset"
+  },
+  "PRESET_TG2A": {
+    "_changeWeaponName": false,
+    "_encyclopedia": "TG2",
+    "_id": "PRESET_TG2A",
+    "_items": [
+      {
+        "_id": "PRESET_TG2A",
+        "_tpl": "TG2",
+        "upd": {
+          "FireMode": {
+            "FireMode": "single"
+          }
+        }
+      },
+      {
+        "_id": "803ab1ea72c3476950c5995e",
+        "_tpl": "59e649f986f77411d949b246",
+        "parentId": "PRESET_TG2A",
+        "slotId": "mod_gas_block"
+      },
+      {
+        "_id": "9d77bfd0ff1cc235c28f1d19",
+        "_tpl": "5649ade84bdc2d1b2b8b4587",
+        "parentId": "PRESET_TG2A",
+        "slotId": "mod_pistol_grip"
+      },
+      {
+        "_id": "47243d64ccb37f9ecd778e28",
+        "_tpl": "5ac50da15acfc4001718d287",
+        "parentId": "PRESET_TG2A",
+        "slotId": "mod_reciever"
+      },
+      {
+        "_id": "013b788fc2dae9b3fe3b8f02",
+        "_tpl": "5ac733a45acfc400192630e2",
+        "parentId": "PRESET_TG2A",
+        "slotId": "mod_sight_rear",
+        "upd": {
+          "Sight": {
+            "ScopesCurrentCalibPointIndexes": [
+              0
+            ],
+            "ScopesSelectedModes": [
+              0
+            ],
+            "SelectedScope": 0
+          }
+        }
+      },
+      {
+        "_id": "1c83ec7bfef1145a0550b174",
+        "_tpl": "5ac50c185acfc400163398d4",
+        "parentId": "PRESET_TG2A",
+        "slotId": "mod_stock"
+      },
+      {
+        "_id": "d8c90438232eab6558acae55",
+        "_tpl": "59d6272486f77466146386ff",
+        "parentId": "PRESET_TG2A",
+        "slotId": "mod_magazine"
+      },
+      {
+        "_id": "432340b5d78567d99473bcd3",
+        "_tpl": "5648b1504bdc2d9d488b4584",
+        "parentId": "803ab1ea72c3476950c5995e",
+        "slotId": "mod_handguard"
+      }
+    ],
+    "_name": "TG2",
+    "_parent": "PRESET_TG2A",
+    "_type": "Preset"
+  },
+  "PRESET_VEPRPIONEER": {
+    "_changeWeaponName": false,
+    "_encyclopedia": "VEPRPIONEER",
+    "_id": "PRESET_VEPRPIONEER",
+    "_items": [
+      {
+        "_id": "PRESET_VEPRPIONEER",
+        "_tpl": "VEPRPIONEER",
+        "upd": {
+          "FireMode": {
+            "FireMode": "single"
+          }
+        }
+      },
+      {
+        "_id": "fdf4c6f46e566b017f1ab0a9",
+        "_tpl": "5c5039be2e221602b177c9ff",
+        "parentId": "PRESET_VEPRPIONEER",
+        "slotId": "mod_gas_block"
+      },
+      {
+        "_id": "a7fc210995937f52b1bc5475",
+        "_tpl": "5c503d0a2e221602b542b7ef",
+        "parentId": "PRESET_VEPRPIONEER",
+        "slotId": "mod_reciever"
+      },
+      {
+        "_id": "c7da68020e9be98315031a8b",
+        "_tpl": "5c503b1c2e221602b21d6e9d",
+        "parentId": "PRESET_VEPRPIONEER",
+        "slotId": "mod_sight_rear",
+        "upd": {
+          "Sight": {
+            "ScopesCurrentCalibPointIndexes": [
+              0
+            ],
+            "ScopesSelectedModes": [
+              0
+            ],
+            "SelectedScope": 0
+          }
+        }
+      },
+      {
+        "_id": "cfc7e97ad2cf6a17e274d0ea",
+        "_tpl": "5c503af12e221602b177ca02",
+        "parentId": "PRESET_VEPRPIONEER",
+        "slotId": "mod_stock"
+      },
+      {
+        "_id": "310f9b34121cffbec903778a",
+        "_tpl": "5c503ac82e221602b21d6e9a",
+        "parentId": "PRESET_VEPRPIONEER",
+        "slotId": "mod_magazine"
+      }
+    ],
+    "_name": "VEPRPIONEER",
+    "_parent": "PRESET_VEPRPIONEER",
+    "_type": "Preset"
+  },
+  "PRESET_vpo192": {
+    "_changeWeaponName": false,
+    "_encyclopedia": "vpo192",
+    "_id": "PRESET_vpo192",
+    "_items": [
+      {
+        "_id": "PRESET_vpo192",
+        "_tpl": "vpo192",
+        "upd": {
+          "FireMode": {
+            "FireMode": "single"
+          }
+        }
+      },
+      {
+        "_id": "e7edb17d77a51f22f23d3cb5",
+        "_tpl": "vpo192mag",
+        "parentId": "PRESET_vpo192",
+        "slotId": "mod_magazine"
+      },
+      {
+        "_id": "85f7af4efcfee6b20a0b0f5b",
+        "_tpl": "5de655be4a9f347bc92edb88",
+        "parentId": "PRESET_vpo192",
+        "slotId": "mod_stock"
+      },
+      {
+        "_id": "f04dcb63a3a7a8e2d8b6ed1b",
+        "_tpl": "barrel_vpo193_420mm",
+        "parentId": "PRESET_vpo192",
+        "slotId": "mod_barrel"
+      }
+    ],
+    "_name": "vpo192",
+    "_parent": "PRESET_vpo192",
+    "_type": "Preset"
+  },
+  "PRESET_VPO208RIFLE": {
+    "_changeWeaponName": false,
+    "_encyclopedia": "VPO208RIFLE",
+    "_id": "PRESET_VPO208RIFLE",
+    "_items": [
+      {
+        "_id": "PRESET_VPO208RIFLE",
+        "_tpl": "VPO208RIFLE",
+        "upd": {
+          "FireMode": {
+            "FireMode": "single"
+          }
+        }
+      },
+      {
+        "_id": "97e3a61180f2255b0143b0c1",
+        "_tpl": "VPO208STOCK",
+        "parentId": "PRESET_VPO208RIFLE",
+        "slotId": "mod_stock"
+      },
+      {
+        "_id": "28fb6ff20484eb5175774020",
+        "_tpl": "574db213245977459a2f3f5d",
+        "parentId": "PRESET_VPO208RIFLE",
+        "slotId": "mod_sight_rear",
+        "upd": {
+          "Sight": {
+            "ScopesCurrentCalibPointIndexes": [
+              0
+            ],
+            "ScopesSelectedModes": [
+              0
+            ],
+            "SelectedScope": 0
+          }
+        }
+      },
+      {
+        "_id": "a4edf12c5beb476bf641acc4",
+        "_tpl": "587df3a12459772c28142567",
+        "parentId": "PRESET_VPO208RIFLE",
+        "slotId": "mod_magazine"
+      }
+    ],
+    "_name": "VPO208RIFLE",
+    "_parent": "PRESET_VPO208RIFLE",
+    "_type": "Preset"
+  },
+  "PRESET_VPO212": {
+    "_changeWeaponName": false,
+    "_encyclopedia": "VPO212",
+    "_id": "PRESET_VPO212",
+    "_items": [
+      {
+        "_id": "PRESET_VPO212",
+        "_tpl": "VPO212",
+        "upd": {
+          "FireMode": {
+            "FireMode": "single"
+          }
+        }
+      },
+      {
+        "_id": "9244e4779434946726b00886",
+        "_tpl": "5c5039be2e221602b177c9ff",
+        "parentId": "PRESET_VPO212",
+        "slotId": "mod_gas_block"
+      },
+      {
+        "_id": "8fc642831242a1151b0db1e0",
+        "_tpl": "5c503d0a2e221602b542b7ef",
+        "parentId": "PRESET_VPO212",
+        "slotId": "mod_reciever"
+      },
+      {
+        "_id": "1689d819bf8e06e186f1ec11",
+        "_tpl": "5c503b1c2e221602b21d6e9d",
+        "parentId": "PRESET_VPO212",
+        "slotId": "mod_sight_rear",
+        "upd": {
+          "Sight": {
+            "ScopesCurrentCalibPointIndexes": [
+              0
+            ],
+            "ScopesSelectedModes": [
+              0
+            ],
+            "SelectedScope": 0
+          }
+        }
+      },
+      {
+        "_id": "e6347324b8a4900e482880d6",
+        "_tpl": "5c503af12e221602b177ca02",
+        "parentId": "PRESET_VPO212",
+        "slotId": "mod_stock"
+      },
+      {
+        "_id": "f01ae369895da8f2dec1942a",
+        "_tpl": "5c503ac82e221602b21d6e9a",
+        "parentId": "PRESET_VPO212",
+        "slotId": "mod_magazine"
+      }
+    ],
+    "_name": "VPO212",
+    "_parent": "PRESET_VPO212",
+    "_type": "Preset"
+  },
+  "PRESET_rhino_40ds": {
+    "_changeWeaponName": false,
+    "_encyclopedia": "weapon_chiappa_rhino_40ds_9x33R",
+    "_id": "PRESET_rhino_40ds",
+    "_items": [
+      {
+        "_id": "PRESET_rhino_40ds",
+        "_tpl": "weapon_chiappa_rhino_40ds_9x33R",
+        "upd": {
+          "FireMode": {
+            "FireMode": "single"
+          }
+        }
+      },
+      {
+        "_id": "23eaebc6661e2d3b077999cf",
+        "_tpl": "619f54a1d25cbd424731fb99",
+        "parentId": "PRESET_rhino_40ds",
+        "slotId": "mod_magazine"
+      },
+      {
+        "_id": "e9ebdae2d7e3f9a0beacd82c",
+        "_tpl": "619f4cee4c58466fe1228435",
+        "parentId": "PRESET_rhino_40ds",
+        "slotId": "mod_sight_rear",
+        "upd": {
+          "Sight": {
+            "ScopesCurrentCalibPointIndexes": [
+              0
+            ],
+            "ScopesSelectedModes": [
+              0
+            ],
+            "SelectedScope": 0
+          }
+        }
+      },
+      {
+        "_id": "d16f66e52f27244497fe44de",
+        "_tpl": "619f4d304c58466fe1228437",
+        "parentId": "PRESET_rhino_40ds",
+        "slotId": "mod_sight_front",
+        "upd": {
+          "Sight": {
+            "ScopesCurrentCalibPointIndexes": [
+              0
+            ],
+            "ScopesSelectedModes": [
+              0
+            ],
+            "SelectedScope": 0
+          }
+        }
+      },
+      {
+        "_id": "1e08313f7188bb44192af385",
+        "_tpl": "619f4bffd25cbd424731fb97",
+        "parentId": "PRESET_rhino_40ds",
+        "slotId": "mod_pistol_grip"
+      }
+    ],
+    "_name": "weapon_chiappa_rhino_200ds_9x33R",
+    "_parent": "PRESET_rhino_40ds",
+    "_type": "Preset"
+  },
+  "PRESET_rhino_200ds": {
+    "_changeWeaponName": false,
+    "_encyclopedia": "weapon_chiappa_rhino_200ds_9x33R",
+    "_id": "PRESET_rhino_200ds",
+    "_items": [
+      {
+        "_id": "PRESET_rhino_200ds",
+        "_tpl": "weapon_chiappa_rhino_200ds_9x33R",
+        "upd": {
+          "FireMode": {
+            "FireMode": "single"
+          }
+        }
+      },
+      {
+        "_id": "6f17da379476963824eceac7",
+        "_tpl": "619f54a1d25cbd424731fb99",
+        "parentId": "PRESET_rhino_200ds",
+        "slotId": "mod_magazine"
+      },
+      {
+        "_id": "56c69db59a7fa3fc3afd2733",
+        "_tpl": "619f4d304c58466fe1228437",
+        "parentId": "PRESET_rhino_200ds",
+        "slotId": "mod_sight_front",
+        "upd": {
+          "Sight": {
+            "ScopesCurrentCalibPointIndexes": [
+              0
+            ],
+            "ScopesSelectedModes": [
+              0
+            ],
+            "SelectedScope": 0
+          }
+        }
+      },
+      {
+        "_id": "4",
+        "_tpl": "619f4bffd25cbd424731fb97",
+        "parentId": "PRESET_rhino_200ds",
+        "slotId": "mod_pistol_grip"
+      }
+    ],
+    "_name": "weapon_chiappa_rhino_200ds_9x33R",
+    "_parent": "PRESET_rhino_200ds",
+    "_type": "Preset"
+  },
+  "PRESET_rhino_60ds": {
+    "_changeWeaponName": false,
+    "_encyclopedia": "weapon_chiappa_rhino_60ds_9x33R",
+    "_id": "PRESET_rhino_60ds",
+    "_items": [
+      {
+        "_id": "PRESET_rhino_60ds",
+        "_tpl": "weapon_chiappa_rhino_60ds_9x33R",
+        "upd": {
+          "FireMode": {
+            "FireMode": "single"
+          }
+        }
+      },
+      {
+        "_id": "6f17da379476963824eceac7",
+        "_tpl": "619f54a1d25cbd424731fb99",
+        "parentId": "PRESET_rhino_60ds",
+        "slotId": "mod_magazine"
+      },
+      {
+        "_id": "56c69db59a7fa3fc3afd2733",
+        "_tpl": "619f4d304c58466fe1228437",
+        "parentId": "PRESET_rhino_60ds",
+        "slotId": "mod_sight_front",
+        "upd": {
+          "Sight": {
+            "ScopesCurrentCalibPointIndexes": [
+              0
+            ],
+            "ScopesSelectedModes": [
+              0
+            ],
+            "SelectedScope": 0
+          }
+        }
+      },
+      {
+        "_id": "4",
+        "_tpl": "619f4bffd25cbd424731fb97",
+        "parentId": "PRESET_rhino_60ds",
+        "slotId": "mod_pistol_grip"
+      }
+    ],
+    "_name": "weapon_chiappa_rhino_60ds_9x33R",
+    "_parent": "PRESET_rhino_60ds",
+    "_type": "Preset"
+  }
 }

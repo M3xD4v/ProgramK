@@ -17,10 +17,6 @@
 	"PRESET_MCX556": 53020,
 	"PRESET_SOC-97R": 41223,
 	"PRESET_STM366": 31232,
-	"STM366": 18632,
-	"STM556": 23320,
-	"STM366_upper": 4535,
-	"STM556_upper": 5653,
 	"PRESET_STM556": 38232,
 	"PRESET_TG2A": 37432,
 	"PRESET_VEPRPIONEER": 48329,
@@ -63,5 +59,21 @@
 	"rem338woodenstock": 4532,
 	"vortex_spitfire_hd_x3": 24122,
 	"vortex_spitfire_hd_x5": 27122,
-	"vpo192mag": 2232
+	"vpo192mag": 2232,
+
+	"VPO208RIFLE": 41000,
+	"STM366": 41000,
+	"STM556": 48000,
+	"STM366_upper": 5634,
+	"STM556_upper": 7563,
+	"SOC-97R": 50000,
+	"VPO212": 41000,
+	"MCX556":63000,
+	"remington338":59000,
+	"VEPRPIONEER": 58000,
+	"TG2":47000,
+	"weapon_chiappa_rhino_200ds_9x33R":22000,
+	"weapon_chiappa_rhino_40ds_9x33R":24000,
+	"weapon_chiappa_rhino_60ds_9x33R":27000,
+	"vpo192":26000
 }

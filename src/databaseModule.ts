@@ -1,15 +1,18 @@
 import {container, DependencyContainer} from "tsyringe";
 import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
 import {ILogger} from "@spt-aki/models/spt/utils/ILogger";
+import * as itemsToAdd from "../IDs/IDs.json";
+
 
 function execute() {
+
+    
 
     const databaseServer = container.resolve < DatabaseServer > ("DatabaseServer");
     const tables = databaseServer.getTables();
     const logger = container.resolve < ILogger > ("WinstonLogger");
     const database = databaseServer.getTables();
     const items = database.templates.items;
-
     const _366mags = [
         "61695095d92c473c7702147a",
         "5c5970672e221602b21d7855",

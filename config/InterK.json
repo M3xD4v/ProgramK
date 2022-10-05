@@ -1,6 +1,6 @@
 {
     "PriceMultiplier": 1,
-    "TraderUpdateTimeInSec": 10,
+    "TraderUpdateTimeInSec": 3600,
     "StockMultiplier": 1,
     "BalancedLoyaltyLevels": true
 }

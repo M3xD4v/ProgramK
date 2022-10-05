@@ -23,26 +23,6 @@ function execute() {
         const ps = this.presets[preset];
         const id = ps._id;
         database.globals.ItemPresets[preset] = ps;
-        const barter = [[
-                {
-                    "_tpl": "5449016a4bdc2d6f028b456f",
-                    "count": 94691
-                },
-            ]
-        ];
-        database.traders["ragfair"].assort.barter_scheme[id] = barter;
-        database.traders["ragfair"].assort.loyal_level_items[id] = 1;
-        let itm = this.presets[preset];
-        itm._items[0].upd = ["upd", {
-                "StackObjectsCount": 99999999,
-                "UnlimitedCount": true
-            }];
-        itm._items[0].parentId = "hideout";
-        itm._items[0].slotId = "hideout";
-        for (let i = 0; i < itm._items.length; i++) {
-            database.traders["ragfair"].assort.items[id] = itm._items[0];
-            logger.log(database.traders["ragfair"].assort.items[id], "blue");
-        }
     }
 }
 // add the code below

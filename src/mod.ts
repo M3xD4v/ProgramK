@@ -6,7 +6,6 @@ import {JsonUtil} from "@spt-aki/utils/JsonUtil";
 import { IPreAkiLoadMod } from "@spt-aki/models/external/IPreAkiLoadMod";
 import { IPostDBLoadMod } from "@spt-aki/models/external/IPostDBLoadMod";
 import { ImageRouter } from "@spt-aki/routers/ImageRouter";
-import { ConfigServer } from "@spt-aki/servers/ConfigServer";
 import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
 import { ITraderAssort, ITraderBase } from "@spt-aki/models/eft/common/tables/ITrader";
 import { ITraderConfig, UpdateTime } from "@spt-aki/models/spt/config/ITraderConfig";
@@ -38,14 +37,24 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
 
     public preAkiLoad(container: DependencyContainer): void {
         this.logger = container.resolve<ILogger>("WinstonLogger");
-
         //Loading Config
         this.modConfig = require("../config/config.json");
         this.modInterKConfig= require("../config/InterK.json");
         this.modConfigPrices = require("../config/Prices.json");
         this.modInterKStock = require("../config/TraderStock.json");
         this.modName = this.modConfig.ModName;
-
+        if (this.modConfig.ItemCustomColors == false)
+        {        for(const key in itemsToAdd) {
+            const ITM = itemsToAdd[key]
+            if (ITM.propOverrides !== undefined){
+               if (Object.keys(ITM.propOverrides).length > 1 ){
+                delete ITM.propOverrides["BackgroundColor"]
+               }
+               else {
+                delete ITM.propOverrides
+               }
+            }
+        }}
         //Loading TraderBase
         let traderBasePath = this.modPath+"/db/base/base.json";
         if(fs.existsSync(traderBasePath)){
@@ -75,11 +84,17 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         const items = database.templates.items;
         const handbook = database.templates.handbook.Items;
         const global = database.locales.global;
-        const traders = database.traders;
+        const cServer = container.resolve<ConfigServer>("ConfigServer");
+        const ragfairConfig = cServer.getConfig<ITraderConfig>(ConfigTypes.RAGFAIR);
+        const traderConfig = cServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
 
+        const traderC =         {
+            "traderId": "newTraderId",
+            "seconds": 3600
+        }
+        ragfairConfig.traders.newTraderId = true
 
         logger.log("Program K Loaded", "yellow");
-
 
         const Prices = this.modConfigPrices
         for (const itemInJson in itemsToAdd) {
@@ -94,9 +109,6 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         databaseModule.execute()
         StocksOverhaul.execute()
         weaponImplementation.execute()
-        database.templates.items["5447a9cd4bdc2dbd208b4567"]._props.Foldable = true
-        database.templates.items["5447a9cd4bdc2dbd208b4567"]._props.FoldedSlot = "mod_stock"
-        database.templates.items["5447a9cd4bdc2dbd208b4567"]._props.Slots[3]._props.filters[0].Filter.push("5bcf0213d4351e0085327c17");
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
 
 
