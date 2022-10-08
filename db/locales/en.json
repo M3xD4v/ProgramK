@@ -1,0 +1,16 @@
+{
+   "quest":{
+      "q1":{
+         "name":"Wipe Day",
+         "description":"Hey, merc, you are just in time, you are exactly who I need. Take a VPO 208 .366 rifle and some ammo. This place became a real nasty place, its horrible. You need to clean this shit up there are a ton of fucking rats called scavs roaming around. Kill some of them using the VPO 208 rifle and come back to me for a reward.... ",
+         "note":"",
+         "failMessageText":"You failed me..",
+         "startedMessageText":"Hey, merc, you are just in time, you are exactly who I need. Take a VPO 208 .366 rifle and some ammo. This place became a real nasty place, its horrible. You need to clean this shit up there are a ton of fucking rats called scavs roaming around. Kill some of them using the VPO 208 rifle and come back to me for a reward.... ",
+         "successMessageText":"Hm. You got the job done here is your reward. Come back for more jobs and rewards...",
+         "conditions":{
+            "843583":"Butcher Scavs all over the Tarkov territory using a VPO 208 rifle"
+         },
+         "location":"any"
+      }
+   }
+}

@@ -260,9 +260,9 @@
          "_id":"366MUZZLEBRAKE",
          "upd":{
             "UnlimitedCount":false,
-            "StackObjectsCount":6
+            "StackObjectsCount":3
          },
-         "loyal_level_items":3
+         "loyal_level_items":2
       },
       {
          "_id":"76239Rotor",

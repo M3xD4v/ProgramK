@@ -1,0 +1,200 @@
+{
+  "q1": {
+    "QuestName": "Wipe Day",
+    "_id": "q1",
+    "canShowNotificationsInGame": true,
+    "changeQuestMessageText": "q1 changeQuestMessageText",
+    "conditions": {
+      "AvailableForFinish": [
+        {
+          "_parent": "CounterCreator",
+          "_props": {
+            "counter": {
+              "conditions": [
+                {
+                  "_parent": "Kills",
+                  "_props": {
+                    "compareMethod": ">=",
+                    "id": "843583",
+                    "target": "Savage",
+                    "value": "1",
+                    "weapon": [
+                      "VPO208RIFLE"
+                    ]
+                  }
+                }
+              ],
+              "id": "5967379186f77463860dadd5"
+            },
+            "doNotResetIfCounterCompleted": false,
+            "dynamicLocale": false,
+            "id": "843583",
+            "index": 0,
+            "oneSessionOnly": false,
+            "parentId": "",
+            "type": "Elimination",
+            "value": "5",
+            "visibilityConditions": []
+          },
+          "dynamicLocale": false
+        }
+      ],
+      "AvailableForStart": [
+        {
+          "_parent": "Level",
+          "_props": {
+            "compareMethod": ">=",
+            "dynamicLocale": false,
+            "id": "5981a09b86f77455537a65ac",
+            "index": 0,
+            "parentId": "",
+            "value": 1,
+            "visibilityConditions": []
+          },
+          "dynamicLocale": false
+        }
+      ],
+      "Fail": []
+    },
+    "description": "q1 description",
+    "failMessageText": "q1 failMessageText",
+    "image": "/files/quest/icon/q1.jpg",
+    "instantComplete": false,
+    "isKey": false,
+    "location": "any",
+    "name": "q1 name",
+    "note": "q1",
+    "restartable": false,
+    "rewards": {
+      "Fail": [],
+      "Started": [],
+      "Success": [
+        {
+          "id": "5fe305df8a67d12f5f24c8aa",
+          "index": 0,
+          "type": "Experience",
+          "value": "1960"
+        },
+        {
+          "findInRaid": true,
+          "id": "5fe305d9c646836c3b6fc562",
+          "index": 1,
+          "items": [
+            {
+              "_id": "62eed265dd61076fac65a095",
+              "_tpl": "5449016a4bdc2d6f028b456f",
+              "upd": {
+                "StackObjectsCount": 19000
+              }
+            }
+          ],
+          "target": "62eed265dd61076fac65a095",
+          "type": "Item",
+          "value": "19000"
+        },
+        {
+          "findInRaid": true,
+          "id": "1234",
+          "index": 2,
+          "items": [
+            {
+              "_id": "PRESET_TG2A",
+              "_tpl": "TG2",
+              "upd": {
+                "StackObjectsCount": 1
+              }
+            },
+            {
+              "_id": "803ab1ea72c3476950c5995e",
+              "_tpl": "59e649f986f77411d949b246",
+              "parentId": "PRESET_TG2A",
+              "slotId": "mod_gas_block"
+            },
+            {
+              "_id": "9d77bfd0ff1cc235c28f1d19",
+              "_tpl": "5649ade84bdc2d1b2b8b4587",
+              "parentId": "PRESET_TG2A",
+              "slotId": "mod_pistol_grip"
+            },
+            {
+              "_id": "47243d64ccb37f9ecd778e28",
+              "_tpl": "5ac50da15acfc4001718d287",
+              "parentId": "PRESET_TG2A",
+              "slotId": "mod_reciever"
+            },
+            {
+              "_id": "013b788fc2dae9b3fe3b8f02",
+              "_tpl": "5ac733a45acfc400192630e2",
+              "parentId": "PRESET_TG2A",
+              "slotId": "mod_sight_rear",
+              "upd": {
+                "Sight": {
+                  "ScopesCurrentCalibPointIndexes": [
+                    0
+                  ],
+                  "ScopesSelectedModes": [
+                    0
+                  ],
+                  "SelectedScope": 0
+                }
+              }
+            },
+            {
+              "_id": "1c83ec7bfef1145a0550b174",
+              "_tpl": "5ac50c185acfc400163398d4",
+              "parentId": "PRESET_TG2A",
+              "slotId": "mod_stock"
+            },
+            {
+              "_id": "d8c90438232eab6558acae55",
+              "_tpl": "59d6272486f77466146386ff",
+              "parentId": "PRESET_TG2A",
+              "slotId": "mod_magazine"
+            },
+            {
+              "_id": "432340b5d78567d99473bcd3",
+              "_tpl": "5648b1504bdc2d9d488b4584",
+              "parentId": "803ab1ea72c3476950c5995e",
+              "slotId": "mod_handguard"
+            }
+          ],
+          "target": "PRESET_TG2A",
+          "type": "Item",
+          "value": "1"
+        },
+        {
+          "findInRaid": true,
+          "id": "60cb467f7c496e588343a193",
+          "index": 3,
+          "items": [
+            {
+              "_id": "62eed265dd61076fac65a099",
+              "_tpl": "366DGW",
+              "upd": {
+                "StackObjectsCount": 60
+              }
+            }
+          ],
+          "target": "62eed265dd61076fac65a099",
+          "type": "Item",
+          "value": "60"
+        },
+        {
+          "id": "60c89c0c80b2027f403dd992",
+          "index": 4,
+          "target": "newTraderId",
+          "type": "TraderStanding",
+          "value": "0.06"
+        }
+      ]
+    },
+    "secretQuest": false,
+    "side": "Pmc",
+    "startedMessageText": "q1 startedMessageText",
+    "successMessageText": "q1 successMessageText",
+    "templateId": "q1",
+    "traderId": "newTraderId",
+    "type": "Elimination"
+  }
+  
+}

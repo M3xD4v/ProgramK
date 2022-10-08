@@ -17,7 +17,6 @@ import * as path from 'path';
 import * as fs from 'fs';
 
 
-
 class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
 
     logger: ILogger
@@ -77,6 +76,8 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         const databaseModule = require("./databaseModule");
         const weaponImplementation = require("./weaponImplementation");
         const StocksOverhaul = require("./StocksOverhaul")
+        const quests = require("./quests");
+
         const databaseServer = container.resolve < DatabaseServer > ("DatabaseServer");
         const tables = databaseServer.getTables();
         const logger = container.resolve < ILogger > ("WinstonLogger");
@@ -86,16 +87,19 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         const global = database.locales.global;
         const cServer = container.resolve<ConfigServer>("ConfigServer");
         const ragfairConfig = cServer.getConfig<ITraderConfig>(ConfigTypes.RAGFAIR);
-        const traderConfig = cServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
-
-        const traderC =         {
-            "traderId": "newTraderId",
-            "seconds": 3600
-        }
+        const questConfig = cServer.getConfig<ITraderConfig>(ConfigTypes.QUEST);
         ragfairConfig.traders.newTraderId = true
+        const dailyquests = {
+            "traderId": "newTraderId",
+            "questTypes": [
+                "Completion",
+                "Exploration",
+                "Elimination"
+            ]}
+        questConfig.repeatableQuests[0].traderWhitelist.push(dailyquests)
+
 
         logger.log("Program K Loaded", "yellow");
-
         const Prices = this.modConfigPrices
         for (const itemInJson in itemsToAdd) {
             if (itemsToAdd[itemInJson].id === undefined) {
@@ -105,10 +109,11 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
             this.createItem(itemsToAdd[itemInJson].id, itemsToAdd[itemInJson].cloneID, itemsToAdd[itemInJson].bundle, itemsToAdd[itemInJson].fullName, itemsToAdd[itemInJson].shortName, itemsToAdd[itemInJson].description, items, global);
         }
 
-        database.globals.config.Mastering[3].Templates.push("VPO208RIFLE");
         databaseModule.execute()
         StocksOverhaul.execute()
         weaponImplementation.execute()
+        quests.execute()
+        
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
 
 
