@@ -1,0 +1,14 @@
+If anyone wants to translate ProgramK, all you need to do is copy en.json and basically translate it. Afterwards you need to rename the new copied file to the language it is translated to
+Example:
+
+-Copy en.json
+-Translate the contents of en.json to japanese for Example
+-Rename the new copied file to jp.json
+
+If you wish to translate programK DM me and I will explain it better! thanks!
+Discord: K4_a#1534
+Available languages:
+"ch", "cz", "en", "en-mx", "es", "fr", "ge", "hu", "it", "jp", "pl", "po", "ru", "sk", "tu"
+
+
+Do not touch repeatableQuest

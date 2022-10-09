@@ -36,12 +36,12 @@ function execute() {
     const logger = tsyringe_1.container.resolve("WinstonLogger");
     const fs = require("fs");
     const localesArray = [
-        "ch", "cz", "en", "en-mx", "es", "fr", "ge", "hu", "it", "jp", "pl", "po", "ru", "sk", "tu"
+        "ch", "cz", "en", "es-mx", "es", "fr", "ge", "hu", "it", "jp", "pl", "po", "ru", "sk", "tu"
     ];
     for (const lng in localesArray) {
         const localPath = modPath + "/db/locales/" + localesArray[lng] + ".json";
         if (fs.existsSync(localPath)) {
-            logger.log("Program K Avaiable languages: " + localesArray[lng], "blue");
+            logger.log("Program K Avaiable languages: " + localesArray[lng], "yellow");
             const local = require(localPath);
             for (const i in local) {
                 const SPTLocale = locales[localesArray[lng]];
@@ -52,6 +52,31 @@ function execute() {
                         const imageRouter = tsyringe_1.container.resolve("ImageRouter");
                         const resFolderPath = modPath + "/res/quests/" + x + ".jpg";
                         imageRouter.addRoute("/files/quest/icon/" + x, resFolderPath);
+                        active[x] = aa[x];
+                    }
+                }
+                if (i == "repeatableQuest") {
+                    for (const x in aa) {
+                        active[x] = aa[x];
+                    }
+                }
+            }
+        }
+        else {
+            const englishLocale = modPath + "/db/locales/" + "en" + ".json";
+            const local = require(englishLocale);
+            logger.log("ProgramK" + localesArray[lng] + " locale gets overwritten in english", "blue");
+            for (const i in local) {
+                const SPTLocale = locales[localesArray[lng]];
+                const active = SPTLocale[i];
+                const aa = local[i];
+                if (i == "quest") {
+                    for (const x in aa) {
+                        active[x] = aa[x];
+                    }
+                }
+                if (i == "repeatableQuest") {
+                    for (const x in aa) {
                         active[x] = aa[x];
                     }
                 }

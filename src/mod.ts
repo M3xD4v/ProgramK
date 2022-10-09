@@ -76,6 +76,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         const databaseModule = require("./databaseModule");
         const weaponImplementation = require("./weaponImplementation");
         const StocksOverhaul = require("./StocksOverhaul")
+        const looseLoot = require("./looseLoot")
         const quests = require("./quests");
 
         const databaseServer = container.resolve < DatabaseServer > ("DatabaseServer");
@@ -112,6 +113,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         databaseModule.execute()
         StocksOverhaul.execute()
         weaponImplementation.execute()
+        looseLoot.execute()
         quests.execute()
         
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");

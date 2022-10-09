@@ -36,9 +36,9 @@
 	"gridHeight": 300,
 	"loyaltyLevels": [
 		{
-			"minLevel": 1,
+			"minLevel": 0,
 			"minSalesSum": 0,
-			"minStanding": 0.2,
+			"minStanding": 0,
 			"buy_price_coef": 55,
 			"repair_price_coef": 150,
 			"insurance_price_coef": 10,

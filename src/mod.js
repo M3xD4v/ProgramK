@@ -69,6 +69,7 @@ class Mod {
         const databaseModule = require("./databaseModule");
         const weaponImplementation = require("./weaponImplementation");
         const StocksOverhaul = require("./StocksOverhaul");
+        const looseLoot = require("./looseLoot");
         const quests = require("./quests");
         const databaseServer = container.resolve("DatabaseServer");
         const tables = databaseServer.getTables();
@@ -102,6 +103,7 @@ class Mod {
         databaseModule.execute();
         StocksOverhaul.execute();
         weaponImplementation.execute();
+        looseLoot.execute();
         quests.execute();
         const jsonUtil = container.resolve("JsonUtil");
         // Add the new trader to the trader lists in DatabaseServer

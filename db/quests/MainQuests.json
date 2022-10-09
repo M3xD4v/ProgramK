@@ -1,6 +1,6 @@
 {
   "q1": {
-    "QuestName": "Wipe Day",
+    "QuestName": "Wipe Day - Part 1",
     "_id": "q1",
     "canShowNotificationsInGame": true,
     "changeQuestMessageText": "q1 changeQuestMessageText",
@@ -195,6 +195,492 @@
     "templateId": "q1",
     "traderId": "newTraderId",
     "type": "Elimination"
+  },
+  "q2": {
+    "QuestName": "Annex1",
+    "_id": "q2",
+    "canShowNotificationsInGame": true,
+    "changeQuestMessageText": "q2 changeQuestMessageText",
+    "conditions": {
+      "AvailableForFinish": [
+        {
+          "_parent": "FindItem",
+          "_props": {
+            "dogtagLevel": 0,
+            "dynamicLocale": false,
+            "id": "q2Cond1",
+            "index": 0,
+            "maxDurability": 100,
+            "minDurability": 0,
+            "onlyFoundInRaid": false,
+            "parentId": "",
+            "target": [
+              "60915994c49cf53e4772cc38"
+            ],
+            "value": "1",
+            "visibilityConditions": []
+          },
+          "dynamicLocale": false
+        },
+        {
+          "_parent": "HandoverItem",
+          "_props": {
+            "dogtagLevel": 0,
+            "dynamicLocale": false,
+            "id": "q2Cond2",
+            "index": 1,
+            "maxDurability": 100,
+            "minDurability": 0,
+            "onlyFoundInRaid": false,
+            "parentId": "",
+            "target": [
+              "60915994c49cf53e4772cc38"
+            ],
+            "value": "1",
+            "visibilityConditions": [
+              {
+                "_parent": "CompleteCondition",
+                "_props": {
+                  "id": "5234432",
+                  "target": "q2Cond1"
+                }
+              }
+            ]
+          },
+          "dynamicLocale": false
+        }
+      ],
+      "AvailableForStart": [
+        {
+          "_parent": "Level",
+          "_props": {
+            "compareMethod": ">=",
+            "dynamicLocale": false,
+            "id": "76575",
+            "index": 0,
+            "parentId": "",
+            "value": 1,
+            "visibilityConditions": []
+          },
+          "dynamicLocale": false
+        },
+        {
+          "_parent": "Quest",
+          "_props": {
+            "availableAfter": 0,
+            "dynamicLocale": false,
+            "id": "51d33b2d4fad9e61441772c0",
+            "index": 1,
+            "parentId": "",
+            "status": [
+              4
+            ],
+            "target": "q1",
+            "visibilityConditions": []
+          },
+          "dynamicLocale": false
+        }
+      ],
+      "Fail": []
+    },
+    "description": "q2 description",
+    "failMessageText": "q2 failMessageText",
+    "image": "/files/quest/icon/q2.jpg",
+    "instantComplete": false,
+    "isKey": false,
+    "location": "any",
+    "name": "q2 name",
+    "note": "q2",
+    "restartable": false,
+    "rewards": {
+      "Fail": [],
+      "Started": [],
+      "Success": [
+        {
+          "id": "5fe305df8a67d12f5f24c8aa",
+          "index": 0,
+          "type": "Experience",
+          "value": "2500"
+        },
+        {
+          "id": "532",
+          "index": 1,
+          "items": [
+            {
+              "_id": "PRESET_STM556",
+              "_tpl": "STM556",
+              "upd": {
+                "FireMode": {
+                  "FireMode": "single"
+                }
+              }
+            },
+            {
+              "_id": "3456345234234234",
+              "_tpl": "55d4b9964bdc2d1d4e8b456e",
+              "parentId": "PRESET_STM556",
+              "slotId": "mod_pistol_grip"
+            },
+            {
+              "_id": "7653453445324534",
+              "_tpl": "55d4887d4bdc2d962f8b4570",
+              "parentId": "PRESET_STM556",
+              "slotId": "mod_magazine"
+            },
+            {
+              "_id": "STMUPPER556",
+              "_tpl": "STM556_upper",
+              "parentId": "PRESET_STM556",
+              "slotId": "mod_reciever"
+            },
+            {
+              "_id": "765345344536524534",
+              "_tpl": "5c0faeddd174af02a962601f",
+              "parentId": "PRESET_STM556",
+              "slotId": "mod_stock"
+            },
+            {
+              "_id": "324256634534",
+              "_tpl": "5c0faf68d174af02a96260b8",
+              "parentId": "PRESET_STM556",
+              "slotId": "mod_charge"
+            },
+            {
+              "_id": "3242566345343452342",
+              "_tpl": "barrelSTM556_406mm",
+              "parentId": "STMUPPER556",
+              "slotId": "mod_barrel"
+            },
+            {
+              "_id": "324256634534345345342342",
+              "_tpl": "6034e3d953a60014f970617b",
+              "parentId": "STMUPPER556",
+              "slotId": "mod_handguard"
+            },
+            {
+              "_id": "32425663453234345345342342",
+              "_tpl": "602e620f9b513876d4338d9a",
+              "parentId": "765345344536524534",
+              "slotId": "mod_stock_000"
+            }
+          ],
+          "loyaltyLevel": 1,
+          "target": "PRESET_STM556",
+          "traderId": "newTraderId",
+          "type": "AssortmentUnlock"
+        },
+        {
+          "findInRaid": true,
+          "id": "54325",
+          "index": 2,
+          "items": [
+            {
+              "_id": "62eed265dd61076fac65a095",
+              "_tpl": "5449016a4bdc2d6f028b456f",
+              "upd": {
+                "StackObjectsCount": 19000
+              }
+            }
+          ],
+          "target": "62eed265dd61076fac65a095",
+          "type": "Item",
+          "value": "15000"
+        },
+        {
+          "findInRaid": true,
+          "id": "12364",
+          "index": 3,
+          "items": [
+            {
+              "_id": "PRESET_rhino_200ds",
+              "_tpl": "weapon_chiappa_rhino_200ds_9x33R",
+              "upd": {
+                "StackObjectsCount": 1
+              }
+            },
+            {
+              "_id": "6f17da379476963824eceac7",
+              "_tpl": "619f54a1d25cbd424731fb99",
+              "parentId": "PRESET_rhino_200ds",
+              "slotId": "mod_magazine"
+            },
+            {
+              "_id": "56c69db59a7fa3fc3afd2733",
+              "_tpl": "619f4d304c58466fe1228437",
+              "parentId": "PRESET_rhino_200ds",
+              "slotId": "mod_sight_front",
+              "upd": {
+                "Sight": {
+                  "ScopesCurrentCalibPointIndexes": [
+                    0
+                  ],
+                  "ScopesSelectedModes": [
+                    0
+                  ],
+                  "SelectedScope": 0
+                }
+              }
+            },
+            {
+              "_id": "4",
+              "_tpl": "619f4bffd25cbd424731fb97",
+              "parentId": "PRESET_rhino_200ds",
+              "slotId": "mod_pistol_grip"
+            }
+          ],
+          "target": "PRESET_rhino_200ds",
+          "type": "Item",
+          "value": "1"
+        },
+        {
+          "id": "60c89c0c80b2027f403dd992",
+          "index": 5,
+          "target": "newTraderId",
+          "type": "TraderStanding",
+          "value": "0.04"
+        },
+        {
+          "findInRaid": true,
+          "id": "54325",
+          "index": 4,
+          "items": [
+            {
+              "_id": "75675336775sdh",
+              "_tpl": "62330c40bdd19b369e1e53d1",
+              "upd": {
+                "StackObjectsCount": 42
+              }
+            }
+          ],
+          "target": "75675336775sdh",
+          "type": "Item",
+          "value": "42"
+        }
+      ]
+    },
+    "secretQuest": false,
+    "side": "Pmc",
+    "startedMessageText": "q2 startedMessageText",
+    "successMessageText": "q2 successMessageText",
+    "templateId": "q2",
+    "traderId": "newTraderId",
+    "type": "PickUp"
+  },
+  "q3": {
+    "QuestName": "Wipe Day - Part 2",
+    "_id": "q3",
+    "canShowNotificationsInGame": true,
+    "changeQuestMessageText": "q3 changeQuestMessageText",
+    "conditions": {
+      "AvailableForFinish": [
+        {
+          "_parent": "CounterCreator",
+          "_props": {
+            "counter": {
+              "conditions": [
+                {
+                  "_parent": "Kills",
+                  "_props": {
+                    "compareMethod": ">=",
+                    "id": "q3Cond1",
+                    "target": "Savage",
+                    "value": "1",
+                    "weapon": [
+                      "weapon_chiappa_rhino_200ds_9x33R"
+                    ]
+                  }
+                },
+                {
+                  "_parent": "Location",
+                  "_props": {
+                    "id": "59674d5a86f77446b872d5fa",
+                    "target": [
+                      "Woods"
+                    ]
+                  }
+                }
+              ],
+              "id": "5967379186f77463860dadd5"
+            },
+            "doNotResetIfCounterCompleted": false,
+            "dynamicLocale": false,
+            "id": "q3Cond1",
+            "index": 0,
+            "oneSessionOnly": false,
+            "parentId": "",
+            "type": "Elimination",
+            "value": "3",
+            "visibilityConditions": []
+          },
+          "dynamicLocale": false
+        }
+      ],
+      "AvailableForStart": [
+        {
+          "_parent": "Level",
+          "_props": {
+            "compareMethod": ">=",
+            "dynamicLocale": false,
+            "id": "5981a09b86f77455537a65ac",
+            "index": 0,
+            "parentId": "",
+            "value": 1,
+            "visibilityConditions": []
+          },
+          "dynamicLocale": false
+        },
+        {
+          "_parent": "Quest",
+          "_props": {
+            "availableAfter": 0,
+            "dynamicLocale": false,
+            "id": "51d33b2d4fad9e61441772c0",
+            "index": 1,
+            "parentId": "",
+            "status": [
+              4
+            ],
+            "target": "q2",
+            "visibilityConditions": []
+          },
+          "dynamicLocale": false
+        }
+      ],
+      "Fail": []
+    },
+    "description": "q3 description",
+    "failMessageText": "q3 failMessageText",
+    "image": "/files/quest/icon/q3.jpg",
+    "instantComplete": false,
+    "isKey": false,
+    "location": "5704e3c2d2720bac5b8b4567",
+    "name": "q3 name",
+    "note": "q3",
+    "restartable": false,
+    "rewards": {
+      "Fail": [],
+      "Started": [],
+      "Success": [
+        {
+          "id": "5fe305df8a67d12f5f24c8aa",
+          "index": 0,
+          "type": "Experience",
+          "value": "1960"
+        },
+        {
+          "findInRaid": true,
+          "id": "5fe305d9c646836c3b6fc562",
+          "index": 1,
+          "items": [
+            {
+              "_id": "62eed265dd61076fac65a095",
+              "_tpl": "5449016a4bdc2d6f028b456f",
+              "upd": {
+                "StackObjectsCount": 11253
+              }
+            }
+          ],
+          "target": "62eed265dd61076fac65a095",
+          "type": "Item",
+          "value": "11253"
+        },
+        {
+          "findInRaid": true,
+          "id": "60cb467f7c496e588343a193",
+          "index": 2,
+          "items": [
+            {
+              "_id": "62eed265dd61076fac65a099",
+              "_tpl": "62330b3ed4dc74626d570b95",
+              "upd": {
+                "StackObjectsCount": 43
+              }
+            }
+          ],
+          "target": "62eed265dd61076fac65a099",
+          "type": "Item",
+          "value": "43"
+        },
+        {
+          "id": "532",
+          "index": 1,
+          "items": [
+            {
+              "_id": "PRESET_rhino_60ds",
+              "_tpl": "weapon_chiappa_rhino_60ds_9x33R",
+              "upd": {
+                "FireMode": {
+                  "FireMode": "single"
+                }
+              }
+            },
+            {
+              "_id": "d1c723709a0a749c349e6552",
+              "_tpl": "619f54a1d25cbd424731fb99",
+              "parentId": "PRESET_rhino_60ds",
+              "slotId": "mod_magazine"
+            },
+            {
+              "_id": "c8a09bdb43aa96df2a93d081",
+              "_tpl": "619f4cee4c58466fe1228435",
+              "parentId": "PRESET_rhino_60ds",
+              "slotId": "mod_sight_rear",
+              "upd": {
+                "Sight": {
+                  "ScopesCurrentCalibPointIndexes": [
+                    0
+                  ],
+                  "ScopesSelectedModes": [
+                    0
+                  ],
+                  "SelectedScope": 0
+                }
+              }
+            },
+            {
+              "_id": "9723ef7e03ae1fb265327d67",
+              "_tpl": "619f4d304c58466fe1228437",
+              "parentId": "PRESET_rhino_60ds",
+              "slotId": "mod_sight_front",
+              "upd": {
+                "Sight": {
+                  "ScopesCurrentCalibPointIndexes": [
+                    0
+                  ],
+                  "ScopesSelectedModes": [
+                    0
+                  ],
+                  "SelectedScope": 0
+                }
+              }
+            },
+            {
+              "_id": "38a71f817791521b59577a58",
+              "_tpl": "619f4bffd25cbd424731fb97",
+              "parentId": "PRESET_rhino_60ds",
+              "slotId": "mod_pistol_grip"
+            }
+          ],
+          "loyaltyLevel": 1,
+          "target": "PRESET_rhino_60ds",
+          "traderId": "newTraderId",
+          "type": "AssortmentUnlock"
+        },
+        {
+          "id": "60c89c0c80b2027f403dd992",
+          "index": 4,
+          "target": "newTraderId",
+          "type": "TraderStanding",
+          "value": "0.05"
+        }
+      ]
+    },
+    "secretQuest": false,
+    "side": "Pmc",
+    "startedMessageText": "q3 startedMessageText",
+    "successMessageText": "q3 successMessageText",
+    "templateId": "q3",
+    "traderId": "newTraderId",
+    "type": "Elimination"
   }
-  
 }

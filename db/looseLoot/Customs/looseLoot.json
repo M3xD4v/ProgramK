@@ -1,0 +1,34 @@
+{
+    "spawnpointsForced": [
+        {
+            "locationId": "(582.3336, 3.9773, 5.5958)",
+            "probability": 1.0,
+            "template": {
+             "Id": "Test ID",
+             "IsStatic": false,
+             "useGravity": false,
+             "randomRotation": false,
+             "Position": {
+              "x": 582.3336,
+              "y": 3.9773,
+              "z": 5.5958
+             },
+             "Rotation": {
+                "x": 0,
+                "y": 135.458725,
+                "z": 0
+             },
+             "IsGroupPosition": false,
+             "GroupPositions": [],
+             "IsAlwaysSpawn": false,
+             "Root": null,
+             "Items": [
+              {
+               "_id": "randomID?",
+               "_tpl": "60915994c49cf53e4772cc38"
+              }
+             ]
+            }
+           }
+    ]
+}
