@@ -36,6 +36,30 @@
             "q3Cond1":"Kill scavs in Woods using a Rhino Chippa 200ds"
          },
          "location":"Woods"
+      },
+      "Vpo1":{
+         "name":"Vpo Gornostay - Part 1",
+         "description":"Hey solider, I have a new mission for you, Here's the deal, I need you to take some scavs on Customs using a Molot VPO-215 Rifle so you get used to it. After this come back and I will give you some modified versions of the gun to test out and perhaps some differenet attachaments...? Anyway I need you to kill some scavs from a distance of 60 meters or something about that, get a scope or something perhaps? Good luck",
+         "note":"",
+         "failMessageText":"You failed me..",
+         "startedMessageText":"Hey solider, I have a new mission for you, Here's the deal, I need you to take some scavs on Customs using a Molot VPO-215 Rifle so you get used to it. After this come back and I will give you some modified versions of the gun to test out and perhaps some differenet attachaments...? Anyway I need you to kill some scavs from a distance of 60 meters or something about that, get a scope or something perhaps? Good luck",
+         "successMessageText":"Hmm, To be honest I this rifle is not that great. I think I should get my hands on the 5.56x45mm one.",
+         "conditions":{
+            "Vpo1Cond1":"Kill scavs in Customs using a Molot VPO-215 from a distance of 60 meters"
+         },
+         "location":"Customs"
+      },
+      "Vpo2":{
+         "name":"Vpo Gornostay - Part 2",
+         "description":"Hey solider, I have a new mission for you, Here's the deal, I need you to take some scavs on Customs using a Molot VPO-215 Rifle so you get used to it. After this come back and I will give you some modified versions of the gun to test out and perhaps some differenet attachaments...? Anyway I need you to kill some scavs from a distance of 60 meters or something about that, get a scope or something perhaps? Good luck",
+         "note":"",
+         "failMessageText":"You failed me..",
+         "startedMessageText":"Hey solider, I have a new mission for you, Here's the deal, I need you to take some scavs on Customs using a Molot VPO-215 Rifle so you get used to it. After this come back and I will give you some modified versions of the gun to test out and perhaps some differenet attachaments...? Anyway I need you to kill some scavs from a distance of 60 meters or something about that, get a scope or something perhaps? Good luck",
+         "successMessageText":"Hmm, To be honest I this rifle is not that great. I think I should get my hands on the 5.56x45mm one.",
+         "conditions":{
+            "Vpo2Cond1":"Kill scavs in Shoreline using a Molot VPO-193"
+         },
+         "location":"Customs"
       }
    },
    "repeatableQuest":{

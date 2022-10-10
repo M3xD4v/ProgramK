@@ -27,8 +27,6 @@ const tsyringe_1 = require("../../../../node_modules/tsyringe");
 const path = __importStar(require("path"));
 function execute() {
     const modPath = path.normalize(path.join(__dirname, '..'));
-    const quests = require("../db/quests/MainQuests.json");
-    const questsOV = require("../db/quests/QuestOverwrites.json");
     const databaseServer = tsyringe_1.container.resolve("DatabaseServer");
     const database = databaseServer.getTables();
     const questTemplate = database.templates.quests;
@@ -83,11 +81,15 @@ function execute() {
             }
         }
     }
-    for (const Iquest in quests) {
-        questTemplate[Iquest] = quests[Iquest];
-    }
-    for (const IquestOverwrites in questsOV) {
-        questTemplate[IquestOverwrites] = questsOV[IquestOverwrites];
+    const questList = [
+        require("../db/quests/MainQuests.json"), require("../db/quests/vpoGornostay.json"), require("../db/quests/QuestOverwrites.json")
+    ];
+    for (const Iquest in questList) {
+        const quest = questList[Iquest];
+        for (const Iquest1 in quest) {
+            questTemplate[Iquest1] = quest[Iquest1];
+            //logger.log(quest[Iquest1],"red")
+        }
     }
     //logger.log(questTemplate["123"],"red")
 }

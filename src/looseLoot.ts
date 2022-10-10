@@ -15,7 +15,7 @@ function execute() {
     const CustomsForced = CustomLooseLoot.spawnpointsForced
     for (const loot in CustomsForced) {
       OGCustomLooseLoot.spawnpointsForced.push(CustomsForced[loot])
-      logger.log( OGCustomLooseLoot.spawnpointsForced,"yellow")
+      //logger.log( OGCustomLooseLoot.spawnpointsForced,"yellow")
     }
 
   }

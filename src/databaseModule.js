@@ -162,7 +162,7 @@ function execute() {
     const filtersIncludeAttachment2 = (filterArray) => filterArray.includes("5c5952732e2216398b5abda2");
     const filtersIncludeAttachment3 = (filterArray) => filterArray.includes("5ba26b17d4351e00367f9bdd");
     const filtersIncludeAttachment4 = (filterArray) => filterArray.includes("618a75c9a3884f56c957ca1b");
-    const filtersIncludeAttachment5 = (filterArray) => filterArray.includes("626bb8532c923541184624b4");
+    const filtersIncludeAttachment5 = (filterArray) => filterArray.includes("57adff4f24597737f373b6e6");
     const filtersIncludeAttachment6 = (filterArray) => filterArray.includes("5dff772da3651922b360bf91");
     for (const item of Object.values(tables.templates.items)) {
         if (isItemSlotsExist(item)) {

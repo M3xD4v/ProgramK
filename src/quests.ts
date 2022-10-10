@@ -6,8 +6,6 @@ import * as path from 'path';
 
 function execute() {
     const modPath = path.normalize(path.join(__dirname, '..'));
-    const quests = require("../db/quests/MainQuests.json");
-    const questsOV = require("../db/quests/QuestOverwrites.json");
     const databaseServer = container.resolve < DatabaseServer > ("DatabaseServer");
     const database = databaseServer.getTables();
     const questTemplate = database.templates.quests
@@ -65,12 +63,17 @@ else {
   }  
 }
     }
-    for (const Iquest in quests) {
-      questTemplate[Iquest] = quests[Iquest]
+const questList = [
+  require("../db/quests/MainQuests.json"), require("../db/quests/vpoGornostay.json"), require("../db/quests/QuestOverwrites.json")
+]
+    for (const Iquest in questList) {
+      const quest = questList[Iquest]
+      for (const Iquest1 in quest) {
+        questTemplate[Iquest1] = quest[Iquest1]
+        //logger.log(quest[Iquest1],"red")
+      }
     }
-    for (const IquestOverwrites in questsOV) {
-      questTemplate[IquestOverwrites] = questsOV[IquestOverwrites]
-    }
+
     //logger.log(questTemplate["123"],"red")
   }
 
