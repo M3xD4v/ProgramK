@@ -40,12 +40,12 @@ function execute() {
               active[x] = aa[x]
             }
           }
-        }  
+        }
 }
 else {
   const englishLocale = modPath + "/db/locales/" + "en" + ".json"
   const local = require(englishLocale);
-  logger.log("ProgramK" + localesArray[lng] + " locale gets overwritten in english", "blue")
+  logger.log("ProgramK " + localesArray[lng] + " locale gets overwritten in english", "blue")
   for (const i in local) {
     const SPTLocale = locales[localesArray[lng]]
     const active = SPTLocale[i]
@@ -60,7 +60,7 @@ else {
         active[x] = aa[x]
       }
     }
-  }  
+  }
 }
     }
 const questList = [
