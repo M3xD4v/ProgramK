@@ -49,6 +49,16 @@
 				"UnlimitedCount": true,
 				"StackObjectsCount": 999999
 			}
+		},
+		{
+			"_id": "NCSTARLONG_FOREGRIP",
+			"_tpl": "NCSTARLONG_FOREGRIP",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
 		}
 	],
 	"barter_scheme": {
@@ -91,6 +101,14 @@
 					"_tpl": "5449016a4bdc2d6f028b456f"
 				}
 			]
+		],
+		"NCSTARLONG_FOREGRIP": [
+			[
+				{
+					"count": 8104,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
 		]
 	},
 	
@@ -99,6 +117,7 @@
         "Leftmount_all_ncstar_mpr45": 1,
         "NCSTARLONG_LEFT": 1,
         "NCSTARLONG_RIGHT": 1,
-		"Vortex_rmr_Mount": 1
+		"Vortex_rmr_Mount": 1,
+		"NCSTARLONG_FOREGRIP": 1 
 	}
 }

@@ -487,6 +487,14 @@
             "StackObjectsCount":16
          },
          "loyal_level_items":1
+      },
+      {
+         "_id":"NCSTARLONG_FOREGRIP",
+         "upd":{
+            "UnlimitedCount":false,
+            "StackObjectsCount":16
+         },
+         "loyal_level_items":1
       }
    ]
 }

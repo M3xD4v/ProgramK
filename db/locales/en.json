@@ -20,7 +20,7 @@
          "startedMessageText":"You're back? Great, I have another mission for you this time a bit different I would say. I need you to pickup me flashdrive that is located in Customs. To be more exact the location is on a table in the checkpoint tower at the military checkpoint. Be careful there might be fucking rat scavs guarding that zone... Kill them all",
          "successMessageText":"You got it? Thanks this will be very useful for later, TerraGroup is going to hate this....",
          "conditions":{
-            "q2Cond1":"Obtain the secure flashdrive on customs",
+            "q2Cond1":"Obtain the secure document files on customs",
             "q2Cond2":"Hand Over the flashdrive"
          },
          "location":"Customs"

@@ -193,6 +193,7 @@ function execute() {
     const isModFilterExist3 = (slots) => slots.findIndex((slot) => slot._name === "mod_tactical_000");
     const isModFilterExist4 = (slots) => slots.findIndex((slot) => slot._name === "mod_sight_rear");
     const isModFilterExist5 = (slots) => slots.findIndex((slot) => slot._name === "mod_mount_000");
+    const isModFilterExist6 = (slots) => slots.findIndex((slot) => slot._name === "mod_foregrip");
 
     const isItemSlotsExist = (item) => item._props.Slots && item._props.Slots.length > 0;
 
@@ -203,7 +204,7 @@ function execute() {
     const filtersIncludeAttachment4 = (filterArray) => filterArray.includes("618a75c9a3884f56c957ca1b");
     const filtersIncludeAttachment5 = (filterArray) => filterArray.includes("57adff4f24597737f373b6e6");
     const filtersIncludeAttachment6 = (filterArray) => filterArray.includes("5dff772da3651922b360bf91");
-
+    const ForegripFilter = (filterArray) => filterArray.includes("5c7fc87d2e221644f31c0298");
     for (const item of Object.values(tables.templates.items)) {
         if (isItemSlotsExist(item)) {
             const index1 = isModFilterExist1(item._props.Slots);
@@ -211,11 +212,16 @@ function execute() {
             const index3 = isModFilterExist3(item._props.Slots);
             const index4 = isModFilterExist4(item._props.Slots);
             const index5 = isModFilterExist5(item._props.Slots);
+            const index6 = isModFilterExist6(item._props.Slots);
 
             if (index1 > -1 && item._name != "mount_all_ncstar_mpr45" && filtersIncludeAttachment(item._props.Slots[index1]._props.filters[0].Filter)) {
                 item._props.Slots[index1]._props.filters[0].Filter.push("NCSTARLONG_RIGHT");
                 item._props.Slots[index1]._props.filters[0].Filter.push("NCSTARLONG_LEFT");
                 item._props.Slots[index1]._props.filters[0].Filter.push("Leftmount_all_ncstar_mpr45");
+                //        logger.log(item._props.Name + " - - - - i1 ", "yellow");
+            }
+            if (index6 > -1 && item._name != "mount_all_ncstar_mpr45" && ForegripFilter(item._props.Slots[index6]._props.filters[0].Filter)) {
+                item._props.Slots[index6]._props.filters[0].Filter.push("NCSTARLONG_FOREGRIP");
                 //        logger.log(item._props.Name + " - - - - i1 ", "yellow");
             }
             if (index2 > -1 && item._name != "mount_all_ncstar_mpr45" && filtersIncludeAttachment2(item._props.Slots[index2]._props.filters[0].Filter)) {

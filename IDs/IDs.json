@@ -1968,6 +1968,7 @@
                "_proto":"55d30c4c4bdc2db4468b457e"
             }
          ]
+         
       }
    },
    "NCSTARLONG_RIGHT":{
@@ -2037,6 +2038,60 @@
                            "6272379924e29f06af4d5ecb",
                            "626becf9582c3e319310b837"
                         ]
+                     }
+                  ]
+               },
+               "_required":false,
+               "_mergeSlotWithChildren":false,
+               "_proto":"55d30c4c4bdc2db4468b457e"
+            }
+         ]
+      }
+   },
+   "NCSTARLONG_FOREGRIP":{
+      "id":"NCSTARLONG_FOREGRIP",
+      "cloneID":"5649a2464bdc2d91118b45a8",
+      "bundle":"right_longmount_all_ncstar_mpr45.bundle",
+      "fullName":"Right Long Ncstar Foregrip Mount",
+      "shortName":"RMPR45",
+      "description":"A universal mount by NcStar that allows installing an auxiliary foregrip at 45 degrees angle but it is rotated to the left than standard NcStar Mount.",
+      "handbookID":"5b5f755f86f77447ec5d770e",
+      "handbookPrice":2510,
+      "traderID":"InterK",
+      "traderPrice":1,
+      "currencyID":"5449016a4bdc2d6f028b456f",
+      "traderLL":1,
+      "propOverrides":{
+         "BackgroundColor":"red",
+         "Slots":[
+            {
+               "_name":"mod_scope",
+               "_id":"622efdf8ec80d870d349b4e7",
+               "_parent":"622efdf8ec80d870d349b4e5",
+               "_props":{
+                  "filters":[
+                     {
+                        "Shift":0,
+                        "Filter":[
+                           "5c7fc87d2e221644f31c0298",
+                           "5cda9bcfd7f00c0c0b53e900",
+                           "619386379fb0c665d5490dbe",
+                           "5c87ca002e221600114cb150",
+                           "59fc48e086f77463b1118392",
+                           "5fce0cf655375d18a253eff0",
+                           "5cf4fb76d7f00c065703d3ac",
+                           "558032614bdc2de7118b4585",
+                           "58c157be86f77403c74b2bb6",
+                           "58c157c886f774032749fb06",
+                           "5f6340d3ca442212f4047eb2",
+                           "591af28e86f77414a27a9e1d",
+                           "5c1bc4812e22164bef5cfde7",
+                           "5c1bc5612e221602b5429350",
+                           "5c1bc5af2e221602b412949b",
+                           "5c1bc5fb2e221602b1779b32",
+                           "5c1bc7432e221602b412949d",
+                           "5c1bc7752e221602b1779b34"
+                         ]
                      }
                   ]
                },
@@ -2403,7 +2458,8 @@
         {
           "Shift": 0,
           "Filter": [
-            "5de655be4a9f347bc92edb88"
+            "5de655be4a9f347bc92edb88",
+            "vpotestStock"
           ]
         }
       ]

@@ -27,7 +27,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
     modConfigPrices: JSON
     modInterKConfig: JSON
     modInterKStock: JSON
-    modName: string
+    TraderName: string
 
     traderBase: JSON
 
@@ -41,7 +41,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         this.modInterKConfig= require("../config/InterK.json");
         this.modConfigPrices = require("../config/Prices.json");
         this.modInterKStock = require("../config/TraderStock.json");
-        this.modName = this.modConfig.ModName;
+        this.TraderName = this.modConfig.TraderName;
         if (this.modConfig.ItemCustomColors == false)
         {        for(const key in itemsToAdd) {
             const ITM = itemsToAdd[key]
@@ -60,10 +60,10 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
             this.traderBase = require(traderBasePath);
         }
         else{
-            this.logger.error(this.modName +"required base.json missing in /db/base/");
+            this.logger.error(this.TraderName +"required base.json missing in /db/base/");
         }
 
-        this.logger.debug(`[${this.modName}] Loading... `);
+        this.logger.debug(`[${this.TraderName}] Loading... `);
 
         this.registerProfileImage(container);
         this.setupTraderUpdateTime(container);
@@ -115,7 +115,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         weaponImplementation.execute()
         looseLoot.execute()
         quests.execute()
-        
+
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
 
 
@@ -148,7 +148,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
             };
         }
         /* */
-        this.logger.debug(`[${this.modName}] Loaded`);
+        this.logger.debug(`[${this.TraderName}] Loaded`);
 
     }
 
@@ -162,14 +162,14 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         let fileCount = files.length;
 
         if(fileCount == 0){
-            this.logger.error(this.modName+": No Files in /db/assort/");
+            this.logger.error(this.TraderName+": No Files in /db/assort/");
             return assort;
         }
 
         files.forEach(file => {
             assort = this.mergeAssorts(assort,file);
         });
-        this.logger.info(this.modName+": Loaded "+fileCount+" files.");
+        this.logger.info(this.TraderName+": Loaded "+fileCount+" files.");
         return assort;
     }
 
@@ -216,7 +216,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
     private mergeAssorts(assort1: ITraderAssort,assort2: ITraderAssort): ITraderAssort{
 		Object.values(assort2.items).map((item)=>{
             const logger = container.resolve < ILogger > ("WinstonLogger");
-			
+
             if (item.upd){
                 if (item.upd.UnlimitedCount && 2+2==3) {
                     function filterById(jsonObject, id) {return jsonObject.filter(function(jsonObject) {return (jsonObject['_id'] == id);})[0];}
@@ -228,7 +228,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
                     delete test['slotId']
                     delete test['_tpl']
                     test.loyal_level_items = 1
-                   // logger.log(JSON.stringify(test) + ",", "blue") 
+                   // logger.log(JSON.stringify(test) + ",", "blue")
                 }
                 if (item.upd.UnlimitedCount) {
 
@@ -238,8 +238,8 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
                         var selectedObject = filterById(sjson['ITEM'], item._id);
                         selectedObject.upd.StackObjectsCount = selectedObject.upd.StackObjectsCount * this.modInterKConfig.StockMultiplier
                         item.upd = selectedObject.upd
-                       // logger.log(item.upd, "blue") 
-                       // logger.log(selectedObject.upd, "blue") 
+                       // logger.log(item.upd, "blue")
+                       // logger.log(selectedObject.upd, "blue")
 
                 }
             }
@@ -257,7 +257,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
 
                // logger.log(`"` +  item._id + `"` +":" + indivItem[0][0].count + `,` , "yellow")
 				assort1.barter_scheme[item._id] = assort2.barter_scheme[item._id];
-                if (this.modInterKConfig.BalancedLoyaltyLevels == true) 
+                if (this.modInterKConfig.BalancedLoyaltyLevels == true)
                 {
                     assort1.loyal_level_items[item._id] = selectedObject.loyal_level_items
                 }
@@ -279,14 +279,14 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
     createItemHandbookEntry(i_id, i_category, i_fprice, i_handbook) {
 
         const logger = container.resolve < ILogger > ("WinstonLogger");
-   
+
 
         i_handbook.push({
             "Id": i_id,
             "ParentId": i_category,
             "Price": i_fprice
         });
-     
+
     }
 
     createItem(i_id, i_clone, i_path, i_lname, i_sname, i_desc, i_items, i_global) {
@@ -316,7 +316,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         }
 
         i_items[i_id] = item;
- 
+
     }
 
 
