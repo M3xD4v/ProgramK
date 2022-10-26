@@ -1,4 +1,6 @@
 {
 	"TraderName":"InterK",
-	"ItemCustomColors" : false
+	"ItemCustomColors" : false,
+	"EnableExtraStockSlots" : true,
+	"QuestItems": false
 }

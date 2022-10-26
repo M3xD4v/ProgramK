@@ -43,7 +43,8 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         this.modInterKStock = require("../config/TraderStock.json");
         this.TraderName = this.modConfig.TraderName;
         if (this.modConfig.ItemCustomColors == false)
-        {        for(const key in itemsToAdd) {
+        {        
+            for(const key in itemsToAdd) {
             const ITM = itemsToAdd[key]
             if (ITM.propOverrides !== undefined){
                if (Object.keys(ITM.propOverrides).length > 1 ){
@@ -78,7 +79,6 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         const StocksOverhaul = require("./StocksOverhaul")
         const looseLoot = require("./looseLoot")
         const quests = require("./quests");
-
         const databaseServer = container.resolve < DatabaseServer > ("DatabaseServer");
         const tables = databaseServer.getTables();
         const logger = container.resolve < ILogger > ("WinstonLogger");
@@ -88,19 +88,25 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         const global = database.locales.global;
         const cServer = container.resolve<ConfigServer>("ConfigServer");
         const ragfairConfig = cServer.getConfig<ITraderConfig>(ConfigTypes.RAGFAIR);
-        const questConfig = cServer.getConfig<ITraderConfig>(ConfigTypes.QUEST);
         ragfairConfig.traders.newTraderId = true
-        const dailyquests = {
-            "traderId": "newTraderId",
-            "questTypes": [
-                "Completion",
-                "Exploration",
-                "Elimination"
-            ]}
-        questConfig.repeatableQuests[0].traderWhitelist.push(dailyquests)
 
 
-        logger.log("Program K Loaded", "yellow");
+        logger.log("Loading...", "cyan");
+        const logo = 
+        `
+                                                                                 
+      ▀███▀▀▀██▄                                                          ▀████▀ ▀███▀ 
+        ██   ▀██▄                                                           ██   ▄█▀   
+        ██   ▄██▀███▄███  ▄██▀██▄ ▄█▀████████▄███ ▄█▀██▄ ▀████████▄█████▄   ██ ▄█▀     
+        ███████   ██▀ ▀▀ ██▀   ▀████  ██   ██▀ ▀▀██   ██   ██    ██    ██   █████▄     
+        ██        ██     ██     ███████▀   ██     ▄█████   ██    ██    ██   ██  ███    
+        ██        ██     ██▄   ▄███        ██    ██   ██   ██    ██    ██   ██   ▀██▄  
+      ▄████▄    ▄████▄    ▀█████▀ ███████▄████▄  ▀████▀██▄████  ████  ████▄████▄   ███▄
+                                 █▀     ██                                             
+                                 ██████▀                                               
+      
+        `
+        logger.log(logo, "cyan");
         const Prices = this.modConfigPrices
         for (const itemInJson in itemsToAdd) {
             if (itemsToAdd[itemInJson].id === undefined) {
@@ -111,7 +117,21 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         }
 
         databaseModule.execute()
-        StocksOverhaul.execute()
+
+        if (this.modConfig.ItemCustomColors == true) {
+            logger.log("ProgramK: Custom item colors --- ENABLED", "magenta")
+        } else {
+            logger.log("ProgramK: Custom item colors --- DISABLED", "magenta")
+        }
+        
+        if (this.modConfig.EnableExtraStockSlots == true) {
+            StocksOverhaul.execute()
+            logger.log("ProgramK: StocksOverhaul Module --- ENABLED", "magenta")
+        } else {
+            logger.log("ProgramK: StocksOverhaul Module --- DISABLED", "magenta")
+        }
+
+
         weaponImplementation.execute()
         looseLoot.execute()
         quests.execute()
@@ -169,7 +189,6 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         files.forEach(file => {
             assort = this.mergeAssorts(assort,file);
         });
-        this.logger.info(this.TraderName+": Loaded "+fileCount+" files.");
         return assort;
     }
 

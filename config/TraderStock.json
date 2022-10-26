@@ -9,6 +9,38 @@
          "loyal_level_items":2
       },
       {
+         "_id":"ohhuntMount",
+         "upd":{
+            "UnlimitedCount":false,
+            "StackObjectsCount":120
+         },
+         "loyal_level_items":1
+      },
+      {
+         "_id":"GG&G",
+         "upd":{
+            "UnlimitedCount":false,
+            "StackObjectsCount":120
+         },
+         "loyal_level_items":1
+      },
+      {
+         "_id":"GG&G_L",
+         "upd":{
+            "UnlimitedCount":false,
+            "StackObjectsCount":120
+         },
+         "loyal_level_items":1
+      },
+      {
+         "_id":"DualBackup",
+         "upd":{
+            "UnlimitedCount":false,
+            "StackObjectsCount":120
+         },
+         "loyal_level_items":1
+      },
+      {
          "_id":"366BUCKSHOT",
          "upd":{
             "UnlimitedCount":false,

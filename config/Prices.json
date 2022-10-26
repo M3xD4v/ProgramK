@@ -77,5 +77,10 @@
 	"weapon_chiappa_rhino_200ds_9x33R":22000,
 	"weapon_chiappa_rhino_40ds_9x33R":24000,
 	"weapon_chiappa_rhino_60ds_9x33R":27000,
-	"vpo192":26000
+	"vpo192":26000,
+	"ohhuntMount": 9765,
+	"DualBackup": 9765,
+	
+	"GG&G": 1,
+	"GG&G_L": 1
 }

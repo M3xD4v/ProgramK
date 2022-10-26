@@ -230,6 +230,38 @@
                 "assets/commonassets/physics/physicsmaterials.bundle",
                 "assets/systems/effects/smoke.bundle"
             ]
+        },
+        {
+            "key":"akPicatinny.bundle",
+            "dependencyKeys":[
+                "shaders",
+                "cubemaps",
+                "assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key":"dualBackup.bundle",
+            "dependencyKeys":[
+                "shaders",
+                "cubemaps",
+                "assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key":"90DegreeOffset.bundle",
+            "dependencyKeys":[
+                "shaders",
+                "cubemaps",
+                "assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key":"90DegreeOffset_Left.bundle",
+            "dependencyKeys":[
+                "shaders",
+                "cubemaps",
+                "assets/commonassets/physics/physicsmaterials.bundle"
+            ]
         }
     ]
 }

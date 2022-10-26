@@ -191,9 +191,9 @@
          "BackgroundColor":"red",
          "StackMaxSize":50,
          "ProjectileCount":8,
-         "ArmorDamage":35,
+         "ArmorDamage":30,
          "PenetrationPower":25,
-         "Damage":34
+         "Damage":24
       }
    },
    "366BUCKSHOT":{
@@ -1968,7 +1968,7 @@
                "_proto":"55d30c4c4bdc2db4468b457e"
             }
          ]
-         
+
       }
    },
    "NCSTARLONG_RIGHT":{
@@ -2938,7 +2938,7 @@
                  "_proto": "55d30c4c4bdc2db4468b457e"
                }
              ]
-            
+
          }
       },
       "STM556_upper":{
@@ -3112,7 +3112,7 @@
                  "_proto": "55d30c4c4bdc2db4468b457e"
                }
              ]
-            
+
          }
       },
       "STM366":{
@@ -4177,9 +4177,9 @@
          "id":"rem338Mag10",
          "cloneID":"5bfeaa0f0db834001b734927",
          "bundle":"mag_m700_wyatt_338_10.bundle",
-         "fullName":"Remington M700 .338 Wyatt's Outdoor 10-round magazine",
+         "fullName":"Remington M700 .338 Wyatt's Outdoor 8-round magazine",
          "shortName":"338Wyatt",
-         "description":"A Remington M700 sniper rifle 10-round magazine by Wyatt's Outdoor, for .338 cartridges.",
+         "description":"A Remington M700 sniper rifle 8-round magazine by Wyatt's Outdoor, for .338 cartridges.",
          "handbookID":"5b5f754a86f774094242f19b",
          "handbookPrice":98,
          "traderID":"InterK",
@@ -4193,7 +4193,7 @@
                  "_name": "cartridges",
                  "_id": "5fc23426900b1d5091531e17",
                  "_parent": "5fc23426900b1d5091531e15",
-                 "_max_count": 10,
+                 "_max_count": 8,
                  "_props": {
                    "filters": [
                      {
@@ -4715,7 +4715,7 @@
              "weapUseType":"secondary",
              "ammoCaliber":"Caliber9x33R",
              "Ergonomics": 75,
-             "RecoilForceUp": 400, 
+             "RecoilForceUp": 400,
             "RecoilForceBack": 260,
             "isFastReload": true,
             "Velocity": 30,
@@ -4741,7 +4741,7 @@
             "weapUseType":"secondary",
             "ammoCaliber":"Caliber9x33R",
             "Ergonomics": 95,
-            "RecoilForceUp": 465, 
+            "RecoilForceUp": 465,
            "RecoilForceBack": 295
          }
       },
@@ -4819,7 +4819,7 @@
                }
              ],
              "Ergonomics": 95,
-             "RecoilForceUp": 480, 
+             "RecoilForceUp": 480,
             "RecoilForceBack": 300,
             "defAmmo": "62330b3ed4dc74626d570b95",
             "defMagType": "619f54a1d25cbd424731fb99",
@@ -4850,6 +4850,346 @@
              "Ergonomics": -12,
              "Accuracy": 5,
              "Recoil": -12
+         }
+      },
+      "ohhuntMount":{
+         "id":"ohhuntMount",
+         "cloneID":"5649d9a14bdc2d79388b4580",
+         "bundle":"akPicatinny.bundle",
+         "fullName":"Ohhunt AK 47/74 Rear Sight Rail Mount for Red Dot Sight Low Profile",
+         "shortName":"OH47",
+         "description":"he ohhunt AK Rear Sight Rail replaces your AKs rear sight with a Picatinny rail for mounting low profile optics to your rifle. The unique design allows both horizontal and vertical level adjustment to ensure your optic is aligned properly with the bore. As a bonus, it features a back-up rear sight for reference aiming or emergency use should the optic fail.",
+         "handbookID":"5b5f75c686f774094242f19f",
+         "handbookPrice":98,
+         "traderID":"InterK",
+         "traderPrice":1,
+         "currencyID":"5449016a4bdc2d6f028b456f",
+         "traderLL":1,
+         "propOverrides":{
+            "BackgroundColor":"violet",
+            "Slots": [
+               {
+                 "_name": "mod_scope",
+                 "_id": "5c064c400db834001d23f46a",
+                 "_parent": "5c064c400db834001d23f468",
+                 "_props": {
+                   "filters": [
+                     {
+                       "Shift": 0,
+                       "Filter": [
+                         "57ac965c24597706be5f975c",
+                         "57aca93d2459771f2c7e26db",
+                         "544a3a774bdc2d3a388b4567",
+                         "5d2dc3e548f035404a1a4798",
+                         "57adff4f24597737f373b6e6",
+                         "5c0517910db83400232ffee5",
+                         "591c4efa86f7741030027726",
+                         "570fd79bd2720bc7458b4583",
+                         "570fd6c2d2720bc6458b457f",
+                         "558022b54bdc2dac148b458d",
+                         "5c07dd120db834001c39092d",
+                         "5c0a2cec0db834001b7ce47d",
+                         "58491f3324597764bc48fa02",
+                         "584924ec24597768f12ae244",
+                         "5b30b0dc5acfc400153b7124",
+                         "6165ac8c290d254f5e6b2f6c",
+                         "60a23797a37c940de7062d02",
+                         "5d2da1e948f035477b1ce2ba",
+                         "5c0505e00db834001b735073",
+                         "609a63b6e2ff132951242d09",
+                         "584984812459776a704a82a6",
+                         "59f9d81586f7744c7506ee62",
+                         "570fd721d2720bc5458b4596",
+                         "57ae0171245977343c27bfcf",
+                         "5dfe6104585a0c3e995c7b82",
+                         "544a3d0a4bdc2d1b388b4567",
+                         "5d1b5e94d7ad1a2b865a96b0",
+                         "609bab8b455afd752b2e6138",
+                         "58d39d3d86f77445bb794ae7",
+                         "616554fe50224f204c1da2aa",
+                         "5c7d55f52e221644f31bff6a",
+                         "616584766ef05c2ce828ef57",
+                         "5b3b6dc75acfc47a8773fb1e",
+                         "615d8d878004cc50514c3233",
+                         "5b2389515acfc4771e1be0c0",
+                         "577d128124597739d65d0e56",
+                         "618b9643526131765025ab35",
+                         "618bab21526131765025ab3f",
+                         "5c86592b2e2216000e69e77c",
+                         "5a37ca54c4a282000d72296a",
+                         "58d2664f86f7747fec5834f6",
+                         "57c69dd424597774c03b7bbc",
+                         "5b3b99265acfc4704b4a1afb",
+                         "5aa66a9be5b5b0214e506e89",
+                         "5aa66c72e5b5b00016327c93",
+                         "5c1cdd302e221602b3137250",
+                         "61714b2467085e45ef140b2c",
+                         "6171407e50224f204c1da3c5",
+                         "61713cc4d8e3106d9806c109",
+                         "5b31163c5acfc400153b71cb",
+                         "5a33b652c4a28232996e407c",
+                         "5a33b2c9c4a282000c5a9511",
+                         "59db7eed86f77461f8380365",
+                         "5a1ead28fcdbcb001912fa9f",
+                         "5dff77c759400025ea5150cf",
+                         "626bb8532c923541184624b4"
+                       ]
+                     }
+                   ]
+                 },
+                 "_required": false,
+                 "_mergeSlotWithChildren": false,
+                 "_proto": "55d30c4c4bdc2db4468b457e"
+               }
+             ],
+             "ConflictingItems": [
+               "5d2c770c48f0354b4a07c100","5d2c76ed48f03532f2136169","5d2c772c48f0355d95672c25","5649af884bdc2d1b2b8b4589"
+             ]
+         }
+      },
+      "DualBackup":{
+         "id":"DualBackup",
+         "cloneID":"5649d9a14bdc2d79388b4580",
+         "bundle":"dualBackup.bundle",
+         "fullName":"45 Degree Offset Dual Side Rail Angle Mount",
+         "shortName":"OH47",
+         "description":"45 degree offset allows easy access to on/off switches for flashlights, lasers, or red dot sights, Easy mounting, Heavy duty 6061 aircraft aluminum construction, Anodized matte black finish, Mounting versatility for backup reflex sight side by side with your primary optic, laser, light, etc.",
+         "handbookID":"5b5f75c686f774094242f19f",
+         "handbookPrice":98,
+         "traderID":"InterK",
+         "traderPrice":1,
+         "currencyID":"5449016a4bdc2d6f028b456f",
+         "traderLL":1,
+         "propOverrides":{
+            "BackgroundColor":"violet",
+            "Slots": [
+               {
+                 "_name": "mod_tactical_000",
+                 "_id": "61816f348004cc50514c3503",
+                 "_parent": "61816dfa6ef05c2ce828f1ad",
+                 "_props": {
+                   "filters": [
+                     {
+                       "Shift": 0,
+                       "Filter":[
+                        "570fd6c2d2720bc6458b457f",
+                        "558022b54bdc2dac148b458d",
+                        "58491f3324597764bc48fa02",
+                        "584924ec24597768f12ae244",
+                        "5b30b0dc5acfc400153b7124",
+                        "6165ac8c290d254f5e6b2f6c",
+                        "60a23797a37c940de7062d02",
+                        "5d2da1e948f035477b1ce2ba",
+                        "5c0505e00db834001b735073",
+                        "584984812459776a704a82a6",
+                        "59f9d81586f7744c7506ee62",
+                        "570fd721d2720bc5458b4596",
+                        "57ae0171245977343c27bfcf",
+                        "609bab8b455afd752b2e6138",
+                        "61605d88ffa6e502ac5e7eeb",
+                        "58d39d3d86f77445bb794ae7",
+                        "616554fe50224f204c1da2aa",
+                        "615d8d878004cc50514c3233",
+                        "577d128124597739d65d0e56",
+                        "58d2664f86f7747fec5834f6",
+                        "61714b2467085e45ef140b2c",
+                        "5a33b2c9c4a282000c5a9511",
+                        "5a800961159bd4315e3a1657",
+                        "57fd23e32459772d0805bcf1",
+                        "544909bb4bdc2d6f028b4577",
+                        "5d10b49bd7ad1a1a560708b0",
+                        "5c06595c0db834001a66af6c",
+                        "5cc9c20cd7f00c001336c65d",
+                        "5d2369418abbc306c62e0c80",
+                        "5b07dd285acfc4001754240d",
+                        "56def37dd2720bec348b456a",
+                        "5a7b483fe899ef0016170d15",
+                        "5a5f1ce64f39f90b401987bc",
+                        "560d657b4bdc2da74d8b4572",
+                        "5b3a337e5acfc4704b4a19a0",
+                        "5c5952732e2216398b5abda2",
+                        "57d17e212459775a1179a0f5",
+                        "6267c6396b642f77f56f5c1c",
+                        "6272370ee4013c5d7e31f418",
+                        "6272379924e29f06af4d5ecb",
+                        "626becf9582c3e319310b837"
+                     ]
+                     }
+                   ]
+                 },
+                 "_required": false,
+                 "_mergeSlotWithChildren": false,
+                 "_proto": "55d30c4c4bdc2db4468b457e"
+               },
+               {
+                 "_name": "mod_tactical_001",
+                 "_id": "61816f3f67085e45ef140c44",
+                 "_parent": "61816dfa6ef05c2ce828f1ad",
+                 "_props": {
+                   "filters": [
+                     {
+                       "Shift": 0,
+                       "Filter":[
+                        "570fd6c2d2720bc6458b457f",
+                        "558022b54bdc2dac148b458d",
+                        "58491f3324597764bc48fa02",
+                        "584924ec24597768f12ae244",
+                        "5b30b0dc5acfc400153b7124",
+                        "6165ac8c290d254f5e6b2f6c",
+                        "60a23797a37c940de7062d02",
+                        "5d2da1e948f035477b1ce2ba",
+                        "5c0505e00db834001b735073",
+                        "584984812459776a704a82a6",
+                        "59f9d81586f7744c7506ee62",
+                        "570fd721d2720bc5458b4596",
+                        "57ae0171245977343c27bfcf",
+                        "609bab8b455afd752b2e6138",
+                        "61605d88ffa6e502ac5e7eeb",
+                        "58d39d3d86f77445bb794ae7",
+                        "616554fe50224f204c1da2aa",
+                        "615d8d878004cc50514c3233",
+                        "577d128124597739d65d0e56",
+                        "58d2664f86f7747fec5834f6",
+                        "61714b2467085e45ef140b2c",
+                        "5a33b2c9c4a282000c5a9511",
+                        "5a800961159bd4315e3a1657",
+                        "57fd23e32459772d0805bcf1",
+                        "544909bb4bdc2d6f028b4577",
+                        "5d10b49bd7ad1a1a560708b0",
+                        "5c06595c0db834001a66af6c",
+                        "5cc9c20cd7f00c001336c65d",
+                        "5d2369418abbc306c62e0c80",
+                        "5b07dd285acfc4001754240d",
+                        "56def37dd2720bec348b456a",
+                        "5a7b483fe899ef0016170d15",
+                        "5a5f1ce64f39f90b401987bc",
+                        "560d657b4bdc2da74d8b4572",
+                        "5b3a337e5acfc4704b4a19a0",
+                        "5c5952732e2216398b5abda2",
+                        "57d17e212459775a1179a0f5",
+                        "6267c6396b642f77f56f5c1c",
+                        "6272370ee4013c5d7e31f418",
+                        "6272379924e29f06af4d5ecb",
+                        "626becf9582c3e319310b837"
+                     ]
+                     }
+                   ]
+                 },
+                 "_required": false,
+                 "_mergeSlotWithChildren": false,
+                 "_proto": "55d30c4c4bdc2db4468b457e"
+               }
+             ]
+         }
+      },
+      "GG&G":{
+         "id":"GG&G",
+         "cloneID":"5649d9a14bdc2d79388b4580",
+         "bundle":"90DegreeOffset.bundle",
+         "fullName":"GG&G Offset Flashlight Mount",
+         "shortName":"GG&G",
+         "description":"GG&G's AR-15 Offset Tactical Flashlight Mount places the tactical flashlight offset to the right or left of the weapon's forearm at about 5 o'clock or 7 o'clock respectively. This permits the operator to manipulate with the thumb the illuminator's rocker switch laser button or rear pressure button of other tactical...",
+         "handbookID":"5b5f75c686f774094242f19f",
+         "handbookPrice":98,
+         "traderID":"InterK",
+         "traderPrice":1,
+         "currencyID":"5449016a4bdc2d6f028b456f",
+         "traderLL":1,
+         "propOverrides":{
+            "BackgroundColor":"violet",
+            "Slots":[
+               {
+                 "_name": "mod_scope",
+                 "_id": "5b800ed086f7747baf6e2fa0",
+                 "_parent": "5b800ed086f7747baf6e2f9e",
+                 "_props": {
+                   "filters": [
+                     {
+                       "Shift": 0,
+                       "Filter": [
+                        "5a800961159bd4315e3a1657",
+                        "57fd23e32459772d0805bcf1",
+                        "544909bb4bdc2d6f028b4577",
+                        "5c06595c0db834001a66af6c",
+                        "5cc9c20cd7f00c001336c65d",
+                        "5d2369418abbc306c62e0c80",
+                        "5b07dd285acfc4001754240d",
+                        "56def37dd2720bec348b456a",
+                        "5a7b483fe899ef0016170d15",
+                        "61605d88ffa6e502ac5e7eeb",
+                        "5a5f1ce64f39f90b401987bc",
+                        "560d657b4bdc2da74d8b4572",
+                        "5b3a337e5acfc4704b4a19a0",
+                        "5c5952732e2216398b5abda2",
+                        "57d17e212459775a1179a0f5",
+                        "6267c6396b642f77f56f5c1c",
+                        "6272370ee4013c5d7e31f418",
+                        "6272379924e29f06af4d5ecb",
+                        "626becf9582c3e319310b837"
+                      ]
+                     }
+                   ]
+                 },
+                 "_required": false,
+                 "_mergeSlotWithChildren": false,
+                 "_proto": "55d30c4c4bdc2db4468b457e"
+               }
+             ]
+         }
+      },
+      "GG&G_L":{
+         "id":"GG&G_L",
+         "cloneID":"5649d9a14bdc2d79388b4580",
+         "bundle":"90DegreeOffset_Left.bundle",
+         "fullName":"GG&G Offset Flashlight Mount",
+         "shortName":"GG&G",
+         "description":"GG&G's AR-15 Offset Tactical Flashlight Mount places the tactical flashlight offset to the right or left of the weapon's forearm at about 5 o'clock or 7 o'clock respectively. This permits the operator to manipulate with the thumb the illuminator's rocker switch laser button or rear pressure button of other tactical...",
+         "handbookID":"5b5f75c686f774094242f19f",
+         "handbookPrice":98,
+         "traderID":"InterK",
+         "traderPrice":1,
+         "currencyID":"5449016a4bdc2d6f028b456f",
+         "traderLL":1,
+         "propOverrides":{
+            "BackgroundColor":"violet",
+            "Slots":[
+               {
+                 "_name": "mod_scope",
+                 "_id": "5b800ed086f7747baf6e2fa0",
+                 "_parent": "5b800ed086f7747baf6e2f9e",
+                 "_props": {
+                   "filters": [
+                     {
+                       "Shift": 0,
+                       "Filter": [
+                        "5a800961159bd4315e3a1657",
+                        "57fd23e32459772d0805bcf1",
+                        "544909bb4bdc2d6f028b4577",
+                        "5c06595c0db834001a66af6c",
+                        "5cc9c20cd7f00c001336c65d",
+                        "5d2369418abbc306c62e0c80",
+                        "5b07dd285acfc4001754240d",
+                        "56def37dd2720bec348b456a",
+                        "5a7b483fe899ef0016170d15",
+                        "61605d88ffa6e502ac5e7eeb",
+                        "5a5f1ce64f39f90b401987bc",
+                        "560d657b4bdc2da74d8b4572",
+                        "5b3a337e5acfc4704b4a19a0",
+                        "5c5952732e2216398b5abda2",
+                        "57d17e212459775a1179a0f5",
+                        "6267c6396b642f77f56f5c1c",
+                        "6272370ee4013c5d7e31f418",
+                        "6272379924e29f06af4d5ecb",
+                        "626becf9582c3e319310b837"
+                      ]
+                     }
+                   ]
+                 },
+                 "_required": false,
+                 "_mergeSlotWithChildren": false,
+                 "_proto": "55d30c4c4bdc2db4468b457e"
+               }
+             ]
          }
       }
 }

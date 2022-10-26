@@ -207,7 +207,7 @@ function execute() {
             "5b39f8db5acfc40016387a1b",
             "628a85ee6b1d481ff772e9d5"
                  ]
-                 const buffertubes = ["5649be884bdc2d79388b4577","606587e18900dc2d9a55b65f","5c793fb92e221644f31bfb64","5bb20e58d4351e00320205d7","617153016c780c1e710c9a2f","5c0faeddd174af02a962601f","5bfe89510db834001808a127","5afd7e095acfc40017541f61","5c793fb92e221644f31bfb64","5c793fc42e221600114ca25d"]
+                 const buffertubes = ["5649be884bdc2d79388b4577","5c793fb92e221644f31bfb64","5c0faeddd174af02a962601f","5c793fb92e221644f31bfb64","5c793fc42e221600114ca25d"]
                  for (const bf of buffertubes) {
                      database.templates.items[bf]._props.Slots = stockSlot
                  }
