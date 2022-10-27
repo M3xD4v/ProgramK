@@ -1,6 +1,12 @@
+
 {
 	"TraderName":"InterK",
 	"ItemCustomColors" : false,
+	"QuestItems": false,
 	"EnableExtraStockSlots" : true,
-	"QuestItems": false
+	"EnabledStockSlots": {
+		"Slot2": false,
+		"Slot3": true,
+		"Slot4": false
+	}
 }
