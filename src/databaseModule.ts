@@ -292,6 +292,7 @@ function execute() {
                 item._props.Slots[index2]._props.filters[0].Filter.push("vortex_spitfire_hd_x5");
                 item._props.Slots[index2]._props.filters[0].Filter.push("monstrum3x");
                 item._props.Slots[index2]._props.filters[0].Filter.push("monstrum3x_tan");
+                item._props.Slots[index2]._props.filters[0].Filter.push("Truglo");
                 //      logger.log(item._props.Name + " - - - - i3 ", "yellow");
             }
             if (index2 > -1 && filtersIncludeAttachment6(item._props.Slots[index2]._props.filters[0].Filter)) {

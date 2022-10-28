@@ -5191,5 +5191,22 @@
                }
              ]
          }
+      },
+      "Truglo":{
+         "id":"Truglo",
+         "cloneID":"5b30b0dc5acfc400153b7124",
+         "bundle":"truglo30mm.bundle",
+         "fullName":"Temp",
+         "shortName":"Temp",
+         "description":"Temp",
+         "handbookID":"5b5f75c686f774094242f19f",
+         "handbookPrice":98,
+         "traderID":"InterK",
+         "traderPrice":1,
+         "currencyID":"5449016a4bdc2d6f028b456f",
+         "traderLL":1,
+         "propOverrides":{
+            "BackgroundColor":"violet"
+         }
       }
 }

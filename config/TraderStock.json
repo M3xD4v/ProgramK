@@ -9,6 +9,14 @@
          "loyal_level_items":2
       },
       {
+         "_id":"Truglo",
+         "upd":{
+            "UnlimitedCount":false,
+            "StackObjectsCount":120
+         },
+         "loyal_level_items":1
+      },
+      {
          "_id":"ohhuntMount",
          "upd":{
             "UnlimitedCount":false,

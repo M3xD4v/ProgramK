@@ -11,6 +11,16 @@
 			}
 		},
 		{
+			"_id": "Truglo",
+			"_tpl": "Truglo",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
 			"_id": "monstrum3x_tan",
 			"_tpl": "monstrum3x_tan",
 			"parentId": "hideout",
@@ -60,6 +70,14 @@
 				}
 			]
 		],
+		"Truglo": [
+			[
+				{
+					"count": 1,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
 		"monstrum3x_tan": [
 			[
 				{
@@ -98,6 +116,7 @@
 		"monstrum3x_tan": 1,
 		"vortex_spitfire_hd_x3": 1,
 		"vortex_spitfire_hd_x5":1,
-		"PPT": 1
+		"PPT": 1,
+		"Truglo": 1 
 	}
 }

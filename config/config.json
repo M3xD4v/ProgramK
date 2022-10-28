@@ -5,8 +5,8 @@
 	"QuestItems": false,
 	"EnableExtraStockSlots" : true,
 	"EnabledStockSlots": {
-		"Slot2": false,
+		"Slot2": true,
 		"Slot3": true,
-		"Slot4": false
+		"Slot4": true
 	}
 }
