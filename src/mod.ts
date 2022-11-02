@@ -10,11 +10,15 @@ import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
 import { ITraderAssort, ITraderBase } from "@spt-aki/models/eft/common/tables/ITrader";
 import { ITraderConfig, UpdateTime } from "@spt-aki/models/spt/config/ITraderConfig";
 import { ILocaleGlobalBase } from "@spt-aki/models/spt/server/ILocaleBase";
-
+import { CustomBotWeaponGenerator } from "./CustomBotWeaponGenerator";
+import { CustomBotInventoryGenerator } from "./CustomBotInventoryGenerator";
 
 import * as itemsToAdd from "../IDs/IDs.json";
 import * as path from 'path';
 import * as fs from 'fs';
+import { Inventory } from "@spt-aki/models/eft/common/tables/IBotBase";
+import { stringify } from "querystring";
+import { HashUtil } from "@spt-aki/utils/HashUtil";
 
 
 class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
@@ -46,7 +50,8 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         {        
             for(const key in itemsToAdd) {
             const ITM = itemsToAdd[key]
-            if (ITM.propOverrides !== undefined){
+            if (ITM.id != "devPPSHMag" && ITM.id != "devround" && ITM.id != "devPPSH") {
+                if (ITM.propOverrides !== undefined){
                if (Object.keys(ITM.propOverrides).length > 1 ){
                 delete ITM.propOverrides["BackgroundColor"]
                }
@@ -54,6 +59,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
                 delete ITM.propOverrides
                }
             }
+        }
         }}
         //Loading TraderBase
         let traderBasePath = this.modPath+"/db/base/base.json";
@@ -68,6 +74,12 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
 
         this.registerProfileImage(container);
         this.setupTraderUpdateTime(container);
+
+
+        container.register<CustomBotWeaponGenerator>("CustomBotWeaponGenerator", CustomBotWeaponGenerator);
+        container.register("BotWeaponGenerator", {useToken: "CustomBotWeaponGenerator"});
+        container.register<CustomBotInventoryGenerator>("CustomBotInventoryGenerator", CustomBotInventoryGenerator);
+        container.register("BotInventoryGenerator", {useToken: "CustomBotInventoryGenerator"});
 
     }
 
@@ -90,6 +102,157 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         const ragfairConfig = cServer.getConfig<ITraderConfig>(ConfigTypes.RAGFAIR);
         ragfairConfig.traders.newTraderId = true
 
+        // -------------------------
+        const primaryType = {
+            "assault_rifles" : 10,
+            "assault_carbines" : 10,
+            "light_machine_guns" : 10,
+            "submachine_guns" : 10,
+            "shotguns" : 10,
+            "marksman_rifles" :10,
+            "sniper_rifles" : 10,
+            "grenade_launcher" : 0,
+        }
+        const test =  {
+            "5448bd6b4bdc2dfc2f8b4569": 1,
+            "56d59856d2720bd8418b456a": 1,
+            "56e0598dd2720bb5668b45a6": 1,
+            "571a12c42459771f627b58a0": 1,
+            "576a581d2459771e7b1bc4f1": 1,
+            "579204f224597773d619e051": 1,
+            "5a17f98cfcdbcb0980087290": 1
+          }
+        function pickFromRelativeProbability(WeaponType) {
+            let RelativeProbabilities = [];
+            var ObjLength = Object.keys(WeaponType)
+            var ObjTest = Object.entries(WeaponType)
+            var i = -1
+            for (const [key, value] of Object.entries(WeaponType)) {
+                i = i + 1 
+                RelativeProbabilities[i] = value + (RelativeProbabilities[i - 1] || 0);
+              }
+              const maxCumulativeWeight = RelativeProbabilities[RelativeProbabilities.length - 1];
+              const randomNumber = maxCumulativeWeight * Math.random();
+              
+              for (let itemIndex = 0; itemIndex < ObjLength.length; itemIndex += 1) {
+                if (RelativeProbabilities[itemIndex] >= randomNumber) {
+                  return ObjLength[itemIndex]
+                }
+              }
+        }
+          function pickWeightedWeaponTplFromPool_1(weapontype)
+          {
+             const WeaponDatabasepath = "../db/botgen/" + weapontype + ".json"
+             const WeaponDatabase = require(WeaponDatabasepath)
+              const weaponPool = WeaponDatabase;
+              return pickFromRelativeProbability(weaponPool)
+          }
+
+          for (let i = 0; i < 12; i++) {
+            logger.log(pickFromRelativeProbability(primaryType),"magenta")
+          }
+
+
+
+          let b = [
+                {
+                    "_id": "5c0d1ec986f77439512a1a80",
+                    "_tpl": "5beed0f50db834001c062b12",
+                    "upd": {
+                        "Repairable": {
+                            "Durability": 46,
+                            "MaxDurability": 52
+                        },
+                        "Foldable": {
+                            "Folded": false
+                        },
+                        "FireMode": {
+                            "FireMode": "fullauto"
+                        }
+                    },
+                    "parentId": "55e6fa47ba403096cb191157",
+                    "slotId": "FirstPrimaryWeapon"
+                },
+                {
+                    "_id": "5c0d1ec986f77439512a1a81",
+                    "_tpl": "5beec8ea0db834001a6f9dbf",
+                    "parentId": "5c0d1ec986f77439512a1a80",
+                    "slotId": "mod_pistol_grip"
+                },
+                {
+                    "_id": "5c0d1ec986f77439512a1a82",
+                    "_tpl": "5beec91a0db834001961942d",
+                    "parentId": "5c0d1ec986f77439512a1a80",
+                    "slotId": "mod_reciever"
+                },
+                {
+                    "_id": "5c0d1ec986f77439512a1a83",
+                    "_tpl": "5beec9450db83400970084fd",
+                    "parentId": "5c0d1ec986f77439512a1a82",
+                    "slotId": "mod_sight_rear"
+                },
+                {
+                    "_id": "5c0d1ec986f77439512a1a84",
+                    "_tpl": "5bf3f59f0db834001a6fa060",
+                    "parentId": "5c0d1ec986f77439512a1a83",
+                    "slotId": "mod_sight_rear"
+                },
+                {
+                    "_id": "5c0d1ec986f77439512a1a85",
+                    "_tpl": "5beec8b20db834001961942a",
+                    "parentId": "5c0d1ec986f77439512a1a80",
+                    "slotId": "mod_stock_001"
+                },
+                {
+                    "_id": "5c0d1ec986f77439512a1a86",
+                    "_tpl": "5beec8c20db834001d2c465c",
+                    "parentId": "5c0d1ec986f77439512a1a85",
+                    "slotId": "mod_stock"
+                },
+                {
+                    "_id": "5c0d1ec986f77439512a1a87",
+                    "_tpl": "5beec3e30db8340019619424",
+                    "parentId": "5c0d1ec986f77439512a1a80",
+                    "slotId": "mod_handguard"
+                },
+                {
+                    "_id": "5c0d1ec986f77439512a1a88",
+                    "_tpl": "5beecbb80db834001d2c465e",
+                    "parentId": "5c0d1ec986f77439512a1a87",
+                    "slotId": "mod_mount_000"
+                },
+                {
+                    "_id": "5c0d1ec986f77439512a1a89",
+                    "_tpl": "5beecbb80db834001d2c465e",
+                    "parentId": "5c0d1ec986f77439512a1a87",
+                    "slotId": "mod_mount_001"
+                },
+                {
+                    "_id": "5c0d1ec986f77439512a1a8a",
+                    "_tpl": "5beec1bd0db834001e6006f3",
+                    "parentId": "5c0d1ec986f77439512a1a80",
+                    "slotId": "mod_barrel"
+                },
+                {
+                    "_id": "5c0d1ec986f77439512a1a8b",
+                    "_tpl": "5beec3420db834001b095429",
+                    "parentId": "5c0d1ec986f77439512a1a8a",
+                    "slotId": "mod_muzzle"
+                }
+            ]
+    
+    const hashUtil = container.resolve<HashUtil>("HashUtil");
+    var obj = Object.values(b)
+    var stringified = JSON.stringify(b)
+    const newID = JSON.stringify(hashUtil.generate())
+    const ogID = JSON.stringify(obj[0]._id)
+    const finalString = stringified.replaceAll(ogID,newID)
+    const finalObject = JSON.parse(finalString)
+    console.log(finalObject)
+
+
+
+//------------------------------------
 
         logger.log("Loading...", "cyan");
         const logo = 
@@ -135,7 +298,6 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         weaponImplementation.execute()
         looseLoot.execute()
         quests.execute()
-
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
 
 

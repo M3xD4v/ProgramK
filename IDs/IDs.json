@@ -5208,5 +5208,163 @@
          "propOverrides":{
             "BackgroundColor":"violet"
          }
+      },
+      "devPPSHMag":{
+         "id":"devPPSHMag",
+         "cloneID":"5ea034eb5aad6446a939737b",
+         "bundle":"assets/content/items/mods/magazines/mag_ppsh_zis_std_762x25_35.bundle",
+         "fullName":"devPPSHMag",
+         "shortName":"devPPSHMag",
+         "description":"devPPSHMag",
+         "handbookID":"5b5f75c686f774094242f19f",
+         "handbookPrice":98,
+         "traderID":"InterK",
+         "traderPrice":1,
+         "currencyID":"5449016a4bdc2d6f028b456f",
+         "traderLL":1,
+         "propOverrides":{
+            "BackgroundColor":"green",
+            "Cartridges":[
+               {
+                 "_name": "cartridges",
+                 "_id": "5ea034eb5aad6446a939737d",
+                 "_parent": "devPPSHMag",
+                 "_max_count": 3500,
+                 "_props": {
+                   "filters": [
+                     {
+                       "Filter": [
+                         "devround"
+                       ]
+                     }
+                   ]
+                 },
+                 "_proto": "5748538b2459770af276a261"
+               }
+             ]
+         }
+      },
+      "devround":{
+         "id":"devround",
+         "cloneID":"5735ff5c245977640e39ba7e",
+         "bundle":"assets/content/items/ammo/patrons/patron_762x25tt_fmj43.bundle",
+         "fullName":"devronud",
+         "shortName":"devronud",
+         "description":"devronud",
+         "handbookID":"5b5f75c686f774094242f19f",
+         "handbookPrice":98,
+         "traderID":"InterK",
+         "traderPrice":1,
+         "currencyID":"5449016a4bdc2d6f028b456f",
+         "traderLL":1,
+         "propOverrides":{
+            "BackgroundColor":"green",
+            "Weight": 0,
+            "StackMaxSize":3500,
+            "InitialSpeed": 1500,
+            "Damage": 300,
+            "PenetrationPower": 500,
+            "Tracer": true
+         }
+      },
+      "devPPSH":{
+         "id":"devPPSH",
+         "cloneID":"5ea03f7400685063ec28bfa8",
+         "bundle":"assets/content/weapons/ppsh41/weapon_zis_ppsh41_762x25_container.bundle",
+         "fullName":"devPPSH",
+         "shortName":"devPPSH",
+         "description":"devPPSH",
+         "handbookID":"5b5f75c686f774094242f19f",
+         "handbookPrice":98,
+         "traderID":"InterK",
+         "traderPrice":1,
+         "currencyID":"5449016a4bdc2d6f028b456f",
+         "traderLL":1,
+         "propOverrides":{
+            "BackgroundColor":"green",
+            "Slots": [
+               {
+                 "_name": "mod_stock",
+                 "_id": "5ea03f7400685063ec28bfab",
+                 "_parent": "5ea03f7400685063ec28bfa8",
+                 "_props": {
+                   "filters": [
+                     {
+                       "Shift": 0,
+                       "Filter": [
+                         "5ea03e9400685063ec28bfa4"
+                       ]
+                     }
+                   ]
+                 },
+                 "_required": true,
+                 "_mergeSlotWithChildren": false,
+                 "_proto": "55d30c4c4bdc2db4468b457e"
+               },
+               {
+                 "_name": "mod_magazine",
+                 "_id": "5ea03f7400685063ec28bfad",
+                 "_parent": "5ea03f7400685063ec28bfa8",
+                 "_props": {
+                   "filters": [
+                     {
+                       "AnimationIndex": -1,
+                       "Filter": [
+                        "devPPSHMag"
+                       ]
+                     }
+                   ]
+                 },
+                 "_required": false,
+                 "_mergeSlotWithChildren": false,
+                 "_proto": "55d30c394bdc2dae468b4577"
+               },
+               {
+                 "_name": "mod_reciever",
+                 "_id": "5ea03f7400685063ec28bfaf",
+                 "_parent": "5ea03f7400685063ec28bfa8",
+                 "_props": {
+                   "filters": [
+                     {
+                       "Shift": 0,
+                       "Filter": [
+                         "5ea03e5009aa976f2e7a514b"
+                       ]
+                     }
+                   ]
+                 },
+                 "_required": true,
+                 "_mergeSlotWithChildren": false,
+                 "_proto": "55d30c4c4bdc2db4468b457e"
+               },
+               {
+                 "_name": "mod_barrel",
+                 "_id": "5ea06b13fadf1d18c87b0774",
+                 "_parent": "5ea03f7400685063ec28bfa8",
+                 "_props": {
+                   "filters": [
+                     {
+                       "Shift": 0,
+                       "Filter": [
+                         "5ea02bb600685063ec28bfa1"
+                       ]
+                     }
+                   ]
+                 },
+                 "_required": true,
+                 "_mergeSlotWithChildren": false,
+                 "_proto": "55d30c4c4bdc2db4468b457e"
+               }
+             ],
+             "ammoCaliber":"devround",
+             "SingleFireRate": 1000,
+             "bFirerate": 1400,
+             "Velocity": 12,
+             "defAmmo": "devround",
+             "AllowOverheat": false,
+             "BaseMalfunctionChance": 0.01,
+             "RecoilForceUp":32,
+             "RecoilForceBack":32
       }
+   }
 }

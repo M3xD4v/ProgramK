@@ -270,6 +270,17 @@
                 "cubemaps",
                 "assets/commonassets/physics/physicsmaterials.bundle"
             ]
+        },
+        {
+            "key":"spectretest.bundle",
+            "dependencyKeys":[
+                "assets/commonassets/physics/physicsmaterials.bundle",
+                "shaders",
+                "packages/com.unity.postprocessing/postprocessing/postprocessresources.bundle",
+                "cubemaps",
+                "assets/content/textures/holemanager/round_spec_mask.bundle",
+                "assets/systems/effects/opticsight/opticsightsmasks.bundle"
+            ]
         }
     ]
 }

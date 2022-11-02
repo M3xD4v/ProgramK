@@ -32,6 +32,48 @@
          },
          "loyal_level_items":1
       },
+      
+      {
+         "_id":"balaclava",
+         "upd":{
+            "UnlimitedCount":true,
+            "StackObjectsCount":9999999
+         },
+         "loyal_level_items":1
+      },
+      {
+         "_id":"devPPSH",
+         "upd":{
+            "UnlimitedCount":true,
+            "StackObjectsCount":9999999
+         },
+         "loyal_level_items":1
+      },
+      {
+         "_id":"devPPSHMag",
+         "upd":{
+            "UnlimitedCount":true,
+            "StackObjectsCount":9999999
+         },
+         "loyal_level_items":1
+      },
+      {
+         "_id":"devPPSHPRESET",
+         "upd":{
+            "UnlimitedCount":true,
+            "StackObjectsCount":9999999
+         },
+         "loyal_level_items":1
+      },
+      {
+         "_id":"devround",
+         "upd":{
+            "UnlimitedCount":true,
+            "StackObjectsCount":9999999
+         },
+         "loyal_level_items":1
+      },
+
       {
          "_id":"GG&G_L",
          "upd":{

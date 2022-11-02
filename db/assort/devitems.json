@@ -1,0 +1,127 @@
+{
+	"items": [
+		{
+			"_id": "devPPSH",
+			"_tpl": "devPPSH",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "devPPSHMag",
+			"_tpl": "devPPSHMag",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "devround",
+			"_tpl": "devround",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "devPPSHPRESET",
+			"_tpl": "devPPSH",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "5eb2963686f7742d3f5ab0fe",
+			"_tpl": "5ea03e9400685063ec28bfa4",
+			"parentId": "devPPSHPRESET",
+			"slotId": "mod_stock"
+		  },
+		  {
+			"_id": "5eb2963686f7742d3f5ab0ff",
+			"_tpl": "devPPSHMag",
+			"parentId": "devPPSHPRESET",
+			"slotId": "mod_magazine"
+		  },
+		  {
+			"_id": "5eb2963686f7742d3f5ab100",
+			"_tpl": "5ea03e5009aa976f2e7a514b",
+			"parentId": "devPPSHPRESET",
+			"slotId": "mod_reciever"
+		  },
+		  {
+			"_id": "5eb2963686f7742d3f5ab101",
+			"_tpl": "5ea02bb600685063ec28bfa1",
+			"parentId": "devPPSHPRESET",
+			"slotId": "mod_barrel"
+		  },
+		  {
+			"_id": "balaclava",
+			"_tpl": "58ac60eb86f77401897560ff",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		  }
+	],
+	"barter_scheme": {
+		"devPPSH": [
+			[
+				{
+					"count": 1,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"devPPSHMag": [
+			[
+				{
+					"count": 1,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"devPPSHPRESET": [
+			[
+				{
+					"count": 1,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"devround": [
+			[
+				{
+					"count": 1,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"balaclava": [
+			[
+				{
+					"count": 1,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		]
+	},
+	"loyal_level_items": {
+		"devPPSH": 1,
+		"devround": 1,
+		"devPPSHMag":1,
+		"devPPSHPRESET":1,
+		"balaclava":1 
+	}
+}

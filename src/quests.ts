@@ -21,6 +21,24 @@ function execute() {
       logger.log("ProgramK: Quest items --- DISABLED", "magenta")
       questassort.success = {}
     }
+
+    if (modCConfig.EnableDevItems == false) {
+      logger.log("ProgramK: Developer items --- Disabled", "magenta")
+      const DevItemsArray = {
+        "devround": "q52",
+        "devPPSHMag": "q52",
+        "devPPSH": "q52",
+        "devPPSHPRESET": "q52",
+        "balaclava": "q52"
+      }
+      for (const [key,value] of Object.entries(DevItemsArray)) {
+        questassort.success[key] = value
+    }
+    }else {
+      logger.log("ProgramK: Developer items --- Enabled", "magenta")
+    }
+
+
     const localesArray = [
       "ch", "cz", "en", "es-mx", "es", "fr", "ge", "hu", "it", "jp", "pl", "po", "ru", "sk", "tu"
     ]

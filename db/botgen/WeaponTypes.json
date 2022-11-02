@@ -1,0 +1,10 @@
+{
+    "assault_rifles" : 10,
+    "assault_carabines" : 10,
+    "light_machine_guns" : 2,
+    "submachine_guns" : 10,
+    "shotguns" : 10,
+    "marksman_rifles" :10,
+    "sniper_rifles" : 10,
+    "grenade_launcher" : 0
+}
