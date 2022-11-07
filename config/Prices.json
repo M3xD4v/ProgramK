@@ -79,12 +79,11 @@
 	"weapon_chiappa_rhino_60ds_9x33R":27000,
 	"vpo192":26000,
 	"ohhuntMount": 9765,
-	"DualBackup": 9765,
+	"DualBackup": 15325,
 	
-	"GG&G": 1,
-	"GG&G_L": 1,
-	"Truglo": 1,
-
+	"GG&G": 11133,
+	"GG&G_L": 11232,
+	"Truglo": 24324,
 
 
 	"devPPSHPRESET": 1,
@@ -92,4 +91,5 @@
 	"devPPSHMag": 1,
 	"devround": 1,
 	"balaclava": 1
+
 }

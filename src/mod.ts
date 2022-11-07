@@ -12,7 +12,9 @@ import { ITraderConfig, UpdateTime } from "@spt-aki/models/spt/config/ITraderCon
 import { ILocaleGlobalBase } from "@spt-aki/models/spt/server/ILocaleBase";
 import { CustomBotWeaponGenerator } from "./CustomBotWeaponGenerator";
 import { CustomBotInventoryGenerator } from "./CustomBotInventoryGenerator";
-
+import { CustomBotGenerator } from "./CustomBotGenerator";
+import { ProfileHelper } from "@spt-aki/helpers/ProfileHelper";
+import type {StaticRouterModService} from "@spt-aki/services/mod/staticRouter/StaticRouterModService";
 import * as itemsToAdd from "../IDs/IDs.json";
 import * as path from 'path';
 import * as fs from 'fs';
@@ -21,7 +23,7 @@ import { stringify } from "querystring";
 import { HashUtil } from "@spt-aki/utils/HashUtil";
 
 
-class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
+class Mod implements IPostDBLoadMod, IPreAkiLoadMod {
 
     logger: ILogger
     DB: JSON
@@ -35,39 +37,114 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
 
     traderBase: JSON
 
-    constructor() {
-    }
+    constructor() {}
 
     public preAkiLoad(container: DependencyContainer): void {
-        this.logger = container.resolve<ILogger>("WinstonLogger");
+        this.logger = container.resolve < ILogger > ("WinstonLogger");
         //Loading Config
         this.modConfig = require("../config/config.json");
-        this.modInterKConfig= require("../config/InterK.json");
+        this.modInterKConfig = require("../config/InterK.json");
         this.modConfigPrices = require("../config/Prices.json");
         this.modInterKStock = require("../config/TraderStock.json");
         this.TraderName = this.modConfig.TraderName;
-        if (this.modConfig.ItemCustomColors == false)
-        {        
-            for(const key in itemsToAdd) {
-            const ITM = itemsToAdd[key]
-            if (ITM.id != "devPPSHMag" && ITM.id != "devround" && ITM.id != "devPPSH") {
-                if (ITM.propOverrides !== undefined){
-               if (Object.keys(ITM.propOverrides).length > 1 ){
-                delete ITM.propOverrides["BackgroundColor"]
-               }
-               else {
-                delete ITM.propOverrides
-               }
+
+        if (this.modConfig.ProfileBackups == true) {
+            this.logger.log("ProgramK: Profile backups --- ENABLED", "magenta")
+            const logger = container.resolve < ILogger > ("WinstonLogger");
+            const staticRouterModService = container.resolve < StaticRouterModService > ("StaticRouterModService");
+            const profileHelper = container.resolve < ProfileHelper > ("ProfileHelper");
+            var index = 0
+            staticRouterModService.registerStaticRouter(
+                "BackupRouter",
+                [{
+                    url: "/client/game/version/validate",
+                    action: (url, info, sessionId, output) => {
+                        const ProfileData = profileHelper.getFullProfile(sessionId)
+                        const ProfileFileData = JSON.stringify(ProfileData, null, 4)
+                        if (index == 0) {
+                            index = 1
+                            var pathF = this.modPath + "/BackUps/"
+                            var pathforProfile = this.modPath + "/BackUps/" + ProfileData.info.id
+                            if (fs.existsSync(pathforProfile)) {
+                                var date = new Date()
+                                var time = date.toLocaleTimeString();
+                                var edit_time = time.replaceAll(" ", "_")
+                                var edit_time2 = edit_time.replaceAll(":", "-")
+                                var day = date.toISOString().slice(0, 10)
+                                var combined = "_" + day + "_" + edit_time2
+
+                                var backupName = pathforProfile + "/" + ProfileData.info.id + combined + ".json"
+                                fs.writeFile(backupName, ProfileFileData, {
+                                    encoding: "utf8",
+                                    flag: "w",
+                                    mode: 0o666
+                                }, (err) => {
+                                    if (err)
+                                        console.log(err);
+                                    else {
+                                        logger.log(`Profile backup executed successfully: ${combined}`, "green")
+                                    }
+                                });
+
+                            } else {
+                                fs.mkdir(path.join(pathF, ProfileData.info.id), (err) => {
+                                    if (err) {
+                                        return console.error(err);
+                                    }
+                                    logger.log("Backup path does not exist, creating folder....", "magenta")
+
+                                });
+
+                                var date = new Date()
+                                var time = date.toLocaleTimeString();
+                                var edit_time = time.replaceAll(" ", "_")
+                                var edit_time2 = edit_time.replaceAll(":", "-")
+                                var day = date.toISOString().slice(0, 10)
+                                var combined = "_" + day + "_" + edit_time2
+
+                                var backupName = pathforProfile + "/" + ProfileData.info.id + combined + ".json"
+                                fs.writeFile(backupName, ProfileFileData, {
+                                    encoding: "utf8",
+                                    flag: "w",
+                                    mode: 0o666
+                                }, (err) => {
+                                    if (err)
+                                        console.log(err);
+                                    else {
+                                        logger.log(`Profile backup executed successfully: ${combined}`, "green")
+                                    }
+                                });
+                            }
+                        }
+                        return output;
+                    }
+                }],
+                "aki"
+            );
+        } else {
+            this.logger.log("ProgramK: Profile backups --- DISABLED", "magenta")
+        }
+
+        if (this.modConfig.ItemCustomColors == false) {
+            for (const key in itemsToAdd) {
+                const ITM = itemsToAdd[key]
+                if (ITM.id != "devPPSHMag" && ITM.id != "devround" && ITM.id != "devPPSH") {
+                    if (ITM.propOverrides !== undefined) {
+                        if (Object.keys(ITM.propOverrides).length > 1) {
+                            delete ITM.propOverrides["BackgroundColor"]
+                        } else {
+                            delete ITM.propOverrides
+                        }
+                    }
+                }
             }
         }
-        }}
         //Loading TraderBase
-        let traderBasePath = this.modPath+"/db/base/base.json";
-        if(fs.existsSync(traderBasePath)){
+        let traderBasePath = this.modPath + "/db/base/base.json";
+        if (fs.existsSync(traderBasePath)) {
             this.traderBase = require(traderBasePath);
-        }
-        else{
-            this.logger.error(this.TraderName +"required base.json missing in /db/base/");
+        } else {
+            this.logger.error(this.TraderName + "required base.json missing in /db/base/");
         }
 
         this.logger.debug(`[${this.TraderName}] Loading... `);
@@ -75,12 +152,16 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         this.registerProfileImage(container);
         this.setupTraderUpdateTime(container);
 
-
+        /*
         container.register<CustomBotWeaponGenerator>("CustomBotWeaponGenerator", CustomBotWeaponGenerator);
         container.register("BotWeaponGenerator", {useToken: "CustomBotWeaponGenerator"});
+        
         container.register<CustomBotInventoryGenerator>("CustomBotInventoryGenerator", CustomBotInventoryGenerator);
         container.register("BotInventoryGenerator", {useToken: "CustomBotInventoryGenerator"});
 
+        container.register<CustomBotGenerator>("CustomBotGenerator", CustomBotGenerator);
+        container.register("BotGenerator", {useToken: "CustomBotGenerator"});
+        */
     }
 
 
@@ -91,6 +172,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         const StocksOverhaul = require("./StocksOverhaul")
         const looseLoot = require("./looseLoot")
         const quests = require("./quests");
+        const debug = require("./debug");
         const databaseServer = container.resolve < DatabaseServer > ("DatabaseServer");
         const tables = databaseServer.getTables();
         const logger = container.resolve < ILogger > ("WinstonLogger");
@@ -98,165 +180,16 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         const items = database.templates.items;
         const handbook = database.templates.handbook.Items;
         const global = database.locales.global;
-        const cServer = container.resolve<ConfigServer>("ConfigServer");
-        const ragfairConfig = cServer.getConfig<ITraderConfig>(ConfigTypes.RAGFAIR);
+        const cServer = container.resolve < ConfigServer > ("ConfigServer");
+        const ragfairConfig = cServer.getConfig < ITraderConfig > (ConfigTypes.RAGFAIR);
         ragfairConfig.traders.newTraderId = true
 
-        // -------------------------
-        const primaryType = {
-            "assault_rifles" : 10,
-            "assault_carbines" : 10,
-            "light_machine_guns" : 10,
-            "submachine_guns" : 10,
-            "shotguns" : 10,
-            "marksman_rifles" :10,
-            "sniper_rifles" : 10,
-            "grenade_launcher" : 0,
-        }
-        const test =  {
-            "5448bd6b4bdc2dfc2f8b4569": 1,
-            "56d59856d2720bd8418b456a": 1,
-            "56e0598dd2720bb5668b45a6": 1,
-            "571a12c42459771f627b58a0": 1,
-            "576a581d2459771e7b1bc4f1": 1,
-            "579204f224597773d619e051": 1,
-            "5a17f98cfcdbcb0980087290": 1
-          }
-        function pickFromRelativeProbability(WeaponType) {
-            let RelativeProbabilities = [];
-            var ObjLength = Object.keys(WeaponType)
-            var ObjTest = Object.entries(WeaponType)
-            var i = -1
-            for (const [key, value] of Object.entries(WeaponType)) {
-                i = i + 1 
-                RelativeProbabilities[i] = value + (RelativeProbabilities[i - 1] || 0);
-              }
-              const maxCumulativeWeight = RelativeProbabilities[RelativeProbabilities.length - 1];
-              const randomNumber = maxCumulativeWeight * Math.random();
-              
-              for (let itemIndex = 0; itemIndex < ObjLength.length; itemIndex += 1) {
-                if (RelativeProbabilities[itemIndex] >= randomNumber) {
-                  return ObjLength[itemIndex]
-                }
-              }
-        }
-          function pickWeightedWeaponTplFromPool_1(weapontype)
-          {
-             const WeaponDatabasepath = "../db/botgen/" + weapontype + ".json"
-             const WeaponDatabase = require(WeaponDatabasepath)
-              const weaponPool = WeaponDatabase;
-              return pickFromRelativeProbability(weaponPool)
-          }
-
-          for (let i = 0; i < 12; i++) {
-            logger.log(pickFromRelativeProbability(primaryType),"magenta")
-          }
 
 
-
-          let b = [
-                {
-                    "_id": "5c0d1ec986f77439512a1a80",
-                    "_tpl": "5beed0f50db834001c062b12",
-                    "upd": {
-                        "Repairable": {
-                            "Durability": 46,
-                            "MaxDurability": 52
-                        },
-                        "Foldable": {
-                            "Folded": false
-                        },
-                        "FireMode": {
-                            "FireMode": "fullauto"
-                        }
-                    },
-                    "parentId": "55e6fa47ba403096cb191157",
-                    "slotId": "FirstPrimaryWeapon"
-                },
-                {
-                    "_id": "5c0d1ec986f77439512a1a81",
-                    "_tpl": "5beec8ea0db834001a6f9dbf",
-                    "parentId": "5c0d1ec986f77439512a1a80",
-                    "slotId": "mod_pistol_grip"
-                },
-                {
-                    "_id": "5c0d1ec986f77439512a1a82",
-                    "_tpl": "5beec91a0db834001961942d",
-                    "parentId": "5c0d1ec986f77439512a1a80",
-                    "slotId": "mod_reciever"
-                },
-                {
-                    "_id": "5c0d1ec986f77439512a1a83",
-                    "_tpl": "5beec9450db83400970084fd",
-                    "parentId": "5c0d1ec986f77439512a1a82",
-                    "slotId": "mod_sight_rear"
-                },
-                {
-                    "_id": "5c0d1ec986f77439512a1a84",
-                    "_tpl": "5bf3f59f0db834001a6fa060",
-                    "parentId": "5c0d1ec986f77439512a1a83",
-                    "slotId": "mod_sight_rear"
-                },
-                {
-                    "_id": "5c0d1ec986f77439512a1a85",
-                    "_tpl": "5beec8b20db834001961942a",
-                    "parentId": "5c0d1ec986f77439512a1a80",
-                    "slotId": "mod_stock_001"
-                },
-                {
-                    "_id": "5c0d1ec986f77439512a1a86",
-                    "_tpl": "5beec8c20db834001d2c465c",
-                    "parentId": "5c0d1ec986f77439512a1a85",
-                    "slotId": "mod_stock"
-                },
-                {
-                    "_id": "5c0d1ec986f77439512a1a87",
-                    "_tpl": "5beec3e30db8340019619424",
-                    "parentId": "5c0d1ec986f77439512a1a80",
-                    "slotId": "mod_handguard"
-                },
-                {
-                    "_id": "5c0d1ec986f77439512a1a88",
-                    "_tpl": "5beecbb80db834001d2c465e",
-                    "parentId": "5c0d1ec986f77439512a1a87",
-                    "slotId": "mod_mount_000"
-                },
-                {
-                    "_id": "5c0d1ec986f77439512a1a89",
-                    "_tpl": "5beecbb80db834001d2c465e",
-                    "parentId": "5c0d1ec986f77439512a1a87",
-                    "slotId": "mod_mount_001"
-                },
-                {
-                    "_id": "5c0d1ec986f77439512a1a8a",
-                    "_tpl": "5beec1bd0db834001e6006f3",
-                    "parentId": "5c0d1ec986f77439512a1a80",
-                    "slotId": "mod_barrel"
-                },
-                {
-                    "_id": "5c0d1ec986f77439512a1a8b",
-                    "_tpl": "5beec3420db834001b095429",
-                    "parentId": "5c0d1ec986f77439512a1a8a",
-                    "slotId": "mod_muzzle"
-                }
-            ]
-    
-    const hashUtil = container.resolve<HashUtil>("HashUtil");
-    var obj = Object.values(b)
-    var stringified = JSON.stringify(b)
-    const newID = JSON.stringify(hashUtil.generate())
-    const ogID = JSON.stringify(obj[0]._id)
-    const finalString = stringified.replaceAll(ogID,newID)
-    const finalObject = JSON.parse(finalString)
-    console.log(finalObject)
-
-
-
-//------------------------------------
 
         logger.log("Loading...", "cyan");
-        const logo = 
-        `
+        const logo =
+            `
                                                                                  
       ▀███▀▀▀██▄                                                          ▀████▀ ▀███▀ 
         ██   ▀██▄                                                           ██   ▄█▀   
@@ -279,26 +212,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
             this.createItem(itemsToAdd[itemInJson].id, itemsToAdd[itemInJson].cloneID, itemsToAdd[itemInJson].bundle, itemsToAdd[itemInJson].fullName, itemsToAdd[itemInJson].shortName, itemsToAdd[itemInJson].description, items, global);
         }
 
-        databaseModule.execute()
-
-        if (this.modConfig.ItemCustomColors == true) {
-            logger.log("ProgramK: Custom item colors --- ENABLED", "magenta")
-        } else {
-            logger.log("ProgramK: Custom item colors --- DISABLED", "magenta")
-        }
-        
-        if (this.modConfig.EnableExtraStockSlots == true) {
-            StocksOverhaul.execute()
-            logger.log("ProgramK: StocksOverhaul Module --- ENABLED", "magenta")
-        } else {
-            logger.log("ProgramK: StocksOverhaul Module --- DISABLED", "magenta")
-        }
-
-
-        weaponImplementation.execute()
-        looseLoot.execute()
-        quests.execute()
-        const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
+        const jsonUtil = container.resolve < JsonUtil > ("JsonUtil");
 
 
         // Add the new trader to the trader lists in DatabaseServer
@@ -307,13 +221,13 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
             base: jsonUtil.deserialize(jsonUtil.serialize(this.traderBase)) as ITraderBase
         };
 
-        let dialoguePath = this.modPath+"/db/dialogue/dialogue.json";
-        if(fs.existsSync(dialoguePath)){
+        let dialoguePath = this.modPath + "/db/dialogue/dialogue.json";
+        if (fs.existsSync(dialoguePath)) {
             tables.traders[this.traderBase._id].dialogue = require(dialoguePath);
         }
 
-        let questassortPath = this.modPath+"/db/questassort/questassort.json";
-        if(fs.existsSync(questassortPath)){
+        let questassortPath = this.modPath + "/db/questassort/questassort.json";
+        if (fs.existsSync(questassortPath)) {
             tables.traders[this.traderBase._id].questassort = require(questassortPath);
         }
 
@@ -330,49 +244,75 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
             };
         }
         /* */
-        this.logger.debug(`[${this.TraderName}] Loaded`);
 
+
+
+        databaseModule.execute()
+
+        if (this.modConfig.ItemCustomColors == true) {
+            logger.log("ProgramK: Custom item colors --- ENABLED", "magenta")
+        } else {
+            logger.log("ProgramK: Custom item colors --- DISABLED", "magenta")
+        }
+
+        if (this.modConfig.EnableExtraStockSlots == true) {
+            StocksOverhaul.execute()
+            logger.log("ProgramK: StocksOverhaul Module --- ENABLED", "magenta")
+        } else {
+            logger.log("ProgramK: StocksOverhaul Module --- DISABLED", "magenta")
+        }
+
+
+        weaponImplementation.execute()
+        looseLoot.execute()
+        quests.execute()
+        if (this.modConfig.DebugMode == true) {
+            logger.log("ProgramK: Debug Mode --- ENABLED", "magenta")
+            debug.execute()
+        } else {
+            logger.log("ProgramK: Debug Mode --- DISABLED", "magenta")
+        }
     }
 
-    private getAssort(logger:ILogger): ITraderAssort{
+    private getAssort(logger: ILogger): ITraderAssort {
         let assort: ITraderAssort = {
             items: [],
             barter_scheme: {},
             loyal_level_items: {}
         };
-        let files = this.loadAssortFiles(this.modPath+"/db/assort/");
+        let files = this.loadAssortFiles(this.modPath + "/db/assort/");
         let fileCount = files.length;
 
-        if(fileCount == 0){
-            this.logger.error(this.TraderName+": No Files in /db/assort/");
+        if (fileCount == 0) {
+            this.logger.error(this.TraderName + ": No Files in /db/assort/");
             return assort;
         }
 
         files.forEach(file => {
-            assort = this.mergeAssorts(assort,file);
+            assort = this.mergeAssorts(assort, file);
         });
         return assort;
     }
 
     private registerProfileImage(container: DependencyContainer): void {
-        const resFolderPath = this.modPath+"/res/";
+        const resFolderPath = this.modPath + "/res/";
 
         // Register route pointing to the profile picture
-        const imageRouter = container.resolve<ImageRouter>("ImageRouter");
+        const imageRouter = container.resolve < ImageRouter > ("ImageRouter");
         //let filename =this.traderBase.avatar.replace(".jpg","");
 
         let fileExt = ".jpg";
         if (path.extname(this.traderBase.avatar) == ".png")
-        fileExt = ".png";
+            fileExt = ".png";
 
         let fileName = path.basename(this.traderBase.avatar);
 
-        imageRouter.addRoute(this.traderBase.avatar.replace(fileExt,""),resFolderPath+fileName);
+        imageRouter.addRoute(this.traderBase.avatar.replace(fileExt, ""), resFolderPath + fileName);
     }
 
     private setupTraderUpdateTime(container: DependencyContainer): void {
-        const configServer = container.resolve<ConfigServer>("ConfigServer");
-        const traderConfig = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
+        const configServer = container.resolve < ConfigServer > ("ConfigServer");
+        const traderConfig = configServer.getConfig < ITraderConfig > (ConfigTypes.TRADER);
         const traderRefreshConfig: UpdateTime = {
             traderId: this.traderBase._id,
             seconds: this.modInterKConfig.TraderUpdateTimeInSec
@@ -380,27 +320,31 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         traderConfig.updateTime.push(traderRefreshConfig);
     }
 
-    private loadAssortFiles(filePath):Array<ITraderAssort>{
+    private loadAssortFiles(filePath): Array < ITraderAssort > {
         const logger = container.resolve < ILogger > ("WinstonLogger");
 
         let fileNameList = fs.readdirSync(filePath);
         let fileList = [];
         fileNameList.forEach(fileName => {
-            if (path.extname(fileName) == ".json"){
-                let newFile = require(filePath+fileName) as ITraderAssort;
+            if (path.extname(fileName) == ".json") {
+                let newFile = require(filePath + fileName) as ITraderAssort;
                 fileList.push(newFile);
             }
         });
         return fileList;
     }
 
-    private mergeAssorts(assort1: ITraderAssort,assort2: ITraderAssort): ITraderAssort{
-		Object.values(assort2.items).map((item)=>{
+    private mergeAssorts(assort1: ITraderAssort, assort2: ITraderAssort): ITraderAssort {
+        Object.values(assort2.items).map((item) => {
             const logger = container.resolve < ILogger > ("WinstonLogger");
 
-            if (item.upd){
-                if (item.upd.UnlimitedCount && 2+2==3) {
-                    function filterById(jsonObject, id) {return jsonObject.filter(function(jsonObject) {return (jsonObject['_id'] == id);})[0];}
+            if (item.upd) {
+                if (item.upd.UnlimitedCount && 2 + 2 == 3) {
+                    function filterById(jsonObject, id) {
+                        return jsonObject.filter(function(jsonObject) {
+                            return (jsonObject['_id'] == id);
+                        })[0];
+                    }
                     const json = JSON.stringify(this.modInterKStock)
                     const sjson = JSON.parse(json)
                     var selectedObject = filterById(sjson['ITEM'], item._id);
@@ -409,46 +353,54 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
                     delete test['slotId']
                     delete test['_tpl']
                     test.loyal_level_items = 1
-                   // logger.log(JSON.stringify(test) + ",", "blue")
+                    // logger.log(JSON.stringify(test) + ",", "blue")
                 }
                 if (item.upd.UnlimitedCount) {
 
-                    function filterById(jsonObject, id) {return jsonObject.filter(function(jsonObject) {return (jsonObject['_id'] == id);})[0];}
-                        const json = JSON.stringify(this.modInterKStock)
-                        const sjson = JSON.parse(json)
-                        var selectedObject = filterById(sjson['ITEM'], item._id);
-                        selectedObject.upd.StackObjectsCount = selectedObject.upd.StackObjectsCount * this.modInterKConfig.StockMultiplier
-                        item.upd = selectedObject.upd
-                       // logger.log(item.upd, "blue")
-                       // logger.log(selectedObject.upd, "blue")
+                    function filterById(jsonObject, id) {
+                        return jsonObject.filter(function(jsonObject) {
+                            return (jsonObject['_id'] == id);
+                        })[0];
+                    }
+                    const json = JSON.stringify(this.modInterKStock)
+                    const sjson = JSON.parse(json)
+                    var selectedObject = filterById(sjson['ITEM'], item._id);
+                    
+                    selectedObject.upd.StackObjectsCount = selectedObject.upd.StackObjectsCount * this.modInterKConfig.StockMultiplier
+                    item.upd = selectedObject.upd
+                    // logger.log(item.upd, "blue")
+                    // logger.log(selectedObject.upd, "blue")
 
                 }
             }
 
             assort1.items.push(item);
-			if(item.parentId =="hideout"){  //check if its not part of a preset
+            if (item.parentId == "hideout") { //check if its not part of a preset
                 const IKConfig = this.modInterKConfig
                 const indivItem = assort2.barter_scheme[item._id]
                 const json = JSON.stringify(this.modInterKStock)
                 const sjson = JSON.parse(json)
-                function filterById(jsonObject, id) {return jsonObject.filter(function(jsonObject) {return (jsonObject['_id'] == id);})[0];}
+
+                function filterById(jsonObject, id) {
+                    return jsonObject.filter(function(jsonObject) {
+                        return (jsonObject['_id'] == id);
+                    })[0];
+                }
                 var selectedObject = filterById(sjson['ITEM'], item._id);
                 indivItem[0][0].count = this.modConfigPrices[item._id]
                 indivItem[0][0].count = indivItem[0][0].count * IKConfig.PriceMultiplier
 
-               // logger.log(`"` +  item._id + `"` +":" + indivItem[0][0].count + `,` , "yellow")
-				assort1.barter_scheme[item._id] = assort2.barter_scheme[item._id];
-                if (this.modInterKConfig.BalancedLoyaltyLevels == true)
-                {
+                // logger.log(`"` +  item._id + `"` +":" + indivItem[0][0].count + `,` , "yellow")
+                assort1.barter_scheme[item._id] = assort2.barter_scheme[item._id];
+                if (this.modInterKConfig.BalancedLoyaltyLevels == true) {
                     assort1.loyal_level_items[item._id] = selectedObject.loyal_level_items
-                }
-				else {
+                } else {
                     assort1.loyal_level_items[item._id] = 1
                 }
-			}
-		});
-		return assort1;
-	}
+            }
+        });
+        return assort1;
+    }
 
     addToFilters(db) {
         const isModFilterExist = (slots) => slots.findIndex((slot) => slot._name === "mod_scope");
@@ -499,7 +451,6 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod  {
         i_items[i_id] = item;
 
     }
-
 
 
 

@@ -6,7 +6,7 @@ import * as itemsToAdd from "../IDs/IDs.json";
 
 function execute() {
 
-    
+
 
     const databaseServer = container.resolve < DatabaseServer > ("DatabaseServer");
     const tables = databaseServer.getTables();
@@ -196,7 +196,7 @@ function execute() {
     const isModFilterExist4 = (slots) => slots.findIndex((slot) => slot._name === "mod_sight_rear");
     const isModFilterExist5 = (slots) => slots.findIndex((slot) => slot._name === "mod_mount_000");
     const isModFilterExist6 = (slots) => slots.findIndex((slot) => slot._name === "mod_foregrip");
-    const isModFilterExist7  = (slots) => slots.findIndex((slot) => slot._name === "mod_sight_rear");
+    const isModFilterExist7 = (slots) => slots.findIndex((slot) => slot._name === "mod_sight_rear");
 
     const isItemSlotsExist = (item) => item._props.Slots && item._props.Slots.length > 0;
 
@@ -302,7 +302,7 @@ function execute() {
 
         }
     }
-  }
+}
 
 
   // add the code below

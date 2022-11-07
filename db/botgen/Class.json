@@ -1,0 +1,76 @@
+{
+"Classes": {
+    "marksman":{
+        "Probability": 
+            {
+                "bigmap": 1,
+                "factory4_day":1,
+                "factory4_night":1,
+                "interchange":1,
+                "laboratory":1,
+                "lighthouse":1,
+                "shoreline":1,
+                "woods":1,
+                "rezervbase":1
+             },
+        "Tiers": 
+            {
+                "level_range": {
+                    "starting_lvl": 1,
+                    "end_lvl": 10,
+                    "Probability": [6,1,1,0,0,0]
+                },
+                "level_range1": {
+                    "starting_lvl": 11,
+                    "end_lvl": 20,
+                    "Probability": [6,1,1,0,0,0]
+                }
+            },
+        "Primary_chance": 90,
+        "Secondary_chance": 90,
+        "Holster_chance": 90,
+        "inventory": "marksman_rifles",
+        "weapons": "marksman_rifles",
+        "gear": "marksman_rifles",
+        "behaviour": "default",
+        "stats": "default"
+    },
+    "assault":{
+        "Probability": 
+            {
+                "bigmap": 1,
+                "factory4_day":1,
+                "factory4_night":1,
+                "interchange":1,
+                "laboratory":1,
+                "lighthouse":1,
+                "shoreline":1,
+                "woods":1,
+                "rezervbase":1
+             },
+        "Tiers": 
+            {
+                "level_range": {
+                    "starting_lvl": 1,
+                    "end_lvl": 10,
+                    "Probability": [6,1,1,0,0,0]
+                },
+                "level_range1": {
+                    "starting_lvl": 11,
+                    "end_lvl": 20,
+                    "Probability": [1,1,1,0,6,6]
+                }
+            },
+        "Primary_chance": 90,
+        "Secondary_chance": 90,
+        "Holster_chance": 90,
+        "inventory": "marksman_rifles",
+        "weapons": "marksman_rifles",
+        "gear": "marksman_rifles",
+        "behaviour": "default",
+        "stats": "default"
+    }
+}
+}
+
+

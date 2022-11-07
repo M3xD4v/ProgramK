@@ -25,7 +25,7 @@ export class CustomBotInventoryGenerator extends BotInventoryGenerator
         @inject("BotLootGenerator") protected botLootGenerator: BotLootGenerator,
         @inject("BotGeneratorHelper") protected botGeneratorHelper: BotGeneratorHelper,
         @inject("WeightedRandomHelper") protected weightedRandomHelper: WeightedRandomHelper,
-        @inject("ConfigServer") protected configServer: ConfigServer
+        @inject("ConfigServer") protected configServer: ConfigServer,
     )
     {
         super(logger,hashUtil,randomUtil,databaseServer,botWeaponGenerator,botLootGenerator,botGeneratorHelper,weightedRandomHelper,configServer);
@@ -42,7 +42,7 @@ export class CustomBotInventoryGenerator extends BotInventoryGenerator
         isPmc: boolean,
         itemGenerationLimitsMinMax: Generation): void
     {
-        const generatedWeapon = this.botWeaponGenerator.generateRandomWeapon(
+        const generatedWeapon = this.botWeaponGenerator.generateRandomWeapon1(
             sessionId,
             weaponSlot.slot,
             templateInventory,
@@ -50,7 +50,6 @@ export class CustomBotInventoryGenerator extends BotInventoryGenerator
             equipmentChances.mods,
             botRole,
             isPmc);
-
         botInventory.items.push(...generatedWeapon.weapon);
         this.botWeaponGenerator.addExtraMagazinesToInventory(generatedWeapon, itemGenerationLimitsMinMax.items.magazines, botInventory, botRole);
     }

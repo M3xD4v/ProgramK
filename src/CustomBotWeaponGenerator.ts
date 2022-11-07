@@ -111,8 +111,6 @@ export class CustomBotWeaponGenerator extends BotWeaponGenerator
         const ogID = JSON.stringify(obj[0]._id)
         const finalString = stringified.replaceAll(ogID,newID)
         const finalObject = JSON.parse(finalString)
-        this.logger.log(weaponArray,"cyan")
-        this.logger.log(finalObject,"magenta")
         if (!weaponItemTemplate) {
             this.logger.error(`Could not find item template with tpl ${weaponTpl}`);
             this.logger.error(`WeaponSlot -> ${equipmentSlot}`);
@@ -135,7 +133,7 @@ export class CustomBotWeaponGenerator extends BotWeaponGenerator
         };
     }
 
-    public override generateRandomWeapon(sessionId: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean): GenerateWeaponResult
+    public generateRandomWeapon1(sessionId: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean): GenerateWeaponResult
     {
         //const weaponTpl = this.pickWeightedWeaponTplFromPool_1(equipmentSlot);
         

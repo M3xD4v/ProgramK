@@ -1,13 +1,14 @@
-
 {
-	"TraderName":"InterK",
-	"ItemCustomColors" : false,
-	"QuestItems": false,
-	"EnableExtraStockSlots" : true,
-	"EnableDevItems": true,
-	"EnabledStockSlots": {
-		"Slot2": true,
-		"Slot3": true,
-		"Slot4": true
-	}
+    "TraderName": "InterK",
+    "ItemCustomColors": false,
+    "QuestItems": true,
+    "EnableExtraStockSlots": true,
+    "EnableDevItems": false,
+    "DebugMode": false,
+    "ProfileBackups": true,
+    "EnabledStockSlots": {
+        "Slot2": true,
+        "Slot3": true,
+        "Slot4": true
+    }
 }
