@@ -1,7 +1,7 @@
 {
-	"366BUCKSHOT": 56,
+	"366BUCKSHOT": 456,
 	"366DGW": 424,
-	"366FLECHETTE": 75,
+	"366FLECHETTE": 235,
 	"366MUZZLEBRAKE": 23045,
 	"366Rotor": 24754,
 	"366SKSAdapter": 2353,
@@ -89,7 +89,12 @@
 	"devPPSHPRESET": 1,
 	"devPPSH": 1,
 	"devPPSHMag": 1,
+	"DevPPSHReciver":1,
 	"devround": 1,
-	"balaclava": 1
+	"balaclava": 1,
+
+	"knineoutdoors_low": 17403,
+	"knineoutdoors_mid": 16324,
+	"knineoutdoors_high": 15545
 
 }

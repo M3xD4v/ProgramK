@@ -5221,6 +5221,171 @@
        "BackgroundColor": "violet"
      }
    },
+   "knineoutdoors_low": {
+    "id": "knineoutdoors_low",
+    "cloneID": "5c1cdd302e221602b3137250",
+    "bundle": "knineoutdoors_low.bundle",
+    "fullName": "KNINE OUTDOORS Picatinny Riser Mount Low Profile",
+    "shortName": "Low KNINE",
+    "description": "KNINE OUTDOORS Picatinny Riser Mount, Low High Profile 1 Inch 0.5 Inch Rail Riser Mounts Adaptor with 3 Slots Picatinny Rails for Scope Rings Optics Sights",
+    "handbookID": "5b5f75c686f774094242f19f",
+    "handbookPrice": 98,
+    "traderID": "InterK",
+    "traderPrice": 1,
+    "currencyID": "5449016a4bdc2d6f028b456f",
+    "traderLL": 1,
+    "propOverrides": {
+      "BackgroundColor": "violet",
+      "Slots":[
+        {
+          "_name": "mod_scope",
+          "_id": "57ffb08724597779f52b3a4f",
+          "_parent": "57ffb0062459777a045af529",
+          "_props": {
+            "filters": [
+              {
+                "Shift": 0,
+                "Filter": [
+                  "58d39d3d86f77445bb794ae7",
+                  "616554fe50224f204c1da2aa",
+                  "5c7d55f52e221644f31bff6a",
+                  "616584766ef05c2ce828ef57",
+                  "577d128124597739d65d0e56",
+                  "615d8d878004cc50514c3233",
+                  "5b31163c5acfc400153b71cb",
+                  "5a33b652c4a28232996e407c",
+                  "5a33b2c9c4a282000c5a9511",
+                  "58d2664f86f7747fec5834f6",
+                  "57ae0171245977343c27bfcf",
+                  "558022b54bdc2dac148b458d",
+                  "58491f3324597764bc48fa02",
+                  "584924ec24597768f12ae244",
+                  "5b30b0dc5acfc400153b7124",
+                  "60a23797a37c940de7062d02",
+                  "5d2da1e948f035477b1ce2ba",
+                  "584984812459776a704a82a6",
+                  "570fd721d2720bc5458b4596"
+                ]
+              }
+            ]
+          },
+          "_required": false,
+          "_mergeSlotWithChildren": false,
+          "_proto": "55d30c4c4bdc2db4468b457e"
+        }
+      ]
+    }
+  },
+  "knineoutdoors_mid": {
+    "id": "knineoutdoors_mid",
+    "cloneID": "5c1cdd302e221602b3137250",
+    "bundle": "knineoutdoors_mid.bundle",
+    "fullName": "KNINE OUTDOORS Picatinny Riser Mount Medium Profile",
+    "shortName": "Medium KNINE",
+    "description": "KNINE OUTDOORS Picatinny Riser Mount, Low High Profile 1 Inch 0.5 Inch Rail Riser Mounts Adaptor with 3 Slots Picatinny Rails for Scope Rings Optics Sights",
+    "handbookID": "5b5f75c686f774094242f19f",
+    "handbookPrice": 98,
+    "traderID": "InterK",
+    "traderPrice": 1,
+    "currencyID": "5449016a4bdc2d6f028b456f",
+    "traderLL": 1,
+    "propOverrides": {
+      "BackgroundColor": "violet",
+      "Slots":[
+        {
+          "_name": "mod_scope",
+          "_id": "57ffb08724597779f52b3a4f",
+          "_parent": "57ffb0062459777a045af529",
+          "_props": {
+            "filters": [
+              {
+                "Shift": 0,
+                "Filter": [
+                  "58d39d3d86f77445bb794ae7",
+                  "616554fe50224f204c1da2aa",
+                  "5c7d55f52e221644f31bff6a",
+                  "616584766ef05c2ce828ef57",
+                  "577d128124597739d65d0e56",
+                  "615d8d878004cc50514c3233",
+                  "5b31163c5acfc400153b71cb",
+                  "5a33b652c4a28232996e407c",
+                  "5a33b2c9c4a282000c5a9511",
+                  "58d2664f86f7747fec5834f6",
+                  "57ae0171245977343c27bfcf",
+                  "558022b54bdc2dac148b458d",
+                  "58491f3324597764bc48fa02",
+                  "584924ec24597768f12ae244",
+                  "5b30b0dc5acfc400153b7124",
+                  "60a23797a37c940de7062d02",
+                  "5d2da1e948f035477b1ce2ba",
+                  "584984812459776a704a82a6",
+                  "570fd721d2720bc5458b4596"
+                ]
+              }
+            ]
+          },
+          "_required": false,
+          "_mergeSlotWithChildren": false,
+          "_proto": "55d30c4c4bdc2db4468b457e"
+        }
+      ]
+    }
+  },
+  "knineoutdoors_high": {
+    "id": "knineoutdoors_high",
+    "cloneID": "5c1cdd302e221602b3137250",
+    "bundle": "knineoutdoors_high.bundle",
+    "fullName": "KNINE OUTDOORS Picatinny Riser Mount High Profile",
+    "shortName": "High KNINE",
+    "description": "KNINE OUTDOORS Picatinny Riser Mount, Low High Profile 1 Inch 0.5 Inch Rail Riser Mounts Adaptor with 3 Slots Picatinny Rails for Scope Rings Optics Sights",
+    "handbookID": "5b5f75c686f774094242f19f",
+    "handbookPrice": 98,
+    "traderID": "InterK",
+    "traderPrice": 1,
+    "currencyID": "5449016a4bdc2d6f028b456f",
+    "traderLL": 1,
+    "propOverrides": {
+      "BackgroundColor": "violet",
+      "Slots":[
+        {
+          "_name": "mod_scope",
+          "_id": "57ffb08724597779f52b3a4f",
+          "_parent": "57ffb0062459777a045af529",
+          "_props": {
+            "filters": [
+              {
+                "Shift": 0,
+                "Filter": [
+                  "58d39d3d86f77445bb794ae7",
+                  "616554fe50224f204c1da2aa",
+                  "5c7d55f52e221644f31bff6a",
+                  "616584766ef05c2ce828ef57",
+                  "577d128124597739d65d0e56",
+                  "615d8d878004cc50514c3233",
+                  "5b31163c5acfc400153b71cb",
+                  "5a33b652c4a28232996e407c",
+                  "5a33b2c9c4a282000c5a9511",
+                  "58d2664f86f7747fec5834f6",
+                  "57ae0171245977343c27bfcf",
+                  "558022b54bdc2dac148b458d",
+                  "58491f3324597764bc48fa02",
+                  "584924ec24597768f12ae244",
+                  "5b30b0dc5acfc400153b7124",
+                  "60a23797a37c940de7062d02",
+                  "5d2da1e948f035477b1ce2ba",
+                  "584984812459776a704a82a6",
+                  "570fd721d2720bc5458b4596"
+                ]
+              }
+            ]
+          },
+          "_required": false,
+          "_mergeSlotWithChildren": false,
+          "_proto": "55d30c4c4bdc2db4468b457e"
+        }
+      ]
+    }
+  },
    "devPPSHMag": {
      "id": "devPPSHMag",
      "cloneID": "5ea034eb5aad6446a939737b",
@@ -5279,6 +5444,23 @@
        "Tracer": true
      }
    },
+   "DevPPSHReciver": {
+    "id": "DevPPSHReciver",
+    "cloneID": "5ea03e5009aa976f2e7a514b",
+    "bundle": "devppshreciver.bundle",
+    "fullName": "DevPPSHReciver",
+    "shortName": "DevPPSHReciver",
+    "description": "DevPPSHReciver",
+    "handbookID": "5b5f75c686f774094242f19f",
+    "handbookPrice": 98,
+    "traderID": "InterK",
+    "traderPrice": 1,
+    "currencyID": "5449016a4bdc2d6f028b456f",
+    "traderLL": 1,
+    "propOverrides": {
+      "BackgroundColor": "green"
+    }
+  },
    "devPPSH": {
      "id": "devPPSH",
      "cloneID": "5ea03f7400685063ec28bfa8",
@@ -5340,7 +5522,7 @@
                {
                  "Shift": 0,
                  "Filter": [
-                   "5ea03e5009aa976f2e7a514b"
+                   "DevPPSHReciver"
                  ]
                }
              ]
@@ -5358,7 +5540,8 @@
                {
                  "Shift": 0,
                  "Filter": [
-                   "5ea02bb600685063ec28bfa1"
+                   "5ea02bb600685063ec28bfa1",
+                   "barrel_ppsh_456mm_762x25"
                  ]
                }
              ]

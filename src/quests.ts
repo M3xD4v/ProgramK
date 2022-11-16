@@ -29,7 +29,8 @@ function execute() {
             "devPPSHMag": "q52",
             "devPPSH": "q52",
             "devPPSHPRESET": "q52",
-            "balaclava": "q52"
+            "balaclava": "q52",
+            "DevPPSHReciver": "q52"
         }
         for (const [key, value] of Object.entries(DevItemsArray)) {
             questassort.success[key] = value
@@ -89,7 +90,7 @@ function execute() {
         }
     }
     const questList = [
-        require("../db/quests/MainQuests.json"), require("../db/quests/vpoGornostay.json"), require("../db/quests/QuestOverwrites.json")
+        require("../db/quests/MainQuests.json"), require("../db/quests/QuestOverwrites.json")
     ]
     for (const Iquest in questList) {
         const quest = questList[Iquest]

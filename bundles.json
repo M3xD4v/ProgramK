@@ -272,6 +272,38 @@
             ]
         },
         {
+            "key":"knineoutdoors_low.bundle",
+            "dependencyKeys":[
+                "shaders",
+                "cubemaps",
+                "assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key":"knineoutdoors_mid.bundle",
+            "dependencyKeys":[
+                "shaders",
+                "cubemaps",
+                "assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key":"knineoutdoors_high.bundle",
+            "dependencyKeys":[
+                "shaders",
+                "cubemaps",
+                "assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key":"devppshreciver.bundle",
+            "dependencyKeys":[
+                "shaders",
+                "cubemaps",
+                "assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
             "key":"spectretest.bundle",
             "dependencyKeys":[
                 "assets/commonassets/physics/physicsmaterials.bundle",

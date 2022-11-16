@@ -2,6 +2,8 @@ import {container, DependencyContainer} from "tsyringe";
 import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
 import {ILogger} from "@spt-aki/models/spt/utils/ILogger";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
+import { start } from "repl";
+import { RandomUtil } from "@spt-aki/utils/RandomUtil";
 
 function execute() {
     const logger = container.resolve < ILogger > ("WinstonLogger");
@@ -128,14 +130,105 @@ function execute() {
       }
 
       const Classes = require("../db/botgen/Class.json")
-      var map = "bigmap"
-      var level = 1
+
+
+
+      function customHealthGenerator(Class, Tier) {
+        const Classes = require("../db/botgen/Class.json")
+        const classHealth = Classes.Classes[Class].health
+        const health = require("../db/botgen/Classes/" + classHealth + "/health.json")
+        const bodyparts = health.health.BodyParts[0]
+        const Index = Tier - 1 
+        const randomUtil = container.resolve < RandomUtil > ("RandomUtil");
+
+
+        function gMaxMin (value) {
+            if (Array.isArray(value) == true) {
+                var Max = value[Index]
+            } else {
+                var Max = value
+            }
+            return Max
+        }
+        const newHealthUsingFunction  = {
+            Hydration: {
+                Current: randomUtil.getInt(gMaxMin(health.health.Hydration.min), gMaxMin(health.health.Hydration.max)),
+                Maximum: gMaxMin(health.health.Hydration.max)
+            },
+            Energy: {
+                Current: randomUtil.getInt(gMaxMin(health.health.Energy.min), gMaxMin(health.health.Energy.max)),
+                Maximum: gMaxMin(health.health.Energy.max)
+            },
+            Temperature: {
+                Current: 37,
+                Maximum: 37
+            },
+            BodyParts: {
+                Head: {
+                    Health: {
+                          Current: randomUtil.getInt(gMaxMin(bodyparts.Head.min), gMaxMin(bodyparts.Head.max)),
+                          Maximum: gMaxMin(bodyparts.Head.max),
+  
+                    }
+                },
+                Chest: {
+                    Health: {
+                            Current: randomUtil.getInt(gMaxMin(bodyparts.Chest.min), gMaxMin(bodyparts.Chest.max)),
+                            Maximum: gMaxMin(bodyparts.Chest.max),
+                    }
+                },
+                Stomach: {
+                    Health: {
+                            Current: randomUtil.getInt(gMaxMin(bodyparts.Stomach.min), gMaxMin(bodyparts.Stomach.max)),
+                            Maximum: gMaxMin(bodyparts.Stomach.max),
+                    }
+                },
+                LeftArm: {
+                    Health: {
+                            Current: randomUtil.getInt(gMaxMin(bodyparts.LeftArm.min), gMaxMin(bodyparts.LeftArm.max)),
+                            Maximum: gMaxMin(bodyparts.LeftArm.max),
+                    }
+                },
+                RightArm: {
+                    Health: {
+                            Current: randomUtil.getInt(gMaxMin(bodyparts.RightArm.min), gMaxMin(bodyparts.RightArm.max)),
+                            Maximum: gMaxMin(bodyparts.RightArm.max),
+                    }
+                },
+                LeftLeg: {
+                    Health: {
+                            Current: randomUtil.getInt(gMaxMin(bodyparts.LeftLeg.min), gMaxMin(bodyparts.LeftLeg.max)),
+                            Maximum: gMaxMin(bodyparts.LeftLeg.max),
+                    }
+                },
+                RightLeg: {
+                    Health: {
+                            Current: randomUtil.getInt(gMaxMin(bodyparts.RightLeg.min), gMaxMin(bodyparts.RightLeg.max)),
+                            Maximum: gMaxMin(bodyparts.RightLeg.max),
+                    }
+                }
+        },
+        UpdateTime: 0
+        }
+      return newHealthUsingFunction
       
+      }
+
+
+
+
+
+      //create a function that converts 12 hour time to 24 hour time
+    
+
+
+      /*
       for (let i = 0; i < 15; i++) {
              var ChoosenClass = pickClass(Classes,map)
              const tier = pickTier(Classes,ChoosenClass,level)
              logger.log(`Map: ${map} Level: ${level} Class:${ChoosenClass} Tier: ${tier}`,"magenta")
       }
+      */
 
     }
     

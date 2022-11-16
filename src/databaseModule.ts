@@ -208,6 +208,7 @@ function execute() {
     const filtersIncludeAttachment5 = (filterArray) => filterArray.includes("57adff4f24597737f373b6e6");
     const filtersIncludeAttachment6 = (filterArray) => filterArray.includes("5dff772da3651922b360bf91");
     const filtersIncludeAttachment7 = (filterArray) => filterArray.includes("5649d9a14bdc2d79388b4580");
+    const pk06 = (filterArray) => filterArray.includes("57ae0171245977343c27bfcf");
     const ForegripFilter = (filterArray) => filterArray.includes("5c7fc87d2e221644f31c0298");
     for (const item of Object.values(tables.templates.items)) {
         if (isItemSlotsExist(item)) {
@@ -286,6 +287,11 @@ function execute() {
             if (index2 > -1 && filtersIncludeAttachment4(item._props.Slots[index2]._props.filters[0].Filter)) {
                 item._props.Slots[index2]._props.filters[0].Filter.push("KobraPicatinny");
                 //    logger.log(item._props.Name + " - - - - i8 ", "yellow");
+            }
+            if (index2 > -1 && pk06(item._props.Slots[index2]._props.filters[0].Filter)) {
+                item._props.Slots[index2]._props.filters[0].Filter.push("knineoutdoors_low");
+                item._props.Slots[index2]._props.filters[0].Filter.push("knineoutdoors_mid");
+                item._props.Slots[index2]._props.filters[0].Filter.push("knineoutdoors_high");
             }
             if (index2 > -1 && filtersIncludeAttachment5(item._props.Slots[index2]._props.filters[0].Filter)) {
                 item._props.Slots[index2]._props.filters[0].Filter.push("vortex_spitfire_hd_x3");

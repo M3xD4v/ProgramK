@@ -49,6 +49,14 @@
          "loyal_level_items":1
       },
       {
+         "_id":"DevPPSHReciver",
+         "upd":{
+            "UnlimitedCount":true,
+            "StackObjectsCount":9999999
+         },
+         "loyal_level_items":1
+      },
+      {
          "_id":"devPPSHMag",
          "upd":{
             "UnlimitedCount":true,
@@ -95,7 +103,7 @@
             "UnlimitedCount":false,
             "StackObjectsCount":320
          },
-         "loyal_level_items":1
+         "loyal_level_items":4
       },
       {
          "_id":"366FLECHETTE",
@@ -103,7 +111,7 @@
             "UnlimitedCount":false,
             "StackObjectsCount":320
          },
-         "loyal_level_items":1
+         "loyal_level_items":4
       },
       {
          "_id":"MCX556_171_barrel",
@@ -574,6 +582,31 @@
          "upd":{
             "UnlimitedCount":false,
             "StackObjectsCount":16
+         },
+         "loyal_level_items":1
+      },
+
+      {
+         "_id":"knineoutdoors_low",
+         "upd":{
+            "UnlimitedCount":false,
+            "StackObjectsCount":3
+         },
+         "loyal_level_items":2
+      },
+      {
+         "_id":"knineoutdoors_mid",
+         "upd":{
+            "UnlimitedCount":false,
+            "StackObjectsCount":2
+         },
+         "loyal_level_items":2
+      },
+      {
+         "_id":"knineoutdoors_high",
+         "upd":{
+            "UnlimitedCount":false,
+            "StackObjectsCount":4
          },
          "loyal_level_items":1
       }

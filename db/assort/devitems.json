@@ -21,6 +21,16 @@
 			}
 		},
 		{
+			"_id": "DevPPSHReciver",
+			"_tpl": "DevPPSHReciver",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
 			"_id": "devround",
 			"_tpl": "devround",
 			"parentId": "hideout",
@@ -115,6 +125,14 @@
 					"_tpl": "5449016a4bdc2d6f028b456f"
 				}
 			]
+		],
+		"DevPPSHReciver": [
+			[
+				{
+					"count": 1,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
 		]
 	},
 	"loyal_level_items": {
@@ -122,6 +140,7 @@
 		"devround": 1,
 		"devPPSHMag":1,
 		"devPPSHPRESET":1,
-		"balaclava":1 
+		"balaclava":1,
+		"DevPPSHReciver":1
 	}
 }

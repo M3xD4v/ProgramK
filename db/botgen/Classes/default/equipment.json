@@ -1,0 +1,23 @@
+{
+  "Tier1": {
+    "Tier1": 34,
+    "test1": 1,
+    "test2": 1,
+    "test3": 1
+  },
+  "Tier2": {
+    "Tier2": 1
+  },
+  "Tier3": {
+    "Tier3": 1
+  },
+  "Tier4": {
+    "Tier4": 1
+  },
+  "Tier5": {
+    "Tier5": 1
+  },
+  "Tier6": {
+    "Tier6": 1
+  }
+}

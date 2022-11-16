@@ -99,10 +99,64 @@
 				"UnlimitedCount": true,
 				"StackObjectsCount": 999999
 			}
+		},		
+		{
+			"_id": "knineoutdoors_low",
+			"_tpl": "knineoutdoors_low",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "knineoutdoors_mid",
+			"_tpl": "knineoutdoors_mid",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
+		},
+		{
+			"_id": "knineoutdoors_high",
+			"_tpl": "knineoutdoors_high",
+			"parentId": "hideout",
+			"slotId": "hideout",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999999
+			}
 		}
 	],
 	"barter_scheme": {
 		"KobraPicatinny": [
+			[
+				{
+					"count": 3423,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"knineoutdoors_low": [
+			[
+				{
+					"count": 3423,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"knineoutdoors_mid": [
+			[
+				{
+					"count": 3423,
+					"_tpl": "5449016a4bdc2d6f028b456f"
+				}
+			]
+		],
+		"knineoutdoors_high": [
 			[
 				{
 					"count": 3423,
@@ -194,6 +248,9 @@
 		"ohhuntMount": 1,
 		"DualBackup": 1,
 		"GG&G": 1,
-		"GG&G_L": 1
+		"GG&G_L": 1,
+		"knineoutdoors_low": 1,
+		"knineoutdoors_mid": 1,
+		"knineoutdoors_high": 1
 	}
 }

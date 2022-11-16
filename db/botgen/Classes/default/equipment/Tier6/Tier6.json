@@ -1,0 +1,46 @@
+{
+  "ArmBand": {
+        "5b3f16c486f7747c327f55f7": 5
+      },
+      "ArmorVest": {
+        "5e4abb5086f77406975c9342": 50
+      },
+      "Backpack": {
+        "56e33634d2720bd8058b456b": 4
+
+      },
+      "Earpiece": {
+        "5e4d34ca86f774264f758330": 3
+
+      },
+      "Eyewear": {
+        "5d6d2ef3a4b93618084f58bd": 1
+      },
+      "FaceCover": {
+        "5fd8d28367cb5e077335170f": 5
+      },
+      "FirstPrimaryWeapon": {
+        "5447a9cd4bdc2dbd208b4567": 4
+      },
+      "Headwear": {
+        "5aa7d03ae5b5b00016327db5": 43
+
+      },
+      "Holster": {
+        "56d59856d2720bd8418b456a": 5
+      },
+      "Pockets": {
+        "557ffd194bdc2d28148b457f": 1
+      },
+      "Scabbard": {
+        "57cd379a24597778e7682ecf": 5
+      },
+      "SecondPrimaryWeapon": {},
+      "SecuredContainer": {
+        "5c0a794586f77461c458f892": 1
+      },
+      "TacticalVest": {
+        "5d5d8ca986f7742798716522": 38
+      }
+}
+

@@ -204,25 +204,6 @@
     "conditions": {
       "AvailableForFinish": [
         {
-          "_parent": "FindItem",
-          "_props": {
-            "dogtagLevel": 0,
-            "dynamicLocale": false,
-            "id": "q2Cond1",
-            "index": 0,
-            "maxDurability": 100,
-            "minDurability": 0,
-            "onlyFoundInRaid": false,
-            "parentId": "",
-            "target": [
-              "60915994c49cf53e4772cc38"
-            ],
-            "value": "1",
-            "visibilityConditions": []
-          },
-          "dynamicLocale": false
-        },
-        {
           "_parent": "HandoverItem",
           "_props": {
             "dogtagLevel": 0,
@@ -237,15 +218,7 @@
               "60915994c49cf53e4772cc38"
             ],
             "value": "1",
-            "visibilityConditions": [
-              {
-                "_parent": "CompleteCondition",
-                "_props": {
-                  "id": "5234432",
-                  "target": "q2Cond1"
-                }
-              }
-            ]
+            "visibilityConditions": []
           },
           "dynamicLocale": false
         }

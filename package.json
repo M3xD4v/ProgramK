@@ -1,10 +1,10 @@
 {
     "name": "Program-K",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "main": "src/mod.js",
     "license": "MIT",
     "author": "K4_a",
-    "akiVersion": "3.2.x",
+    "akiVersion": "3.3.0",
     "scripts": {
         "setup:environment": "npm i",
         "build:unzipped": "copyfiles -e \"./node_modules/**/*.*\" -e \"./types/**/*.*\" -e \"./%npm_package_name%-%npm_package_version%/**/*.*\" -e \"./package-lock.json\" -e \"./tsconfig.json\" -e \"./README.txt\" -e \"./mod.code-workspace\" \"./**/*.*\" ./%npm_package_name%-%npm_package_version%",

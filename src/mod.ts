@@ -10,17 +10,17 @@ import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
 import { ITraderAssort, ITraderBase } from "@spt-aki/models/eft/common/tables/ITrader";
 import { ITraderConfig, UpdateTime } from "@spt-aki/models/spt/config/ITraderConfig";
 import { ILocaleGlobalBase } from "@spt-aki/models/spt/server/ILocaleBase";
+/*
 import { CustomBotWeaponGenerator } from "./CustomBotWeaponGenerator";
 import { CustomBotInventoryGenerator } from "./CustomBotInventoryGenerator";
 import { CustomBotGenerator } from "./CustomBotGenerator";
+import { CustomBotController } from "./CustomBotController";
+*/
 import { ProfileHelper } from "@spt-aki/helpers/ProfileHelper";
 import type {StaticRouterModService} from "@spt-aki/services/mod/staticRouter/StaticRouterModService";
 import * as itemsToAdd from "../IDs/IDs.json";
 import * as path from 'path';
 import * as fs from 'fs';
-import { Inventory } from "@spt-aki/models/eft/common/tables/IBotBase";
-import { stringify } from "querystring";
-import { HashUtil } from "@spt-aki/utils/HashUtil";
 
 
 class Mod implements IPostDBLoadMod, IPreAkiLoadMod {
@@ -152,7 +152,7 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod {
         this.registerProfileImage(container);
         this.setupTraderUpdateTime(container);
 
-        /*
+         /*
         container.register<CustomBotWeaponGenerator>("CustomBotWeaponGenerator", CustomBotWeaponGenerator);
         container.register("BotWeaponGenerator", {useToken: "CustomBotWeaponGenerator"});
         
@@ -161,6 +161,9 @@ class Mod implements IPostDBLoadMod, IPreAkiLoadMod {
 
         container.register<CustomBotGenerator>("CustomBotGenerator", CustomBotGenerator);
         container.register("BotGenerator", {useToken: "CustomBotGenerator"});
+
+        container.register<CustomBotController>("CustomBotController", CustomBotController);
+        container.register("BotController", {useToken: "CustomBotController"});
         */
     }
 
